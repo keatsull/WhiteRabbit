@@ -1,3 +1,7 @@
+/*********************************************************************
+FONTS
+*********************************************************************/
+
 @font-face {
   font-family: 'Rajdhani';
   font-style: normal;
@@ -14,7 +18,193 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+/*********************************************************************
+MAIN
+*********************************************************************/
 body {
-	background-image: (url:'../Imgs/test.background.png');
+	background: url('../images/testbackground.png') no-repeat center center fixed; /*replace me with wanted background*/
 	background-size: cover;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-repeat: no-repeat;
+	background-color: black;
+	margin: 0 0;
+	padding: 0 0;
 }
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 100;
+}
+
+footer h3 {
+	font-family: 'Rajdhani';
+	font-weight: 700;
+	font-size: 40px;
+	text-align: right;
+	color: white;
+}
+
+/*********************************************************************
+Character Divs
+*********************************************************************/
+.characterContainer {
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	position: absolute;
+	display: flex;
+	-webkit-display: flex;
+	-moz-display: flex;
+	-ms--display: flex;
+	justify-content: center;
+}
+
+/* First Character of characters on screen */
+.characterContainer span {
+	width: 100%;
+	height: 100%;
+	float: left;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.characterContainer span:nth-child(1) {
+	background-image: url('../images/angry.png'); /*replace me with character*/
+
+}
+
+/* Second Character of characters on screen */
+.characterContainer span:nth-child(2) {
+	background-image: url('../images/angry.png'); /*replace me with character*/
+
+}
+
+/* Third Character of characters on screen */
+.characterContainer span:nth-child(3) {
+	background-image: url('../images/angry.png'); /*replace me with character*/
+
+}
+
+/* Fourth Character of characters on screen */
+.characterContainer span:nth-child(4) {
+	background-image: url('../images/angry.png'); /*replace me with character*/
+
+}
+
+/* Fifth Character of characters on screen */
+.characterContainer span:nth-child(5) {
+	background-image: url('../images/angry.png'); /*replace me with character*/
+
+}
+
+/* add more if we need more than 5 characters */
+
+/*********************************************************************
+Conversation Divs
+*********************************************************************/
+#conversationContainer {
+	width: 80%;
+	height: 50%;
+	position: fixed;
+	bottom: 50px;
+	left: 10%;
+	/*background-color: rgba(255, 255, 255, 0.2);*/
+	display: inline-block;
+	vertical-align: top;
+}
+
+#conversationContainer #title {
+	font-family: 'Rajdhani';
+	font-weight: 700;
+	font-size: 50px;
+	text-align: left;
+	color: white;
+	/*text-transform: uppercase;*/
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
+}
+
+#dialogue {
+	border-color: rgba(255, 255, 255, 1);
+	border-width: 3px;
+	border-radius: 20px;
+	border-style: solid;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(20px); /* not working with all browsers */
+	padding: 0px 20px;
+	vertical-align: top;
+}
+
+#dialogue p {
+	font-family: 'Rajdhani';
+	font-weight: 400;
+	font-size: 25px;
+	text-align: left;
+	color: white;
+}
+
+.optionContainer {
+	width: 100%;
+	display: flex;
+	-webkit-display: flex;
+	-moz-display: flex;
+	-ms--display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.optionContainer span {
+	float: left;
+	max-width: 100%;
+	min-width: 25%;
+	border-width: 3px;
+	border-radius: 20px;
+	border-style: solid;
+	backdrop-filter: blur(20px);
+	padding: 0px 20px;
+	margin: 0 10px 0 10px;
+}
+
+.optionContainer span h3 {
+	font-family: 'Rajdhani';
+	font-weight: 700;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+}
+
+.optionContainer span p {
+	font-family: 'Rajdhani';
+	font-weight: 400;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+}
+
+.optionContainer span:nth-child(1) {
+	border-color: rgba(244, 67, 54, 1);
+	background-color: rgba(244, 67, 54, 0.3);
+}
+.optionContainer span:nth-child(2) {
+	border-color: rgba(33, 150, 243, 1);
+	background-color: rgba(33, 150, 243, 0.3);
+}
+.optionContainer span:nth-child(3) {
+	border-color: rgba(76, 175, 80, 1);
+	background-color: rgba(76, 175, 80, 0.3);
+}
+
+/* use me to disable dialogue option */
+.disableMe {
+
+}
+
+/*********************************************************************
+OTHER
+*********************************************************************/
