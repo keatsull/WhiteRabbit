@@ -208,7 +208,7 @@ Conversation Divs
 	opacity: 0;
 }
 
-.optionContainer span {
+.optionContainer a {
 	float: left;
 	max-width: 100%;
 	min-width: 25%;
@@ -218,9 +218,10 @@ Conversation Divs
 	backdrop-filter: blur(20px);
 	padding: 0px 20px;
 	margin: 0 10px 0 10px;
+	text-decoration: none;
 }
 
-.optionContainer span h3 {
+.optionContainer a h3 {
 	font-family: 'Rajdhani';
 	font-weight: 700;
 	font-size: 25px;
@@ -228,7 +229,7 @@ Conversation Divs
 	color: white;
 }
 
-.optionContainer span p {
+.optionContainer a p {
 	font-family: 'Rajdhani';
 	font-weight: 400;
 	font-size: 25px;
@@ -236,7 +237,7 @@ Conversation Divs
 	color: white;
 }
 
-.optionContainer span:nth-child(1) {
+.optionContainer a:nth-child(1) {
 	border-color: rgba(244, 67, 54, 1);
 	background-color: rgba(244, 67, 54, 0.3);
 	-webkit-transition: background-color 1s;
@@ -245,12 +246,11 @@ Conversation Divs
     transition: background-color 1s;
 }
 
-.optionContainer span:nth-child(1):hover {
+.optionContainer a:nth-child(1):hover {
 	background-color: rgba(244, 67, 54, 0.9);
-	cursor: pointer;
 }
 
-.optionContainer span:nth-child(2) {
+.optionContainer a:nth-child(2) {
 	border-color: rgba(33, 150, 243, 1);
 	background-color: rgba(33, 150, 243, 0.3);
 	-webkit-transition: background-color 1s;
@@ -259,12 +259,11 @@ Conversation Divs
     transition: background-color 1s;
 }
 
-.optionContainer span:nth-child(2):hover {
+.optionContainer a:nth-child(2):hover {
 	background-color: rgba(33, 150, 243, 0.9);
-	cursor: pointer;
 }
 
-.optionContainer span:nth-child(3) {
+.optionContainer a:nth-child(3) {
 	border-color: rgba(76, 175, 80, 1);
 	background-color: rgba(76, 175, 80, 0.3);
 	-webkit-transition: background-color 1s;
@@ -273,14 +272,15 @@ Conversation Divs
     transition: background-color 1s;
 }
 
-.optionContainer span:nth-child(3):hover {
+.optionContainer a:nth-child(3):hover {
 	background-color: rgba(76, 175, 80, 0.9);
-	cursor: pointer;
 }
 
 /* use me to disable dialogue option */
 .disableMe {
-
+	pointer-events: none;
+   	cursor: default;
+   	opacity: 0.5;
 }
 
 /*********************************************************************
