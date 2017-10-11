@@ -22,17 +22,25 @@ FONTS
 MAIN
 *********************************************************************/
 body {
+	background-color: black;
+	margin: 0 0;
+	padding: 0 0;
+	opacity: 0;
+}
+
+#backgroundImg {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	margin: 0 auto;
+	z-index: -100;
 	background: url('../images/testbackground.png') no-repeat center center fixed; /*replace me with wanted background*/
 	background-size: cover;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
 	background-repeat: no-repeat;
-	background-color: black;
-	margin: 0 0;
-	padding: 0 0;
 }
-
 
 /* footer */
 footer {
@@ -93,6 +101,7 @@ Character Divs
 	-moz-display: flex;
 	-ms--display: flex;
 	justify-content: center;
+	opacity: 0;
 }
 
 /* First Character of characters on screen */
@@ -105,9 +114,16 @@ Character Divs
 	background-position: bottom;
 }
 
+/* likely wont use this */
+/*.characterContainer span img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	margin: 0;
+}*/
+
 .characterContainer span:nth-child(1) {
 	background-image: url('../images/angry.png'); /*replace me with character*/
-
 }
 
 /* Second Character of characters on screen */
@@ -148,6 +164,7 @@ Conversation Divs
 	/*background-color: rgba(255, 255, 255, 0.2);*/
 	display: inline-block;
 	vertical-align: top;
+	opacity: 0;
 }
 
 #conversationContainer #title {
@@ -188,6 +205,7 @@ Conversation Divs
 	-ms--display: flex;
 	justify-content: center;
 	margin-top: 20px;
+	opacity: 0;
 }
 
 .optionContainer span {
@@ -335,6 +353,10 @@ MOBILE
 	}
 
 }
+/*********************************************************************
+Animations
+*********************************************************************/
+
 
 /*********************************************************************
 OTHER
