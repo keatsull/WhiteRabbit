@@ -33,6 +33,8 @@ body {
 	padding: 0 0;
 }
 
+
+/* footer */
 footer {
 	position: fixed;
 	bottom: 0;
@@ -41,13 +43,41 @@ footer {
 	z-index: 100;
 }
 
-footer h3 {
+#menuBtn {
+	padding-right: 20px;
+}
+
+#menuBtn a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.7);
+	-webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+    opacity: 1;
+}
+
+#menuBtn a:visited {
+	color: inherit;
+}
+
+#menuBtn a:hover {
+	color: white;
+}
+
+#menuBtn h3 {
 	font-family: 'Rajdhani';
 	font-weight: 700;
 	font-size: 40px;
 	text-align: right;
-	color: white;
+	color: rgba(255, 255, 255, 0.7);
 }
+
+/*********************************************************************
+NAVIGATION
+*********************************************************************/
+
+/* TAFARA insert CSS in here dont forget to create a branch git branch NovelNav, git checkout NovelNav */
 
 /*********************************************************************
 Character Divs
@@ -190,14 +220,43 @@ Conversation Divs
 .optionContainer span:nth-child(1) {
 	border-color: rgba(244, 67, 54, 1);
 	background-color: rgba(244, 67, 54, 0.3);
+	-webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
 }
+
+.optionContainer span:nth-child(1):hover {
+	background-color: rgba(244, 67, 54, 0.9);
+	cursor: pointer;
+}
+
 .optionContainer span:nth-child(2) {
 	border-color: rgba(33, 150, 243, 1);
 	background-color: rgba(33, 150, 243, 0.3);
+	-webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
 }
+
+.optionContainer span:nth-child(2):hover {
+	background-color: rgba(33, 150, 243, 0.9);
+	cursor: pointer;
+}
+
 .optionContainer span:nth-child(3) {
 	border-color: rgba(76, 175, 80, 1);
 	background-color: rgba(76, 175, 80, 0.3);
+	-webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+.optionContainer span:nth-child(3):hover {
+	background-color: rgba(76, 175, 80, 0.9);
+	cursor: pointer;
 }
 
 /* use me to disable dialogue option */
