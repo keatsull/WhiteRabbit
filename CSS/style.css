@@ -45,6 +45,7 @@ footer {
 
 #menuBtn {
 	padding-right: 20px;
+	visibility: visible;
 }
 
 #menuBtn a {
@@ -261,6 +262,77 @@ Conversation Divs
 
 /* use me to disable dialogue option */
 .disableMe {
+
+}
+
+/*********************************************************************
+MOBILE
+*********************************************************************/
+
+/* mobile */
+@media only screen and (max-width: 1300px), (max-height: 1000px) {
+
+	footer {
+		visibility: hidden; /* hide */
+	}
+
+	#menuBtn {
+		visibility: hidden; /* hide, use hamburger menu for mobile */
+	}
+
+	#conversationContainer {
+		width: 90%;
+		height: 100%;
+		left: 5%;
+		top: 20px;
+	}
+
+	#conversationContainer #title {
+		font-size: 24px;
+	}
+
+	#dialogue {
+		padding: 0px 10px;
+		margin: 0;
+		max-height: 50%;
+	}
+
+	#dialogue p {
+		font-size: 15px;f
+	}
+
+	.optionContainer {
+		width: 100%;
+		display: inline-block;
+		vertical-align: bottom;
+		position: absolute;
+		bottom: 30px;
+	}
+
+	.optionContainer span {
+		width: 100%;
+		border-width: 3px;
+		border-radius: 20px;
+		border-style: solid;
+		backdrop-filter: blur(20px);
+		padding: 0;
+		margin: 5px 0;
+	}
+
+	.optionContainer span h3 {
+		font-size: 20px;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		margin-top: 10px;
+	}
+
+	.optionContainer span p {
+		font-size: 15px;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 5px;
+	}
 
 }
 
