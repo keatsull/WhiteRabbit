@@ -327,7 +327,7 @@ MOBILE
 		bottom: 30px;
 	}
 
-	.optionContainer span {
+	.optionContainer a {
 		width: 100%;
 		border-width: 3px;
 		border-radius: 20px;
@@ -337,7 +337,7 @@ MOBILE
 		margin: 5px 0;
 	}
 
-	.optionContainer span h3 {
+	.optionContainer a h3 {
 		font-size: 20px;
 		text-align: center;
 		padding: 0;
@@ -345,7 +345,7 @@ MOBILE
 		margin-top: 10px;
 	}
 
-	.optionContainer span p {
+	.optionContainer a p {
 		font-size: 15px;
 		padding: 0;
 		margin: 0;
