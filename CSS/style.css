@@ -34,7 +34,7 @@ body {
 	position: fixed;
 	margin: 0 auto;
 	z-index: -100;
-	background: url('../images/testbackground.png') no-repeat center center fixed; /*replace me with wanted background*/
+	background: url('../images/shop_interior1.png') no-repeat center center fixed; /*replace me with wanted background*/
 	background-size: cover;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
@@ -123,30 +123,30 @@ Character Divs
 }*/
 
 .characterContainer span:nth-child(1) {
-	background-image: url('../images/angry.png'); /*replace me with character*/
+	background-image: url('../images/Sora2.png'); /*replace me with character*/
 }
 
 /* Second Character of characters on screen */
 .characterContainer span:nth-child(2) {
-	background-image: url('../images/angry.png'); /*replace me with character*/
+	background-image: url('../images/Sora2.png'); /*replace me with character*/
 
 }
 
 /* Third Character of characters on screen */
 .characterContainer span:nth-child(3) {
-	background-image: url('../images/angry.png'); /*replace me with character*/
+	background-image: url('../images/Sora2.png'); /*replace me with character*/
 
 }
 
 /* Fourth Character of characters on screen */
 .characterContainer span:nth-child(4) {
-	background-image: url('../images/angry.png'); /*replace me with character*/
+	background-image: url('../images/Sora2.png'); /*replace me with character*/
 
 }
 
 /* Fifth Character of characters on screen */
 .characterContainer span:nth-child(5) {
-	background-image: url('../images/angry.png'); /*replace me with character*/
+	background-image: url('../images/Sora2.png'); /*replace me with character*/
 
 }
 
