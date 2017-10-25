@@ -75,13 +75,15 @@ NAVIGATION
     -moz-transition: color 0.3s;
     -o-transition: color 0.3s;
     transition: color 0.3s;
+    outline: 0;
 }
 
-#menuBtn :visited {
+#menuBtn:active {
 	color: inherit;
+	outline: 0;
 }
 
-#menuBtn :hover {
+#menuBtn:hover {
 	color: white;
 }
 
@@ -197,6 +199,51 @@ Conversation Divs
 	color: white;
 }
 
+#dialogueBtnContainer {
+	height: 40px;
+	margin-top: 10px;
+}
+
+#dialogueBtnContainer button {
+	font-family: 'Rajdhani';
+	font-weight: 700;
+	font-size: 30px;
+	text-align: center;
+	vertical-align: text-top;
+	color: rgba(255, 255, 255, 0.7);
+	-webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+    background: none;
+    border: none;
+    z-index: 100;
+    cursor: pointer;
+    -webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	outline: 0;
+}
+
+#dialogueBtnContainer button:hover {
+	color: white;
+}
+
+#dialogueBtnContainer button:active {
+	outline: 0;
+}
+
+#nextBtn {
+    float: right;
+}
+
+
+
+#prevBtn {
+    float: left;;
+}
+
 .optionContainer {
 	width: 100%;
 	display: flex;
@@ -210,8 +257,7 @@ Conversation Divs
 
 .optionContainer a {
 	float: left;
-	max-width: 100%;
-	min-width: 25%;
+	width: 100%;
 	border-width: 3px;
 	border-radius: 20px;
 	border-style: solid;
@@ -317,6 +363,16 @@ MOBILE
 
 	.dialogue p {
 		font-size: 15px;f
+	}
+
+	#dialogueBtnContainer {
+		height: 30px;
+		margin-bottom: 5px;
+	}
+
+	#dialogueBtnContainer button {
+		font-size: 20px;
+		
 	}
 
 	.optionContainer {

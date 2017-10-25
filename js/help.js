@@ -25,7 +25,7 @@ $(document).ready(function(e){
 
     	var newCount = $('#helpOptions').children().length
 
-    	if (newCount > 0) {
+    	if (newCount > 0 && $('.optionContainer').css("visibility") == "visible") {
     		$('#optionsTitle').css("visibility", "visible");
     	} else {
     		$('#optionsTitle').css("visibility", "hidden");
