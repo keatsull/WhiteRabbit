@@ -51,40 +51,39 @@ footer {
 	z-index: 100;
 }
 
+/*********************************************************************
+NAVIGATION
+*********************************************************************/
 #menuBtn {
-	padding-right: 20px;
 	visibility: visible;
-}
-
-#menuBtn a {
-	text-decoration: none;
+	background: none;
+	border: none;
+	position: fixed;
+	right: 20px;
+	bottom:5px;
+    opacity: 1;
+    cursor:pointer;
+    height: 60px;
+    width: 120px;
+    font-family: 'Rajdhani';
+	font-weight: 700;
+	font-size: 40px;
+	text-align: center;
+	vertical-align: text-top;
 	color: rgba(255, 255, 255, 0.7);
 	-webkit-transition: color 0.3s;
     -moz-transition: color 0.3s;
     -o-transition: color 0.3s;
     transition: color 0.3s;
-    opacity: 1;
 }
 
-#menuBtn a:visited {
+#menuBtn :visited {
 	color: inherit;
 }
 
-#menuBtn a:hover {
+#menuBtn :hover {
 	color: white;
 }
-
-#menuBtn h3 {
-	font-family: 'Rajdhani';
-	font-weight: 700;
-	font-size: 40px;
-	text-align: right;
-	color: rgba(255, 255, 255, 0.7);
-}
-
-/*********************************************************************
-NAVIGATION
-*********************************************************************/
 
 /* TAFARA insert CSS in here dont forget to create a branch git branch NovelNav, git checkout NovelNav */
 
@@ -155,7 +154,7 @@ Character Divs
 /*********************************************************************
 Conversation Divs
 *********************************************************************/
-#conversationContainer {
+.conversationContainer {
 	width: 80%;
 	height: 50%;
 	position: fixed;
@@ -164,10 +163,9 @@ Conversation Divs
 	/*background-color: rgba(255, 255, 255, 0.2);*/
 	display: inline-block;
 	vertical-align: top;
-	opacity: 0;
 }
 
-#conversationContainer #title {
+.conversationContainer #title {
 	font-family: 'Rajdhani';
 	font-weight: 700;
 	font-size: 50px;
@@ -176,9 +174,10 @@ Conversation Divs
 	/*text-transform: uppercase;*/
 	-webkit-text-stroke-width: 1px;
    	-webkit-text-stroke-color: black;
+   	opacity: 0;
 }
 
-#dialogue {
+.dialogue {
 	border-color: rgba(255, 255, 255, 1);
 	border-width: 3px;
 	border-radius: 20px;
@@ -187,9 +186,10 @@ Conversation Divs
 	backdrop-filter: blur(20px); /* not working with all browsers */
 	padding: 0px 20px;
 	vertical-align: top;
+	opacity: 0;
 }
 
-#dialogue p {
+.dialogue p {
 	font-family: 'Rajdhani';
 	font-weight: 400;
 	font-size: 25px;
@@ -239,7 +239,7 @@ Conversation Divs
 
 .optionContainer a:nth-child(1) {
 	border-color: rgba(244, 67, 54, 1);
-	background-color: rgba(244, 67, 54, 0.3);
+	background-color: rgba(244, 67, 54, 0.7);
 	-webkit-transition: background-color 1s;
     -moz-transition: background-color 1s;
     -o-transition: background-color 1s;
@@ -252,7 +252,7 @@ Conversation Divs
 
 .optionContainer a:nth-child(2) {
 	border-color: rgba(33, 150, 243, 1);
-	background-color: rgba(33, 150, 243, 0.3);
+	background-color: rgba(33, 150, 243, 0.7);
 	-webkit-transition: background-color 1s;
     -moz-transition: background-color 1s;
     -o-transition: background-color 1s;
@@ -265,7 +265,7 @@ Conversation Divs
 
 .optionContainer a:nth-child(3) {
 	border-color: rgba(76, 175, 80, 1);
-	background-color: rgba(76, 175, 80, 0.3);
+	background-color: rgba(76, 175, 80, 0.7);
 	-webkit-transition: background-color 1s;
     -moz-transition: background-color 1s;
     -o-transition: background-color 1s;
@@ -298,24 +298,24 @@ MOBILE
 		visibility: hidden; /* hide, use hamburger menu for mobile */
 	}
 
-	#conversationContainer {
+	.conversationContainer {
 		width: 90%;
 		height: 100%;
 		left: 5%;
-		top: 20px;
+		top: 40px;
 	}
 
-	#conversationContainer #title {
+	.conversationContainer #title {
 		font-size: 24px;
 	}
 
-	#dialogue {
+	.dialogue {
 		padding: 0px 10px;
 		margin: 0;
 		max-height: 50%;
 	}
 
-	#dialogue p {
+	.dialogue p {
 		font-size: 15px;f
 	}
 
@@ -324,7 +324,7 @@ MOBILE
 		display: inline-block;
 		vertical-align: bottom;
 		position: absolute;
-		bottom: 30px;
+		bottom: 50px;
 	}
 
 	.optionContainer a {
@@ -353,6 +353,85 @@ MOBILE
 	}
 
 }
+/*********************************************************************
+HELP OVERLAY
+*********************************************************************/
+#helpOverlay {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	background-color: rgba(0, 0, 0, 0.9);
+	display: block;
+	z-index: 1000;
+	margin: 0 auto;
+	position: fixed;
+}
+
+#closeBtn {
+	background: url('../images/btns/close-btn.png') no-repeat;
+	background-size: contain;
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#helpDialogue {
+	background-color: rgba(0, 0, 0, 1);
+}
+
+#helpDialogue p {
+	font-family: 'Rajdhani';
+	font-weight: 400;
+	font-size: 35px;
+	text-align: left;
+	color: white;
+}
+
+#helpDialogue p span {
+	color: rgb(33, 150, 243);
+}
+
+.conversationContainer #dialogueTitle {
+	font-family: 'Rajdhani';
+	font-weight: 700;
+	font-size: 50px;
+	text-align: left;
+	color: rgb(244, 67, 54);
+}
+
+#helpOptions a {
+	pointer-events: none;
+	width: 100%;
+}
+
+#optionsTitle {
+	font-family: 'Rajdhani';
+	font-weight: 700;
+	font-size: 50px;
+	text-align: left;
+	color: rgb(244, 67, 54);
+	visibility: hidden;
+	margin-top: 30px;
+	margin-bottom: -10px;
+}
+
+#helpOptions a:nth-child(1) {
+	background-color: rgba(244, 67, 54, 1);
+}
+
+#helpOptions a:nth-child(2) {
+	background-color: rgba(33, 150, 243, 1);
+}
+
+#helpOptions a:nth-child(3) {
+	background-color: rgba(76, 175, 80, 1);
+}
+
 /*********************************************************************
 Animations
 *********************************************************************/

@@ -8,11 +8,34 @@
 	<title>Fate Denier by Team White Rabbit</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/fadeIn.js"></script>
+	<script src="js/help.js"></script>
 </head>
 
 <body>
 	<!-- used for background image so we can use nice transition effects -->
 	<div id="backgroundImg"></div>
+
+	<!-- Help Overlay -->
+	<div id="helpOverlay">
+		<button id="closeBtn"></button>
+		<div class="conversationContainer">
+
+			<!-- Help dialoge -->
+			<div id="dialogueTitle">1. DIALOGUE</div>
+			<div class="dialogue" id="helpDialogue">
+				<p>Dialogue, Scroll through using the <span>next</span> and <span>prev</span> buttons. <br />
+				Use the <span>Dialogue Choices</span> to continue the story.</p>
+			</div> 
+
+			<div id="optionsTitle">2. DIALOGUE OPTIONS</div>
+
+			<div class="optionContainer" id="helpOptions">
+			</div>
+
+			
+
+		</div>
+	</div>
 
 	<!-- Enter characters in here using <span></span> -->
 	<div class="characterContainer">
@@ -21,11 +44,11 @@
 	</div>
 	
 	<!-- Conversation Container -->
-	<div id="conversationContainer">
+	<div class="conversationContainer">
 
 		<!-- Dialogue Container -->
 		<div id="title">Character:</div>
-		<div id="dialogue">
+		<div class="dialogue">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
 		</div>
 
@@ -33,19 +56,19 @@
 		<div class="optionContainer">
 			<!-- 0 - 3 options max add <a href="#"></a> to add option, <h3></h3> for title use <p></p> for text, use class="disableMe" to disable an option -->
 			<a href="#"><h3>Option 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p></a>
-			<a href="#" class="disableMe"><h3>Option 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p></a>
+			<a href="#"><h3>Option 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p></a>
+			
 		</div>
 		
 	</div>
-	
-
 	
 </body>
 
 
 <!-- temp -->
 <footer>
-	<div id="menuBtn"><h3><a href="#">MENU</a></h3></div>
+	<!--<div id="menuBtn"><h3><a href="#">MENU</a></h3></div>-->
+	<button id="menuBtn">MENU</button>
 </footer>
 
  
