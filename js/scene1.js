@@ -3,11 +3,7 @@ $(document).ready(function(e) {
 	//This is the file that will store all the text dialogues and character
 	//names for use in the corresponding scene. 
 
-	//Starts here
-	//Declare the container for displayed dialogue and choices(when applicable)
 	let currentDialogue = '';
-	let currentChoiceA = '';
-	let currentChoiceB = '';
 	
 	//To iterate through the code. 
 	let i = 0;
@@ -17,84 +13,86 @@ $(document).ready(function(e) {
 		showUI(".optionContainer", false);
 	}
 
-	var storyLineNum = 0; //current storyline
-	var decisionNum = 0; //current descision
-	var responseNum = 0; //current response
-
-	//For decision's to determine the outcomes. 
-	let decisionState = 0;
-
 	//Story Arrays
-	//These are arrays that contain dialogue for the scene
+	//replace, delete and add more as necessary
+	//add more using ,''
+	let storyLine = [
+		'Ahahaha, So much crazy talk.',
+		'The professor here has one of those things, and the whole lecture hall hasnt mentioned a word of it!',
+		'Like it isnt even there!', 
+		'So, anyway, Whats the deal Takashi, have you talked to her yet?'
+	];
 
-	//Opening lines, Akira talking to Takashi over txt
-	let storyLineA = ['Ahahaha, So much crazy talk.',
-	'The professor here has one of those things, and the whole lecture hall hasnt mentioned a word of it!',
-	'Like it isnt even there!', 'So, anyway, Whats the deal Takashi, have you talked to her yet?'];
+	//make sure too associate with storyline
+	let charAndLocation = [
+		'Sora, at Work',
+		'Sora, at Work',
+		'Boss, outside Work',
+		'Boss, outside Work'
+	];
 
-	//First dialogue option, Whether he is going to talk to Sora
-	let decisionA = ['[1] No,not yet', '[2] Actually, todays the day!'];
+	//add more using ,''
+	let decision = [
+		'No,not yet', 
+		'Actually, todays the day!'
+	];
 
-	//Response's based on decisionA
-	let responseA = ['No, Not yet. Im just waiting for the right time', 
-	'The "right time?"', 'You just have to talked to her right away',
-	'Be confident about yourself thats it.', 'Confidence is overrated'];
-
-	let responseB = ['Actually, todays the day! Next time I see her Ill say hi.',
-	'Thats it!', 'If you walk up to her with that sort of confidence you might just stand a chance.',
-	'"Might just stand a chance?", thanks for the words of support Akira.', 'Anytime'];
-
-	//Standard Conversation with customer
-	let storyLineB = ['Oh! Hey, just this?', 'Yes,Please','Suddenly, strange animated strings attached to the customer warp into appearance, wriggling in the air.',
-	'Should Takashi warn the customer?'];
-
-	//Decision to warn customer
-	let decisionB = ['Warn the customer', 'Ignore the strings'];
-
-	//Response's based on decisionB
-	let responseC = ['Sir! You have something on your back!', 'Excuse me? Look, I dont have time for games, my bus arrives in a minute.'];
-
-	let responseD = ['Th-Thatll be 295 Yen', 'Thank you'];
-
-	//Customer Leaves, See's Sora
-	let storyLineC = ['The Customer exited the Store'];
-
-	var currentStorylines = [storyLineA, storyLineB, storyLineC]; //add if there is more
-	var currentResponses = [responseA, responseB, responseC, responseD];
-	var currentDecisions = [decisionA, decisionB];
-
-
-	//Starting the code, runs linearly.
+	//links for decision, likely only use first 2
+	let link1 = '#';
+	let link2 = '#';
+	let link3 = '#';
+	let link4 = '#';
 	
 	//This is the click event that changes the dialogue when the user clicks.
-	$("#nextBtn").click(function() {nextText();}); 
-	$("#prevBtn").click(function() {prevText();}); 
+	$("#nextBtn").click(function() {nextText(); newEvent();}); 
+	$("#prevBtn").click(function() {prevText(); newEvent();}); 
 	
 	//Populates the inital dialogue
-	currentDialogue = currentStorylines[storyLineNum][i];
-	$("#charDialogue").html(currentDialogue);
-	
+	if (i < storyLine.length && i < charAndLocation.length) {
+		currentDialogue = storyLine[i];
+		$('#title').html(charAndLocation[i]);
+		$("#charDialogue").html(currentDialogue);
+	}
 
+	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
+	function newEvent() {
+
+		//use the value i to set when a background &/or character should change
+		if (i <= 2) {
+			changeCharacter('url("./images/Sora2.png")');
+			changeBackground('url("./images/bgs/shop_interior1.png")');
+		} else {
+			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeBackground('url("./images/bgs/testbackground.png")');
+		}
+	}
+	
+	//previous dialogue
 	function prevText() {
 
-		if (i < currentStorylines[storyLineNum].length && i >= 0) {
+		if (i < storyLine[i].length && i >= 0) {
 			//console.log("Here");
 
 			if (i >= 0) {
 				i--;
 			}
 
+			//used for normal
+			var count = storyLine.length; 
+			var count2 = charAndLocation.length;
+			currentDialogue = storyLine[i];
+
 			//enable next on decisions
-			if (i < currentStorylines[storyLineNum].length) {
+			if (i < count) {
 				enableBtn("#nextBtn", true);
 			}
 			
 			//This is the full text for this part of the code. Will cycle through the first array. 
-			if(i < currentStorylines[storyLineNum].length) {				
-				currentDialogue = currentDialogue = currentStorylines[storyLineNum][i];
+			if(i < count && i < count2) {				
 				$("#charDialogue").html(currentDialogue);
+				$('#title').html(charAndLocation[i]);
 
-				showUI(".optionContainer", false);
+				showUI(".conversationContainer .optionContainer", false);
 			}
 
 			if (i == 0) {
@@ -113,30 +111,44 @@ $(document).ready(function(e) {
 				enableBtn("#prevBtn", true);
 			}
 
-			if(i < currentStorylines[storyLineNum].length) {				
-				currentDialogue = currentDialogue = currentStorylines[storyLineNum][i];
+			//used for normal
+			var count = storyLine.length;
+			var count2 = charAndLocation.length;
+			currentDialogue = storyLine[i];
+
+			if(i < count && i < count2 ) {				
 				$("#charDialogue").html(currentDialogue);
+				$('#title').html(charAndLocation[i]);
 			}
 
-			if (i == currentStorylines[storyLineNum].length-1) {
-				$('.optionContainer').html(''); //clear
-				showUI(".optionContainer", true);
+			if (i == count-1) {
+				showUI(".conversationContainer .optionContainer", true);
+				$('.conversationContainer .optionContainer').html(''); //clear
 				//Populates the choices on screen.
-				for(var j = 0; j < currentDecisions[decisionNum].length; j++) {
-					var n = j+1
-					$('.optionContainer').append('<a href="#"><h3>Option '+n+'</h3><p>'+currentDecisions[decisionNum][j]+'</p></a>');
-				}
 
+				for(var j = 0; j < decision.length; j++) {
+					var n = j+1;
+
+					//links
+					var link = '#';
+					if (j == 0) { link = link1; }
+					if (j == 1) { link = link2; }
+					if (j == 2) { link = link3; }
+					if (j == 3) { link = link4; }
+					
+					$('.conversationContainer .optionContainer').append('<a href="'+link+'""><h3>Option '+n+'</h3><p>'+decision[j]+'</p></a>');
+				} 
 				enableBtn("#nextBtn", false);
 			}
 
-			if (i < currentStorylines[storyLineNum].length-1) {
+			
+
+			if (i < count-1) {
 				i++;
 			}
-
 			
 	}
-	
+
 	function enableBtn(button, bool) {
 		if (!bool) {
 			$(button).css({
@@ -160,5 +172,15 @@ $(document).ready(function(e) {
 			$(div).css("visibility", "hidden");
 		}
 	}
+
+	//changes character, also set which file to change, default use 1
+	function changeCharacter(file) {
+		$('.characterContainer span:nth-child(1)').css("background-image", file) 
+	}
+
+	function changeBackground(file) {
+		$('#backgroundImg').css("background-image", file);
+	}
+
 
 });

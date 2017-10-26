@@ -15,12 +15,12 @@ $(document).ready(function(e){
 
     	$('#helpOptions').html('');  //empty
 
-    	var count = $('.optionContainer').children().length
+    	var count = $('.conversationContainer .optionContainer').children().length
 
     	for (var i = 0; i < count; i++) {
     		var x = i+1
     		var str = x.toString()
-    		$('#helpOptions').append('<a href="#"><h3>Choice Option '+str+'</h3>'); 
+    		$('#helpOptions').append('<a href=""><h3>Choice Option '+str+'</h3></a>'); 
     	}
 
     	var newCount = $('#helpOptions').children().length
