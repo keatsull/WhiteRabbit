@@ -43,12 +43,16 @@ $(document).ready(function(e) {
 	let link3 = '#';
 	let link4 = '#';
 
+	//First Images here
+	changeCharacter('url("./images/characters/Customer_animated.gif")');
+	changeBackground('url("./images/bgs/shop_interior1.png")');
+
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
 		//use the value i to set when a background &/or character should change
 		if (i <= 2) {
-			changeCharacter('url("./images/Sora2.png")');
+			changeCharacter('url("./images/characters/Customer_animated.gif")');
 			changeBackground('url("./images/bgs/shop_interior1.png")');
 		} else {
 			changeCharacter('url("./images/characters/BossFinal.png")');
