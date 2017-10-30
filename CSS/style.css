@@ -84,6 +84,7 @@ NAVIGATION
     -o-transition: color 0.3s;
     transition: color 0.3s;
     outline: 0;
+    -webkit-text-stroke: 1px black;
 }
 
 #menuBtn:active {
@@ -531,6 +532,42 @@ MOBILE
 
 /* mobile */
 @media only screen and (max-width: 1300px), (max-height: 1000px) {
+	/* Dialogue and Options */
+	.conversationContainer #title {
+		font-size: 34px;
+	}
+
+	.dialogue p {
+		font-size: 25px;f
+	}
+
+	#dialogueBtnContainer button {
+		font-size: 30px;
+	}
+
+	.optionContainer a h3 {
+		font-size: 30px;
+	}
+
+	.optionContainer a p {
+		font-size: 25px;
+	}
+
+	/* help overlay */
+	.conversationContainer #dialogueTitle {
+		font-size: 34px;
+	}
+
+	#optionsTitle {
+		font-size: 34px;
+	}
+
+	#helpDialogue p {
+		font-size: 25px;
+	}
+}
+
+@media only screen and (max-width: 500px), (max-height: 800px) {
 
 	/* MENUS */
 	footer {
@@ -555,7 +592,7 @@ MOBILE
 		width: 90%;
 		height: 100%;
 		left: 5%;
-		top: 40px;
+		top: 80px;
 	}
 
 	.conversationContainer #title {
@@ -587,7 +624,7 @@ MOBILE
 		display: inline-block;
 		vertical-align: bottom;
 		position: absolute;
-		bottom: 50px;
+		bottom: 100px;
 	}
 
 	.optionContainer a {
@@ -618,6 +655,7 @@ MOBILE
 	/* help overlay */
 	.conversationContainer #dialogueTitle {
 		font-size: 24px;
+		margin-bottom: 10px;
 	}
 
 	#optionsTitle {

@@ -9,10 +9,9 @@ $(document).ready(function(e){
     $("#mobileMenuHelpBtn").click(function(){
         $('#helpOverlay').css("visibility", "visible");
         $('#helpOverlay').delay(0).animate({'opacity': '1'}, 300);
-        $('#mobileMenuContainer').delay(0).slideToggle(0, function() {
-            $('#mobileMenuOverlay').delay(0).animate({'opacity': '0'}, 300);
-            $('#mobileMenuOverlay').delay(0).css("visibility", "hidden");
-        });
+        $('#mobileMenuContainer').slideUp("fast", function() {});
+        $('#mobileMenuOverlay').delay(300).animate({'opacity': '0'}, 100);
+        $('#mobileMenuOverlay').delay(400).css("visibility", "hidden");
         getChoices();
     });
 
