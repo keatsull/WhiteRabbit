@@ -51,6 +51,14 @@ footer {
 	z-index: 100;
 }
 
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	z-index: 100;
+}
+
 /*********************************************************************
 NAVIGATION
 *********************************************************************/
@@ -86,6 +94,8 @@ NAVIGATION
 #menuBtn:hover {
 	color: white;
 }
+
+button:focus {outline:0;}
 
 /* TAFARA insert CSS in here dont forget to create a branch git branch NovelNav, git checkout NovelNav */
 
@@ -332,86 +342,6 @@ Conversation Divs
 }
 
 /*********************************************************************
-MOBILE
-*********************************************************************/
-
-/* mobile */
-@media only screen and (max-width: 1300px), (max-height: 1000px) {
-
-	footer {
-		visibility: hidden; /* hide */
-	}
-
-	#menuBtn {
-		visibility: hidden; /* hide, use hamburger menu for mobile */
-	}
-
-	.conversationContainer {
-		width: 90%;
-		height: 100%;
-		left: 5%;
-		top: 40px;
-	}
-
-	.conversationContainer #title {
-		font-size: 24px;
-	}
-
-	.dialogue {
-		padding: 0px 10px;
-		margin: 0;
-		max-height: 50%;
-	}
-
-	.dialogue p {
-		font-size: 15px;f
-	}
-
-	#dialogueBtnContainer {
-		height: 30px;
-		margin-bottom: 5px;
-	}
-
-	#dialogueBtnContainer button {
-		font-size: 20px;
-		
-	}
-
-	.optionContainer {
-		width: 100%;
-		display: inline-block;
-		vertical-align: bottom;
-		position: absolute;
-		bottom: 50px;
-	}
-
-	.optionContainer a {
-		width: 100%;
-		border-width: 3px;
-		border-radius: 20px;
-		border-style: solid;
-		backdrop-filter: blur(20px);
-		padding: 0;
-		margin: 5px 0;
-	}
-
-	.optionContainer a h3 {
-		font-size: 20px;
-		text-align: center;
-		padding: 0;
-		margin: 0;
-		margin-top: 10px;
-	}
-
-	.optionContainer a p {
-		font-size: 15px;
-		padding: 0;
-		margin: 0;
-		margin-bottom: 5px;
-	}
-
-}
-/*********************************************************************
 HELP OVERLAY
 *********************************************************************/
 #helpOverlay {
@@ -497,3 +427,209 @@ Animations
 /*********************************************************************
 OTHER
 *********************************************************************/
+
+/*********************************************************************
+MOBILE
+*********************************************************************/
+/* mobile nav */
+#mobileMenuBtn {
+	visibility: hidden;
+	background: url('../images/btns/hamburger-wht.png') no-repeat;
+	background-size: contain;
+	float:right;
+	margin-right: 10px;
+	width: 50px;
+	height: 33px;
+	margin-top: 20px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+#mobileMenuOverlay {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	background-color: rgba(0, 0, 0, 0.9);
+	display: block;
+	z-index: 1000;
+	margin: 0 auto;
+	position: fixed;
+}
+
+#mobileCloseBtn {
+	background: url('../images/btns/close-btn.png') no-repeat;
+	background-size: contain;
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#mobileMenuContainer {
+	margin: 0 auto;
+	width: 100%;
+	height: 80%;
+	top: 20%;
+	text-align: center;
+	position: absolute;
+}
+
+#mobileMenuContainer ul {
+	list-style-type:none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+#mobileMenuContainer li {
+    display:block;
+    vertical-align: top;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 10px; 
+}
+
+#mobileMenuContainer a {
+	font-family: 'Rajdhani', sans-serif;;
+	font-weight: 700;
+	font-size: 40px;
+	color: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+	-webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+#mobileMenuContainer button {
+	font-family: 'Rajdhani', sans-serif;;
+	font-weight: 700;
+	font-size: 40px;
+	color: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+	-webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+    background: none;
+    border: none;
+ 	cursor: pointer;
+}
+
+#mobileMenuContainer button:hover {
+	color:white;
+}
+
+#mobileMenuContainer a:hover {
+	color:white;
+}
+
+/* mobile */
+@media only screen and (max-width: 1300px), (max-height: 1000px) {
+
+	/* MENUS */
+	footer {
+		visibility: hidden; /* hide */
+	}
+
+	#menuBtn {
+		visibility: hidden; /* hide, use hamburger menu for mobile */
+	}
+
+	header {
+		visibility: visible;
+	}
+
+	#mobileMenuBtn {
+		visibility: visible;
+	}
+
+
+	/* Dialogue and Options */
+	.conversationContainer {
+		width: 90%;
+		height: 100%;
+		left: 5%;
+		top: 40px;
+	}
+
+	.conversationContainer #title {
+		font-size: 24px;
+	}
+
+	.dialogue {
+		padding: 0px 10px;
+		margin: 0;
+		max-height: 50%;
+	}
+
+	.dialogue p {
+		font-size: 15px;f
+	}
+
+	#dialogueBtnContainer {
+		height: 30px;
+		margin-bottom: 5px;
+	}
+
+	#dialogueBtnContainer button {
+		font-size: 20px;
+		
+	}
+
+	.optionContainer {
+		width: 100%;
+		display: inline-block;
+		vertical-align: bottom;
+		position: absolute;
+		bottom: 50px;
+	}
+
+	.optionContainer a {
+		width: 100%;
+		border-width: 3px;
+		border-radius: 20px;
+		border-style: solid;
+		backdrop-filter: blur(20px);
+		padding: 0;
+		margin: 5px 0;
+	}
+
+	.optionContainer a h3 {
+		font-size: 20px;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		margin-top: 10px;
+	}
+
+	.optionContainer a p {
+		font-size: 15px;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 5px;
+	}
+
+	/* help overlay */
+	.conversationContainer #dialogueTitle {
+		font-size: 24px;
+	}
+
+	#optionsTitle {
+		font-size: 24px;
+		display: inline-block;
+		vertical-align: bottom;
+		position: absolute;
+		bottom: 200px;
+	}
+
+	#helpDialogue p {
+		font-size: 15px;
+	}
+
+}

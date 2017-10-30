@@ -9,12 +9,29 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/fadeIn.js"></script>
 	<script src="js/help.js"></script>
+	<script src="js/mobilemenu.js"></script>
 	<script src="js/scene1.js"></script>
 </head>
+
+<header>
+	<button id="mobileMenuBtn"></button>
+</header>
 
 <body>
 	<!-- used for background image so we can use nice transition effects -->
 	<div id="backgroundImg"></div>
+
+	<!-- Mobile Menu -->
+	<div id="mobileMenuOverlay">
+		<button id="mobileCloseBtn"></button>
+		<div id="mobileMenuContainer">
+			<ul>
+				<li><a href="#">RESTART</a></li>
+				<li><a href="#">EXIT GAME</a></li>
+				<li><button id="mobileMenuHelpBtn">HELP</button></li>
+			</ul>
+		</div>
+	</div>
 
 	<!-- Help Overlay -->
 	<div id="helpOverlay">
@@ -28,8 +45,8 @@
 				Use the <span>Dialogue Choices</span> to continue the story.</p>
 			</div> 
 
+			
 			<div id="optionsTitle">2. DIALOGUE OPTIONS</div>
-
 			<div class="optionContainer" id="helpOptions">
 			</div>
 
@@ -62,7 +79,7 @@
 		<!-- Options Container -->
 		<div class="optionContainer">
 			<!-- 0 - 3 options max add <a href="#"></a> to add option, <h3></h3> for title use <p></p> for text, use class="disableMe" to disable an option -->
-			<!--<span id="optionOne"><h3>Option 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p></span>
+			<!--<a href="" id="optionOne"><h3>Option 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p></a>
 			<span id="optionTwo"><h3>Option 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p></span>
 			<span id="optionThree"><h3>Option 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p></span>-->
 			

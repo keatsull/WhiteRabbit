@@ -42,17 +42,6 @@ $(document).ready(function(e) {
 	let link2 = '#';
 	let link3 = '#';
 	let link4 = '#';
-	
-	//This is the click event that changes the dialogue when the user clicks.
-	$("#nextBtn").click(function() {nextText(); newEvent();}); 
-	$("#prevBtn").click(function() {prevText(); newEvent();}); 
-	
-	//Populates the inital dialogue
-	if (i < storyLine.length && i < charAndLocation.length) {
-		currentDialogue = storyLine[i];
-		$('#title').html(charAndLocation[i]);
-		$("#charDialogue").html(currentDialogue);
-	}
 
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
@@ -67,6 +56,19 @@ $(document).ready(function(e) {
 		}
 	}
 	
+	/************************ PROGRAMMERS ONLY **********************
+	****************************************************************/
+	//This is the click event that changes the dialogue when the user clicks.
+	$("#nextBtn").click(function() {nextText(); newEvent();}); 
+	$("#prevBtn").click(function() {prevText(); newEvent();}); 
+	
+	//Populates the inital dialogue
+	if (i < storyLine.length && i < charAndLocation.length) {
+		currentDialogue = storyLine[i];
+		$('#title').html(charAndLocation[i]);
+		$("#charDialogue").html(currentDialogue);
+	}
+
 	//previous dialogue
 	function prevText() {
 
@@ -181,6 +183,5 @@ $(document).ready(function(e) {
 	function changeBackground(file) {
 		$('#backgroundImg').css("background-image", file);
 	}
-
-
+	
 });

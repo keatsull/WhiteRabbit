@@ -6,6 +6,16 @@ $(document).ready(function(e){
         getChoices();
     });
 
+    $("#mobileMenuHelpBtn").click(function(){
+        $('#helpOverlay').css("visibility", "visible");
+        $('#helpOverlay').delay(0).animate({'opacity': '1'}, 300);
+        $('#mobileMenuContainer').delay(0).slideToggle(0, function() {
+            $('#mobileMenuOverlay').delay(0).animate({'opacity': '0'}, 300);
+            $('#mobileMenuOverlay').delay(0).css("visibility", "hidden");
+        });
+        getChoices();
+    });
+
     $("#closeBtn").click(function(){
         $('#helpOverlay').delay(0).animate({'opacity': '0'}, 300);
         $('#helpOverlay').delay(300).css("visibility", "hidden");
