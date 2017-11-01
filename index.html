@@ -12,20 +12,39 @@
 
 
 <body>
+	<!--Background container-->
 	<div id="backgroundImage"></div>
+
+	<!-- Title Card-->
 	<div id="logoImage"><img src="images/logos/title-wht.png"></img></div>
 
+	<!-- Links to the various pages, add links in the href to the right page -->
 	<h3 id = "startStory"><a href="novel.html">Start Game</a></h3>
 	<h3 id = "loadStory"><a href = "">Load Game</a></h3>
 	<h3 id = "achievements"><a href = "">Achievements</a></h3>
 	<h3 id =  "helpMenu"><a href = "">Help</a></h3>
 
+	<!--Team logo -->
 	<div id= "groupLogo"><img src = "images/logos/logo-wht.png"></img></div>
-
-	<audio autoplay loop >
+ 	
+ 	<!-- Opening music -->
+	<audio id = "bgMusic" autoplay loop >
 	<source src="audio/bg/titlemusic.mp3" type="audio/ogg">
-
 	</audio>
+
+	<script>
+
+		//Set this to false to turn off sound.  
+		let isSoundOn = true;
+
+		if(isSoundOn == true)
+		{
+			//Adjusts music volume, set the number from 0.0 to 1.0 to increase or decrease volume
+			var bgMusic = document.getElementById("bgMusic");
+			bgMusic.volume = 0.5;	
+
+		}
+	</script>
 </body>
 
 

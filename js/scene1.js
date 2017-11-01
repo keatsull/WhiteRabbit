@@ -182,5 +182,16 @@ $(document).ready(function(e) {
 		$('#backgroundImg').css("background-image", file);
 	}
 
+	//Set this to false to turn off sound.  
+	let isSoundOn = true;
+
+	if(isSoundOn == true)
+	{
+		//Adjusts music volume, set the number from 0.0 to 1.0 to increase or decrease volume
+		var bgMusic = document.getElementById("bgMusic");
+		bgMusic.volume = 0.5;	
+
+	}
+
 
 });
