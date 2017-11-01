@@ -1,6 +1,6 @@
 
 $(document).ready(function(e){
-    $("#menuBtn").click(function(){
+    $("#menuHelpBtn").click(function(){
     	$('#helpOverlay').css("visibility", "visible");
         $('#helpOverlay').delay(0).animate({'opacity': '1'}, 300);
         getChoices();

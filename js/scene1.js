@@ -58,10 +58,16 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/BossFinal.png")');
 			changeBackground('url("./images/bgs/testbackground.png")');
 		}
+
+		if (i == 3) {
+			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+			shakeScreen();
+		}
 	}
 	
 	/************************ PROGRAMMERS ONLY **********************
 	****************************************************************/
+
 	//This is the click event that changes the dialogue when the user clicks.
 	$("#nextBtn").click(function() {nextText(); newEvent();}); 
 	$("#prevBtn").click(function() {prevText(); newEvent();}); 
@@ -186,6 +192,22 @@ $(document).ready(function(e) {
 
 	function changeBackground(file) {
 		$('#backgroundImg').css("background-image", file);
+	}
+
+	//loop specifies weather audio keeps playing or not
+	function playAudio(file, loop) {
+		$('#audioContainer').html(''); //empty 
+		
+		if (loop) {
+			$('#audioContainer').html('<audio loop autoplay><source src='+file+' type="audio/mpeg"></audio>');
+		} else {
+			$('#audioContainer').html('<audio autoplay><source src='+file+' type="audio/mpeg"></audio>');
+		}
+	}
+
+	function shakeScreen() {
+		$('.conversationContainer').effect("shake", {times: 3}, 700);
+		$('.characterContainer').effect("shake", {times: 4}, 600);
 	}
 	
 });
