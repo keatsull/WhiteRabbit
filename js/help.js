@@ -1,4 +1,4 @@
-
+/* Created by Keaten Sullivan  */
 $(document).ready(function(e){
     $("#menuHelpBtn").click(function(){
     	$('#helpOverlay').css("visibility", "visible");

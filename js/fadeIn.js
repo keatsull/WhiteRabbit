@@ -1,3 +1,4 @@
+/* Created by Keaten Sullivan  */
 $(document).ready(function(e) {
 	$(document.body).delay(300).animate({'opacity': '1'}, 700);
 	$('.characterContainer').delay(500).animate({'opacity': '1'}, 700);

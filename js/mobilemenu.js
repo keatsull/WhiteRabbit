@@ -1,3 +1,4 @@
+/* Created by Keaten Sullivan  */
 $(document).ready(function(e){
 
 	$('#mobileMenuContainer').hide();
@@ -13,5 +14,13 @@ $(document).ready(function(e){
     	$('#mobileMenuContainer').slideUp("fast", function() {});
         $('#mobileMenuOverlay').delay(0).animate({'opacity': '0'}, 300);
         $('#mobileMenuOverlay').delay(300).css("visibility", "hidden");
+    });
+
+    $("#mobileMenuSaveBtn").click(function(){
+        saveGame(window.location.pathname);
+    });
+
+    $("#mobileMenuLoadBtn").click(function(){
+        loadGame()
     });
 });

@@ -1,12 +1,24 @@
+/* Created by Rhys Harrison & Keaten Sullivan, script Entered by Clifford Smith */
 $(document).ready(function(e) {
 
 	//This is the file that will store all the text dialogues and character
 	//names for use in the corresponding scene. 
 
-	let currentDialogue = '';
+	var currentDialogue = '';
 	
 	//To iterate through the code. 
-	let i = 0;
+	var i = 0;
+	var loadedGame = false;
+
+	//if loaded from previous save
+	if (getDidWeLoadGame() == true) {
+		i = getDialogueLocation();
+		console.log(i);
+		setDidWeLoadGame(false); //application now wont go through this function
+		loadedGame = true;
+	} else {
+		i = 0;
+	}
 
 	if (i == 0) {
 		enableBtn("#prevBtn", false);
@@ -50,6 +62,8 @@ $(document).ready(function(e) {
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
+		console.log(i);
+
 		//use the value i to set when a background &/or character should change
 		if (i <= 2) {
 			changeCharacter('url("./images/characters/Customer_animated.gif")');
@@ -73,17 +87,25 @@ $(document).ready(function(e) {
 	$("#prevBtn").click(function() {prevText(); newEvent();}); 
 	
 	//Populates the inital dialogue
-	if (i < storyLine.length && i < charAndLocation.length) {
-		currentDialogue = storyLine[i];
-		$('#title').html(charAndLocation[i]);
-		$("#charDialogue").html(currentDialogue);
+	if (loadedGame) {
+		nextText();
+		newEvent();
+		loadedGame = false;
+	} else {
+		if (i < storyLine.length && i < charAndLocation.length) {
+			currentDialogue = storyLine[i];
+			$('#title').html(charAndLocation[i]);
+			$("#charDialogue").html(currentDialogue);
+		}
 	}
+
+	
+	
 
 	//previous dialogue
 	function prevText() {
 
 		if (i < storyLine[i].length && i >= 0) {
-			//console.log("Here");
 
 			if (i >= 0) {
 				i--;
@@ -111,6 +133,8 @@ $(document).ready(function(e) {
 				enableBtn("#prevBtn", false);
 			} 
 			
+			//store i
+			storeDialogueLocation(i);
 
 		}
 	}
@@ -122,6 +146,9 @@ $(document).ready(function(e) {
 			if (i > 0) {
 				enableBtn("#prevBtn", true);
 			}
+
+			//store i
+			storeDialogueLocation(i);
 
 			//used for normal
 			var count = storyLine.length;
