@@ -182,7 +182,7 @@ $(document).ready(function(e) {
 		$('#backgroundImg').css("background-image", file);
 	}
 
-	//Set this to false to turn off sound.  
+	
 
 
 	if(isSoundOn == true)
