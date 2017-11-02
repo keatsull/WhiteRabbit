@@ -5,6 +5,7 @@
 <head>
 	<title>Fate Denier by Team White Rabbit</title>
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<script src = "js/global.js"></script>
 
 </head>
 
@@ -20,9 +21,14 @@
 
 	<!-- Links to the various pages, add links in the href to the right page -->
 	<h3 id = "startStory"><a href="novel.html">Start Game</a></h3>
+	</br>
 	<h3 id = "loadStory"><a href = "">Load Game</a></h3>
-	<h3 id = "achievements"><a href = "">Achievements</a></h3>
+	</br>
+	<h3 id = "achievements"><a href = "pages/achievements.html">Achievements</a></h3>
+	</br>
 	<h3 id =  "helpMenu"><a href = "">Help</a></h3>
+	</br>
+	<h3 id =  "extraMenu"><a href = "">Bonus Features</a></h3>
 
 	<!--Team logo -->
 	<div id= "groupLogo"><img src = "images/logos/logo-wht.png"></img></div>
@@ -35,7 +41,7 @@
 	<script>
 
 		//Set this to false to turn off sound.  
-		let isSoundOn = true;
+	
 
 		if(isSoundOn == true)
 		{
@@ -43,6 +49,11 @@
 			var bgMusic = document.getElementById("bgMusic");
 			bgMusic.volume = 0.5;	
 
+		}
+		else
+		{
+			var bgMusic = document.getElementById("bgMusic");
+			bgMusic.volume = 0.0;	
 		}
 	</script>
 </body>

@@ -183,7 +183,7 @@ $(document).ready(function(e) {
 	}
 
 	//Set this to false to turn off sound.  
-	let isSoundOn = true;
+
 
 	if(isSoundOn == true)
 	{
@@ -191,6 +191,11 @@ $(document).ready(function(e) {
 		var bgMusic = document.getElementById("bgMusic");
 		bgMusic.volume = 0.5;	
 
+	}
+	else
+	{
+		var bgMusic = document.getElementById("bgMusic");
+		bgMusic.volume = 0.0;	
 	}
 
 
