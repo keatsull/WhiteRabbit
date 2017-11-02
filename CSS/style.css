@@ -163,6 +163,30 @@ Character Divs
 
 }
 
+.computerContainer {
+	width: 80vw;
+    height: 80vw;
+    position: absolute;
+    bottom: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-image: url('../images/characters/computer.png');
+}
+
+.computer {
+	background: white;
+    width: 75vw;
+    height: 55vw;
+    left: 2.5vw;
+    bottom: 8vw;
+    position: absolute;
+    overflow-y: scroll;
+}
+
+.computerData {
+	
+}
 /* add more if we need more than 5 characters */
 
 /*********************************************************************
