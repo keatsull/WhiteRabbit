@@ -18,9 +18,10 @@ $(document).ready(function(e){
 
     $("#mobileMenuSaveBtn").click(function(){
         saveGame(window.location.pathname);
+        
     });
 
     $("#mobileMenuLoadBtn").click(function(){
-        loadGame()
+        loadGame();
     });
 });
