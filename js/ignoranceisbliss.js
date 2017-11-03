@@ -186,8 +186,8 @@ $(document).ready(function(e) {
 	];
 
 	//links for decision, likely only use first 2
-	let link1 = 'choice6.html';
-	let link2 = 'choice7.html';
+	let link1 = '#';
+	let link2 = '#';
 	let link3 = '#';
 	let link4 = '#';
 
@@ -316,7 +316,7 @@ $(document).ready(function(e) {
 					if (j == 2) { link = link3; }
 					if (j == 3) { link = link4; }
 					
-					$('.conversationContainer .optionContainer').append('<a href="'+link+'""><h3>Option '+n+'</h3><p>'+decision[j]+'</p></a>');
+					$('.conversationContainer .optionContainer').append('<a href="'+link+'"><h3>END</h3><p>'+decision[j]+'</p></a>');
 				} 
 				enableBtn("#nextBtn", false);
 			}
