@@ -18,6 +18,8 @@ function setDidWeLoadGame(bool) {
 function saveGame(loc) {
 	var local = loc.split('/').pop();
 	localStorage.setItem('lastSave', local);
+	storeDialogueLocation(returnLocation());
+
 	hideMobileMenu();
 	showOverlayText('SAVED GAME');
 	console.log(getSave());
@@ -48,7 +50,6 @@ function loadGame() {
 		showOverlayText('UNABLE TO LOAD GAME');
 	} else {
 		setDidWeLoadGame(true);
-
 		//reload website
 		window.location.href = getSave();
 	}

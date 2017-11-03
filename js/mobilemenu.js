@@ -13,7 +13,7 @@ $(document).ready(function(e){
 
     $("#mobileMenuSaveBtn").click(function(){
         saveGame(window.location.pathname);
-        
+        storeDialogueLocation(returnLocation());
     });
 
     $("#mobileMenuLoadBtn").click(function(){

@@ -1,4 +1,6 @@
 /* Created by Rhys Harrison & Keaten Sullivan, script Entered by Clifford Smith */
+var currentLocation = 0;
+
 $(document).ready(function(e) {
 
 	//This is the file that will store all the text dialogues and character
@@ -140,7 +142,7 @@ $(document).ready(function(e) {
 			} 
 			
 			//store i
-			storeDialogueLocation(i);
+			currentLocation = i;
 
 		}
 	}
@@ -163,8 +165,8 @@ $(document).ready(function(e) {
 			}
 
 			//store i for save/load purposes
-			storeDialogueLocation(i);
 			console.log(i);
+			currentLocation = i;
 
 			//used for normal
 			currentDialogue = storyLine[i];
@@ -246,3 +248,7 @@ $(document).ready(function(e) {
 	}
 	
 });
+
+function returnLocation() {
+		return currentLocation;
+}
