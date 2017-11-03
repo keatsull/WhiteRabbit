@@ -40,29 +40,132 @@ $(document).ready(function(e) {
 	//replace, delete and add more as necessary
 	//add more using ,''
 	let storyLine = [
-		'Ahahaha, So much crazy talk.',
-		'The professor here has one of those things, and the whole lecture hall hasnt mentioned a word of it!',
-		'Like it isnt even there!', 
-		'So, anyway, Whats the deal Takashi, have you talked to her yet?'
+'Excuse me? Look I don’t have time for games, my bus arrives in a minute.',
+
+		'The Customer exits the convenient store.',
+
+		'Am I losing my mind?', 
+
+		'TAKASHI notices a girl standing outside the convenient store beside a bus stop.',
+
+		'It’s her!',
+		'She always gets off the bus at this time',
+		'Okay Takashi, you’ve already told Akira You’d do it.',
+		'Now’s the time to make yourself known!',
+		'BOSS i’m going on break for 5 can you handle the front?',
+
+		'Bloody hell takashi! It’s a bit out of the blue',
+
+		'Sorry i really need 5 minutes',
+
+		'Ahh fine ',
+
+		'Takashi quickly leaves the store but as he exits a Strange animated strings warps into appearance',
+		'this time the string is attached to Takashi',
+
+		'Wah!',
+		'No, not now!',
+		'Not Again!',
+
+		'TAKASHI ARE YOU ALRIGHT!',
+
+		'ARRRrrr',
+		'dammit not again',
+ 		'I was so close to talking to that girl!',
+ 		'I’ll probably never have the courage again, why now!',
+		'this hasn’t happened since me and kira were kids',
+		'brings back bad memories all that time spent in hospital….',
+		'I should let Kira know.',
+
+		'“Beap beap beap”',
+
+		'Takashi pulls out phone',
+
+		'"Speak of the devil"',
+
+		'Message: Hey how did it go did you end up talking to her?',
+
+		'Message: Nah one of those things appeared on me again, i blacked out and woke up at home',
+
+		'Message: WHAT!!!!! I thought those days were over, didn’t the doctor say that you grew out of it? The string should no longer manifest on you.',
+
+		'Message: I’ve never trusted doctors, besides how could they know, there is no diagnosis for this type of thing',
+
+		'Message: Hmmm….well do you know how you got home?',
+
+		'Message: No I completely blacked out again',
+
+		'Message: well it can’t be helped maybe your boss helped you home.',
+
+		'Message: I’ll probably get fired this time he already sounded annoyed during my shift and now this….',
+
+		'Message: Don’t worry about it, things have always worked out anyways i’ve got some good news',
+		'i’ve found some information about what these manifestations are',
+ 		'go to this website I’ll send a link to your computer',
+
+		'Takashi goes to his computer to open the link it looks weird a format he is not use to seeing',
+
+		'Message: we can talk more after i’m finished at Uni',
+
+		'Message: Ok i’ll have a look now',
+
+		'Message: We’ll talk later'
+
 	];
 
 	//make sure too associate with storyline
 	let charAndLocation = [
-		'Sora, at Work',
-		'Sora, at Work',
-		'Boss, outside Work',
-		'Boss, outside Work'
+		'Customer',
+		'&nbsp',
+		'Takashi',
+		'&nbsp',
+		'Takashi',
+		'Takashi',
+		'Takashi',
+		'Takashi',
+		'Takashi',
+		'Boss',
+		'Takashi',
+		'Boss',
+		'&nbsp',
+		'&nbsp',
+		'Takashi',
+		'Takashi',
+		'Takashi',
+		'Boss',
+		'Takashi',
+		'Takashi',
+		'Takashi',
+		'Takashi',
+		'Takashi',
+		'Takashi',
+		'Takashi',
+		'&nbsp',
+		'&nbsp',
+		'Takashi',
+		'Kira',
+		'Takashi',
+		'Kira',
+		'Takashi',
+		'Kira',
+		'Takashi',
+		'Kira',
+		'Takashi',
+		'Kira',
+		'Kira',
+		'Takashi',
+		'Kira'
 	];
 
 	//add more using ,''
 	let decision = [
-		'No,not yet', 
-		'Actually, todays the day!'
+		'I feel so tired after what happened and i can’t miss my shift tomorrow \n i’ll have to just have a quick nap and meet up with kira and learn tabout what he found then, he will understand ',
+		'I am tired but i bet i can spend some time on researching what kira found'
 	];
 
 	//links for decision, likely only use first 2
-	let link1 = '#';
-	let link2 = '#';
+	let link1 = 'choice6.html';
+	let link2 = 'choice7.html';
 	let link3 = '#';
 	let link4 = '#';
 
