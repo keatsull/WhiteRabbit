@@ -256,7 +256,7 @@ let storyLine = [
 
 	//links for decision, likely only use first 2
 	let link1 = "choice8.html";
-	let link2 = '#';
+	let link2 = 'Conspiracy.html';
 	let link3 = '#';
 	let link4 = '#';
 
