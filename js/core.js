@@ -18,6 +18,8 @@ function setDidWeLoadGame(bool) {
 function saveGame(loc) {
 	var local = loc.split('/').pop();
 	localStorage.setItem('lastSave', local);
+	hideMobileMenu();
+	showOverlayText('SAVED GAME');
 	console.log(getSave());
 }
 
@@ -47,6 +49,13 @@ function loadGame() {
 	//reload website
 	window.location.href = getSave();
 
+}
+
+function showOverlayText(text) {
+	console.log(text);
+	$('#overlayText').show(0);
+	$('#overlayText').html('<h3>'+text+'</h3>');
+	$('#overlayText').delay(2000).hide(0);
 }
 
 

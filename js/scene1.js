@@ -16,6 +16,7 @@ $(document).ready(function(e) {
 		console.log(i);
 		setDidWeLoadGame(false); //application now wont go through this function
 		loadedGame = true;
+		showOverlayText('LOADED GAME');
 	} else {
 		i = 0;
 	}
@@ -55,14 +56,10 @@ $(document).ready(function(e) {
 	let link3 = '#';
 	let link4 = '#';
 
-	//First Images here
-	changeCharacter('url("./images/characters/Customer_animated.gif")');
-	changeBackground('url("./images/bgs/shop_interior1.png")');
-
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
-		console.log(i);
+		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
 		if (i <= 2) {
@@ -87,27 +84,28 @@ $(document).ready(function(e) {
 	$("#prevBtn").click(function() {prevText(); newEvent();}); 
 	
 	//Populates the inital dialogue
-	if (loadedGame) {
-		nextText();
-		newEvent();
-		loadedGame = false;
-	} else {
-		if (i < storyLine.length && i < charAndLocation.length) {
-			currentDialogue = storyLine[i];
-			$('#title').html(charAndLocation[i]);
-			$("#charDialogue").html(currentDialogue);
-		}
-	}
+	if (i < storyLine.length && i < charAndLocation.length) {
+		currentDialogue = storyLine[i];
+		$('#title').html(charAndLocation[i]);
+		$("#charDialogue").html(currentDialogue);
 
-	
+		if (loadedGame) {
+			if (i == storyLine.length-1) {
+				enableBtn("#nextBtn", false); //disable next button
+			}
+			loadedGame = false;
+		}
+
+		newEvent();
+	}
 	
 
 	//previous dialogue
 	function prevText() {
 
-		if (i < storyLine[i].length && i >= 0) {
+		if (i < storyLine.length && i >= 0) {
 
-			if (i >= 0) {
+			if (i > 0) {
 				i--;
 			}
 
@@ -142,17 +140,25 @@ $(document).ready(function(e) {
 	//Click event, will look in the code to find the next dialogue option. 
 	function nextText(){
 
+			//vars
+			var count = storyLine.length;
+			var count2 = charAndLocation.length;
+
+			//up i value
+			if (i < count-1) {
+				i++;
+			}
+
 			//enable previous button
 			if (i > 0) {
 				enableBtn("#prevBtn", true);
 			}
 
-			//store i
+			//store i for save/load purposes
 			storeDialogueLocation(i);
+			console.log(i);
 
 			//used for normal
-			var count = storyLine.length;
-			var count2 = charAndLocation.length;
 			currentDialogue = storyLine[i];
 
 			if(i < count && i < count2 ) {				
@@ -178,12 +184,6 @@ $(document).ready(function(e) {
 					$('.conversationContainer .optionContainer').append('<a href="'+link+'""><h3>Option '+n+'</h3><p>'+decision[j]+'</p></a>');
 				} 
 				enableBtn("#nextBtn", false);
-			}
-
-			
-
-			if (i < count-1) {
-				i++;
 			}
 			
 	}

@@ -453,6 +453,26 @@ Animations
 /*********************************************************************
 OTHER
 *********************************************************************/
+/* overlay text title */
+#overlayText {
+	height: 100px;
+	text-align: center;
+	z-index: 2000;
+	width: 100%;
+	position: fixed;
+	top: 35%;
+	vertical-align: middle;
+}
+
+#overlayText h3 {
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 700;
+	font-size: 60px;
+	color: white;
+	line-height: 100px;
+	line-height: 50px;
+	-webkit-text-stroke: 1px black;
+}
 
 /*********************************************************************
 MOBILE
@@ -521,7 +541,7 @@ MOBILE
 }
 
 #mobileMenuContainer a {
-	font-family: 'Rajdhani', sans-serif;;
+	font-family: 'Rajdhani', sans-serif;
 	font-weight: 700;
 	font-size: 40px;
 	color: rgba(255, 255, 255, 0.7);
@@ -533,7 +553,7 @@ MOBILE
 }
 
 #mobileMenuContainer button {
-	font-family: 'Rajdhani', sans-serif;;
+	font-family: 'Rajdhani', sans-serif;
 	font-weight: 700;
 	font-size: 40px;
 	color: rgba(255, 255, 255, 0.7);

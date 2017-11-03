@@ -4,16 +4,11 @@ $(document).ready(function(e){
 	$('#mobileMenuContainer').hide();
 
 	$("#mobileMenuBtn").click(function(){
-    	$('#mobileMenuOverlay').css("visibility", "visible");
-        $('#mobileMenuOverlay').delay(0).animate({'opacity': '1'}, 300);
-        $('#mobileMenuContainer').delay(300).slideDown("slow", function() {
-        });
+    	showMobileMenu();
     });
 
     $("#mobileCloseBtn").click(function(){
-    	$('#mobileMenuContainer').slideUp("fast", function() {});
-        $('#mobileMenuOverlay').delay(0).animate({'opacity': '0'}, 300);
-        $('#mobileMenuOverlay').delay(300).css("visibility", "hidden");
+    	hideMobileMenu();
     });
 
     $("#mobileMenuSaveBtn").click(function(){
@@ -25,3 +20,15 @@ $(document).ready(function(e){
         loadGame();
     });
 });
+
+function hideMobileMenu() {
+    $('#mobileMenuContainer').slideUp("fast", function() {});
+    $('#mobileMenuOverlay').delay(0).animate({'opacity': '0'}, 300);
+    $('#mobileMenuOverlay').delay(300).css("visibility", "hidden");
+}
+
+function showMobileMenu() {
+    $('#mobileMenuOverlay').css("visibility", "visible");
+    $('#mobileMenuOverlay').delay(0).animate({'opacity': '1'}, 300);
+    $('#mobileMenuContainer').delay(300).slideDown("slow", function() {});
+}
