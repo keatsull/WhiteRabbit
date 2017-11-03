@@ -43,11 +43,16 @@ function getDialogueLocation() {
 function loadGame() {
 
 	//get items
-	var load = getSave()
-	setDidWeLoadGame(true);
+	if (getSave() === null) {
+		//cant load game
+		showOverlayText('UNABLE TO LOAD GAME');
+	} else {
+		setDidWeLoadGame(true);
 
-	//reload website
-	window.location.href = getSave();
+		//reload website
+		window.location.href = getSave();
+	}
+	
 
 }
 

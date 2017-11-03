@@ -31,4 +31,19 @@ function showMobileMenu() {
     $('#mobileMenuOverlay').css("visibility", "visible");
     $('#mobileMenuOverlay').delay(0).animate({'opacity': '1'}, 300);
     $('#mobileMenuContainer').delay(300).slideDown("slow", function() {});
+
+    //disable load game if it doesnt exist
+    if (getSave() === null) {
+        $('#mobileMenuLoadBtn').css({
+            'pointer-events': 'none',
+            'cursor': 'default',
+            'opacity': '0.5'
+        });
+    } else {
+        $('#mobileMenuLoadBtn').css({
+            'pointer-events': 'all',
+            'cursor': 'pointer',
+            'opacity': '1'
+        });
+    }
 }
