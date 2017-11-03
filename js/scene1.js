@@ -12,18 +12,18 @@ $(document).ready(function(e) {
 
 	//if loaded from previous save
 	if (getDidWeLoadGame() == true) {
-		//in icongnito mode, save feature does not work
-		if (isNaN(getSave())) {
+		//in icongnito mode, save feature does not
+		//if (isNaN(getSave())) {
 			//cant load game
-			showOverlayText('ERROR LOADING');
-			i = 0;
-		} else {
+			//showOverlayText('ERROR LOADING');
+			//i = 0;
+		//} else {
 			i = getDialogueLocation();
 			console.log(i);
 			setDidWeLoadGame(false); //application now wont go through this function
 			loadedGame = true;
 			showOverlayText('LOADED GAME');
-		}
+		//}
 		
 	} else {
 		i = 0;
