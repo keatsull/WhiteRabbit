@@ -418,7 +418,7 @@ HELP OVERLAY
 	color: rgb(244, 67, 54);
 }
 
-#helpOptions a {
+#helpOptions {
 	pointer-events: none;
 }
 
@@ -462,6 +462,7 @@ OTHER
 	position: fixed;
 	top: 35%;
 	vertical-align: middle;
+	pointer-events: none;
 }
 
 #overlayText h3 {

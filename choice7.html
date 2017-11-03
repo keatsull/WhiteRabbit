@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="Description" content="Fate Denier Visual Novel">
+<meta name="keywords" content="Visual Novel, Anime, Manga, Game, Gaming">
+<meta name="author" content="White Rabbit">
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Fate Denier by Team White Rabbit</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/core.js"></script>
+	<script src="js/fadeIn.js"></script>
+	<script src="js/help.js"></script>
+	<script src="js/mobilemenu.js"></script>
+	<script src="js/choice7.js"></script>
+</head>
+
+<header>
+	<button id="mobileMenuBtn"></button>
+</header>
+
+<body>
+	<!-- used for background image so we can use nice transition effects -->
+	<div id="backgroundImg"></div>
+	
+	<!-- Mobile Menu -->
+	<div id="mobileMenuOverlay">
+		<button id="mobileCloseBtn"></button>
+		<div id="mobileMenuContainer">
+			<ul>
+				<li><a href="#">RESTART</a></li>
+				<li><button id="mobileMenuSaveBtn">SAVE GAME</button></li>
+				<li><button id="mobileMenuLoadBtn">LOAD GAME</button></li>
+				<li><a href="index.html">EXIT GAME</a></li>
+				<li><button id="mobileMenuHelpBtn">HELP</button></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Help Overlay -->
+	<div id="helpOverlay">
+		
+		<div class="conversationContainer">
+
+			<!-- Help dialoge -->
+			<div id="dialogueTitle">1. DIALOGUE</div>
+			<div class="dialogue" id="helpDialogue">
+				<p>Dialogue, Scroll through using the <span>next</span> and <span>prev</span> buttons. <br />
+				Use the <span>Dialogue Choices</span> to continue the story.</p>
+			</div> 
+
+			
+			<div id="optionsTitle">2. DIALOGUE OPTIONS</div>
+			<div class="optionContainer" id="helpOptions">
+			</div>
+
+		</div>
+
+		<button id="closeBtn"></button>
+	</div>
+
+	<!-- Enter characters in here using <span></span> -->
+	<div class="characterContainer">
+		<!-- 0 - 5 characters max add <span></span> to add character-->
+		<span></span>
+	</div>
+	
+	<!-- Conversation Container -->
+	<div class="conversationContainer">
+
+		<!-- Dialogue Container -->
+		<div id="title">Character:</div>
+		<div class="dialogue">
+			<div id="dialogueBtnContainer">
+				<button id="nextBtn">NEXT</button>
+				<button id="prevBtn">PREV</button>
+			</div>
+
+			<p id="charDialogue"></p>
+			
+		</div>
+
+		<!-- Options Container -->
+		<div class="optionContainer">
+			<!-- 0 - 3 options max add <a href="#"></a> to add option, <h3></h3> for title use <p></p> for text, use class="disableMe" to disable an option -->
+			<!--<a href="" id="optionOne"><h3>Option 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p></a>
+			<span id="optionTwo"><h3>Option 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p></span>
+			<span id="optionThree"><h3>Option 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p></span>-->
+			
+		</div>
+		
+	</div>
+
+	<!-- used for sound effects -->
+	<div id="audioContainer"></div>
+
+	<!-- used for notifications -->
+	<div id="notification"></div>
+
+	<!-- used for information overlay -->
+	<div id="overlayText"></div>
+	
+</body>
+
+
+<!-- temp -->
+<footer>
+	<!--<div id="menuBtn"><h3><a href="#">MENU</a></h3></div>-->
+	<button id="menuBtn">MENU</button>
+</footer>
+
+ 
+</html>
