@@ -40,18 +40,19 @@ $(document).ready(function(e) {
 	//replace, delete and add more as necessary
 	//add more using ,''
 	let storyLine = [
-		'The “right time?” You just have to talk to her right away',
-		'Be confident about yourself that’s it',
+		'The “right time?” You just have to talk to her right away.',
 
-		'Confidence is overrated',
+		'Be confident about yourself, that’s all there is to it.',
 
-		'A Customer appears in front, ready to make a purchase, Takashi places the phone down and greets the customer.',
+		'Confidence is overrated.',
 
-		'Takashi Oh! H-hey, just this?',
+		'**A Customer appears in front, ready to make a purchase, Takashi places the phone down and greets the customer.**',
 
-		'Customer Yes, please',
+		'Oh! HH-hey, just this?',
 
-		'Suddenly, a strange animated string attached to the customer warps into appearance, wriggling in the air.'
+		'Yes, please',
+
+		'**Suddenly, a strange animated string attached to the customer warps into appearance, wriggling in the air.**'
 	];
 
 	//make sure too associate with storyline
@@ -69,7 +70,7 @@ $(document).ready(function(e) {
 	//add more using ,''
 	let decision = [
 		'Sir/Madam! You have something on your back!', 
-		'Th-That’ll be 295 Yen'
+		'Th-That’ll be 295 Yen..'
 	];
 
 	//links for decision, likely only use first 2
@@ -85,13 +86,13 @@ $(document).ready(function(e) {
 
 		//use the value i to set when a background &/or character should change
 		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
+			changeCharacter('url("./images/characters/Customer_animated.gif")'); //Change to phone
 			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
-			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');
+		} else if (i >= 3 && i <= 5){
+			changeCharacter('url("./images/characters/BossFinal.png")'); //change to customer W/O string
 		}
-
+		else if(i == 6)
+			changeCharacter('url("./images/characters/Customer_animated.gif")');
 		if (i == 3) {
 			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();

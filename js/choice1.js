@@ -58,10 +58,13 @@ $(document).ready(function(e) {
 
 		'**Takashi pulls out his phone**',
 
-		'KIRA Hahahaha so much crazy talk.',
-		'The professor here has one of those things',
-		'and the whole lecture hall hasn’t mentioned a word of it! Like it isn’t even there!',
-		'So what’s the deal takashi, Have you talked to her yet?'
+		'Hahahaha so much crazy talk!',
+
+		'The professor here has one of those things..',
+
+		'..and the whole lecture hall hasn’t mentioned a word of it! Like it isn’t even there!',
+
+		'So, anyway, what’s the deal takashi? Have you talked to her yet?'
 	];
 
 	//make sure too associate with storyline
@@ -109,7 +112,7 @@ $(document).ready(function(e) {
 			changeBackground('url("./images/bgs/shop_interior1.png")');
 		}
 
-		else if( i == 7 ){
+		else if( i >= 7 ){
 			changeCharacter('url("./images/characters/sora2.png")');
 			changeBackground('url("./images/bgs/testbackground.png")');
 		}
