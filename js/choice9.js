@@ -41,19 +41,19 @@ $(document).ready(function(e) {
 	//add more using ,''
 	let storyLine = [
 
-		'I’ve always loved painting it allows me to escape',
+		'I’ve always loved painting it allows me to escape'
 
 	];
 
 	//make sure too associate with storyline
 	let charAndLocation = [
-		'Sora',
+		'Sora'
 	];
 
 	//add more using ,''
 	let decision = [
 		'So how long have you lived around here?', 
-	/* greyed out choice */	'So why did you choose art?'
+	/* greyed out choice */	'So, why did you choose art?'
 	];
 
 	//links for decision, likely only use first 2
@@ -68,15 +68,11 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
-			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');
-		}
+		if (i == 0) {
+			changeCharacter('url("./images/characters/Sora2.png")');
+			changeBackground('url("./images/bgs/shop_interior1.png")'); //Cafe
 
-		if (i == 3) {
+		if (i == 0) {
 			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
 		}

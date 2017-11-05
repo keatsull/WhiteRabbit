@@ -42,88 +42,95 @@ $(document).ready(function(e) {
 	let storyLine = [
 
 		
-		'About 6 months i moved here after my grandparents kicked me out',
+		'About 6 months.. I moved here after my grandparents kicked me out.', //0
 
-		'That must of been hard',
+		'That must of been hard.',
 
-		'At the beginning it was, not knowing anyone but now i’m use to it, fate has a funny way of throwing us around',
+		'At the beginning it was, not knowing anyone, but now I’m use to it. Fate has a funny way of throwing us around.', //2
 
-		'Soras phone buzzes she quickly looks and seems mildly alarmed',
+		'**Sora\'s phone buzzes she quickly looks and seems mildly alarmed**',
 
-		'Sorry i have to go, can we catch up later',
+		'Sorry, I have to go, can we catch up later.', //4
 
-		'Sure not a problem',
+		'Sure, not a problem.',
 
-		'Feel free to message me later if you’d like',
+		'Feel free to message me later if you’d like.', //6
 
-		'Sora quickly leaves the cafe but drops a book out of her bag as she leaves Takashi picks it up it looks really old',
-		'Takashi runs out of the cafe to catch sora but she is no where to be seen',
+		'**Sora quickly leaves the cafe, but drops a book out of her bag as she leaves. Takashi picks it up it looks really old**',
 
-		'“It must be an art reference or something, i’ll have to return this to her I’ll message her when i get home”',
+		'**Takashi runs out of the cafe to catch Sora but she is no where to be seen**',  //8
 
-		'Takashi get’s home and puts Soras book on his bed',
+		'“It must be an art reference or something, I’ll have to return this to her. I’ll message her when I get home”',
 
-		'Takashi pulls out phone and messages sora',
+		'**Takashi get’s home and puts Soras book on his bed**',  //10
 
-		'Hi sora you dropped a book at the cafe, do you want to meet up tomorrow so i can return it',
+		'**Takashi pulls out phone and messages Sora**',
 
-		'I was worried i thought i lost it, i need the book urgently can you bring it to my place?',
+		'Hi Sora, you dropped a book at the cafe, do you want to meet up tomorrow so I can return it?',  //12
 
-		'Umm sure i can bring it over',
+		'Oh good! I was worried when I thought I lost it, but I need the book urgently. Can you please bring it to my place?',
 
-		'Sora sends through her address',
+		'Umm..Sure, I can bring it over.', //14
 
-		'We must of really hit it off at the cafe for her to trust me to return it, then again it must be an important book, maybe she needs it for university',
+		'**Sora sends through her address**',
 
-		'Takahi puts on shoes and heads to the address', 
-		'Takashi walks quickly to the address thinking briefly about how he is going to approach this situation',
+		'We must of really hit it off at the cafe for her to trust me to return it. Then again, it must be an important book and she needs it for university.', //16
 
-		'I never thought this could happen, only a few days ago i was struggling to even say a word to her now i’m going to her house to drop off a book.',
-		'I wonder what i’m going to say when i get there….',
+		'**Takashi puts on shoes and heads to the address**', 
 
-		'Takashi arrives at the address it looks like a normal apartment building not so different from takashis',
+		'**Takashi walks quickly to the address, thinking briefly about how he is going to approach this situation**',  //18
 
-		'Okay don’t get nervous now',
+		'I never thought this could happen, only a few days ago I was struggling to even say a word to her and now I’m going to her house to drop off a book.',
 
-		'Takashi knocks at the door', 
-		'Sora answers',
+		'I wonder what I’m going to say when I get there….',  //20
 
-		'Oh hi takashi that didnt take you long you must live near by',
+		'**Takashi arrives at the address it looks like a normal apartment building not so different from Takashi\'s**',
 
-		'I left as soon as i got your message',
+		'Okay, don’t get nervous now.',  //22
 
-		'Thanks heaps i would of been in trouble if i’d lost it',
+		'**Takashi knocks at the door**', 
 
-		'Takashi hands over book and the energy surrounding sora suddenly changes',
+		'**Sora answers**',  //24
+
+		'Oh, hi Takashi! That didn\'t take you long, you must live nearby.',
+
+		'I left as soon as I got your message.',  //26
+
+		'Thanks heaps, I would of been in trouble if I’d lost it.',
+
+		'**Takashi hands over book and the energy surrounding Sora suddenly changes**',  //28
 
 		'So did you look through the book?',
 
-		'No haha', 
+		'No haha.', //30
 
-		'Sora seems angry',
+		'**Sora seems angry**',
 
-		'ARE YOU SURE!',
+		'ARE YOU SURE?!',  //32
 
-		'“What has happened to sora usually from what i can tell she is more collected than this”',
-		'Yeah i’m sure the title is in latin and i can’t read latin, i’m surprised you can did you take latin at uni?',
+		'“What has happened to Sora? Usually she seems more collected than this”',
 
-		'I hope you understand but i can’t trust you this book holds too many secrets we can’t let out',
+		'Yeah, I’m sure the title is in latin and I can’t read latin. I’m surprised you can, did you take latin at uni?',  //34
 
-		'“Wth is she on about?”',
-		'I’m not sure i’m understanding what your talkin….',
+		'I hope you understand but I can’t trust you. This book holds too many secrets we can’t let out.',
 
-		'Before takashi can finish his sentence he can feel something cold in his stomach as he looks down he can see a dagger glowing red with some sort of energy surrounding it stabbed directly into his stomach',
- 		'the warm blood starts gushing out of him in streams and his knees buckle, he hold his stomach in blinding pain.',
+		'“What the hell is she on about?”',  //36
 
-		'WHY! Sora whhhyyyyyy',
+		'I’m not sure I’m underst-',
 
-		'I’m sorry but if it wasn’t you it would of been me',
+		'**Before Takashi can finish his sentence, he can feel something cold in his stomach. As he looks down, he can see a dagger glowing red with a form of energy surrounding it impaled directly into his stomach',  //38
 
-		'As the screen turns black Takashi can hear a mysterious voice',
+ 		'**The warm blood starts gushing out of him in streams. His knees buckle and he holds his stomach in blinding pain.**',
 
-		'Good job sora now we can continue our work, who would of guessed that this idiot would of brang himself to us haha how naive he must of been, do not worry i’ll take care of the body, look’s like we will have to move again.',
+		'WHY!? SORA, WHHHHYYYYY?!',   //40
 
-		'Ok doctor what ever you say',
+		'I’m sorry, but if it wasn’t you it would of been me.',
+
+		'**As Takashi\'s world goes black he can hear a mysterious voice...**',  //42
+
+		'Good job Sora, now we can continue our work. Who would of guessed that this idiot would have brought himself to us? Ha-Ha-Ha, how naive he must of been. Do not worry, I’ll take care of the body but it looks like we will have to move again.',
+
+		'Ok doctor, what ever you say.',  //44
 
 		'….'
 
@@ -197,13 +204,55 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
+		if (i >= 0 && i <= 6) {
+			changeCharacter('url("./images/characters/Sora2.png")');
+			changeBackground('url("./images/bgs/shop_interior1.png")');			//Cafe
+		} else if (i == 7){
 			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeBackground('url("./images/bgs/testbackground.png")');			//Book?
+		}
+		else if (i >= 8 && i <= 9 ){
+			changeCharacter('url("./images/characters/BossFinal.png")');		//null
+			changeBackground('url("./images/bgs/testbackground.png")');			//Street
+		}
+		else if (i == 10 ){	
+			changeBackground('url("./images/bgs/testbackground.png")');			//Takashis
+		}
+		else if (i >= 11 && i <= 15 ){
+			changeCharacter('url("./images/characters/BossFinal.png")');		//phome
 			changeBackground('url("./images/bgs/testbackground.png")');
 		}
+		else if (i == 16 ){
+			changeCharacter('url("./images/characters/BossFinal.png")');		//null
+		}
+		else if (i == 17 ){
+			changeBackground('url("./images/bgs/testbackground.png")');			//Black Screen
+		}
+		else if (i >= 18 && i <= 20 ){
+			changeBackground('url("./images/bgs/testbackground.png")');			//Street
+		}
+		else if (i >= 21 && i <= 23){
+			changeBackground('url("./images/bgs/testbackground.png")');			//Apartment
+		}
+		else if (i >= 24 && i <= 27 ){
+			changeCharacter('url("./images/characters/Sora2.png")');
+		}
+		else if (i >= 28 && i <= 36){
+			changeCharacter('url("./images/characters/BossFinal.png")');	//Evil Sora
+		}
+		else if (i == 37 ){
+			changeCharacter('url("./images/characters/BossFinal.png")');      //null, Remove Sora, adds effect
+		}
+		else if (i >= 38 && i <= 41 ){
+			changeCharacter('url("./images/characters/BossFinal.png")');		//Oh noes, you have been stabbed screen.
+			changeBackground('url("./images/bgs/testbackground.png")');
+		}
+		else if (i >= 42 && i <= 45){
+			changeBackground('url("./images/bgs/testbackground.png")');			//black screen of die-dead
+		}
+
+
+
 
 		if (i == 3) {
 			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);

@@ -174,8 +174,8 @@ $(document).ready(function(e) {
 
 	//add more using ,''
 	let decision = [
-		'I feel so tired after what happened and i can’t miss my shift tomorrow \n i’ll have to just have a quick nap and meet up with kira and learn tabout what he found then, he will understand ',
-		'I am tired but i bet i can spend some time on researching what kira found'
+		'I feel so tired after what happened and i can’t miss my shift tomorrow \n I’ll have to just have a quick nap and meet up with Kira and learn tabout what he found then, he will understand.',
+		'I am tired but I bet I can spend some time on researching what Kira found.'
 	];
 
 	//links for decision, likely only use first 2
