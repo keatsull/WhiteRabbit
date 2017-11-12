@@ -41,54 +41,55 @@ $(document).ready(function(e) {
 	//add more using ,''
 let storyLine = [
 
-		'Takashi puts away his phone and pulls up the website from the link kira supplied',
+		'Takashi puts away his phone and pulls up the website from the link kira supplied', //website blurred
 
 		'Kira always finds the weirdest places online.',
 
 		'The Title Reads “The Destined and the fight for fate”',
+
 		'One message board reads “Manifestations of attachment”',
 
 		'That does sound like what we are experiencing….',
 
-		'Takashi opens the thread',
-		'It starts with pictures of the strings hanging out of people',
+		'Takashi opens the thread',  //hide dialogue 6
+		//'It starts with pictures of the strings hanging out of people',  //--delete
 
- 		'i though me and kira were the only ones that could see those things!',
+ 		'i though me and kira were the only ones that could see those things!', //show dialgue 7
 
-		'Next takashi opens a thread called FATED DENIERS',
+		'Next takashi opens a thread called FATED DENIERS', //open all blur new webpage 8
 
-		'One user named “SkyLimit” starts talking about “fate deniers” It reads: ',
+		//'One user named “SkyLimit” starts talking about “fate deniers” It reads: ', //--delete
 
 
-		'I’ve found a FD been tailing him for 6 months and am certain that he was affected.',
+		//'I’ve found a FD been tailing him for 6 months and am certain that he was affected.', //--delete
 
-		'how do you know for sure, do i have to remind you of the responsibilities of the destined?',
+		//'how do you know for sure, do i have to remind you of the responsibilities of the destined?', //--delete
 
-		'destined? What has kira stumbled onto! Sounds like a cult….',
+		'destined? What has kira stumbled onto! Sounds like a cult….',	//show dialogue 9
 
-		'no you don’t' ,
+		//'no you don’t' , //--delete
 
-		'Keep an eye on him until an opportunity appears then do what you have too.',
+		//'Keep an eye on him until an opportunity appears then do what you have too.', //--delete
 
-		'ok ',
+		//'ok ',	//--delete
 
-		'I have to figure out what these fate deniers are and what exactly these “Destined” have to do with them. ',
+		'I have to figure out what these fate deniers are and what exactly these “Destined” have to do with them. ', //show dialgue 9
 
-		'Takashi looks at the clock on the wall',
+		'Takashi looks at the clock on the wall', //clock wallpaper 10
 
 		'What! how did it get so late i have work soon',
 		'man i hope i do not get fired',
 		'the boss seemed annoyed aswell as i passed out',
 		'I will have to hurry',
 
-		'Takashi struggles to put on his uniform and then starts to walk to work' ,
+		'Takashi struggles to put on his uniform and then starts to walk to work' , //street scene 15
 
 		'The destined ha just a normal everyday cult….',
  		'but they did have pictures of the manifestations i wonder if they really do know what’s going on?',
 		'None of this matters if i lose my job though, the boss will probably not be happy about what happened hopefully i can lawyer my way around it',
 		'hopefully i can find what is behind this so i can prevent it from happening again.',
 
-		'Well look who it is, thought you would take the day off after what happened yesterday',
+		'Well look who it is, thought you would take the day off after what happened yesterday', //work scene with boss 20
 
 		'Sorry' ,
 		'did you help me home?',
@@ -109,10 +110,10 @@ let storyLine = [
 
 		'“Is he trying to be nice? Either way he believed the lie time to just get today over with and talk to kira about the website”',
 
-		'Boss heads out the back of the shop and leaves the front to takashi',
+		'Boss heads out the back of the shop and leaves the front to takashi', //boss leaves 33
 		'takashi goes behind the counter and starts his shift',
 
-		'Mystery girl approaches the counter',
+		'Mystery girl approaches the counter', //sora 35
 
 		'Ok I’m not gonna mess this up again',
 		'“Play it cool”',
@@ -156,7 +157,7 @@ let storyLine = [
 
 		'Here is my number',
 
-		'Sora places a business card called ‘sora’s modern art’ on the counter and leaves',
+		'Sora places a business card called ‘sora’s modern art’ on the counter and leaves', //business card 59
 
 		'“Wow that actually worked!! Maybe what kira said about confidence is true”',
 
@@ -164,10 +165,9 @@ let storyLine = [
 
 		'“She must be doing a creative arts degree”',
 
-		'TAKASHI! What are you doing just standing around get to work!',
+		'TAKASHI! What are you doing just standing around get to work!', //boss - yells 63
 
 		'Sorry boss will get to it',
-
 
 	];
 
@@ -179,16 +179,16 @@ let storyLine = [
 		'&nbsp',
 		'Takashi',
 		'&nbsp',
-		'&nbsp',
+		//'&nbsp', //--delete
 		'Takashi',
 		'&nbsp',
-		'&nbsp',
-		'SkyLimit',
-		'DrCraze',
+		//'&nbsp', //--delete
+		//'SkyLimit', //--delete
+		//'DrCraze', //--delete
 		'Takashi',
-		'SkyLimit',
-		'DrCraze',
-		'SkyLimit',
+		//'SkyLimit', //--delete
+		//'DrCraze', //--delete
+		//'SkyLimit', //--delete
 		'Takashi',
 		'&nbsp',
 		'Takashi',
@@ -265,19 +265,80 @@ let storyLine = [
 
 		console.log('here'+i);
 
-		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
-			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');
+		if (i == 0) {
+			changeCharacter('url("")'); //empty
+			//changeCharacter('url("./images/characters/computer.png")');
+			changeBackground('url("./images/bgs/computerscenebg.png")');
+			changeComputerImg("url(./images/computerscenes/desktopmessageboard3.png)");
 		}
 
-		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+		//use the value i to set when a background &/or character should change
+		if (i == 6) {
+			hideDialogue();
+			//show computer
+			notScrolling();
+		}	
+
+		if (i == 7) {
+			//blurred background
+			$(".computer").animate({ scrollTop: 0 }, "slow");
+			changeComputerImg("url(./images/computerscenes/desktopmessageboard3.png)");
+		}
+
+		if (i == 8) {
+			hideDialogue();
+			changeComputerImg("url(./images/computerscenes/desktopmessageboard1.png)");
+			notScrolling();
+		}	
+
+		if (i == 9) {
+			hideDialogue();
+			changeComputerImg("url(./images/computerscenes/desktopmessageboard2.png)");
+			notScrolling();
+		}
+
+		if (i < 10) {
+			hideComputer(false);
+		}
+
+		if (i == 10) {
+			//clock on wall background
+			//hide computer
+			changeBackground('url("./images/bgs/clockbg.png")');
+			hideComputer(true);
+		}
+
+		if (i == 15) {
+			//walks to work scene
+			changeBackground('url("./images/bgs/street8.jpg")');
+		}
+
+		if (i == 20) {
+			//work and boss
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
+			changeCharacter('url("./images/characters/BossFinal.png")');
+		}
+
+		if (i == 33) {
+			//work boss exits
+			changeCharacter('url("")'); //empty
+		}
+
+		if (i == 35) {
+			//work and sora
+			changeCharacter('url("./images/characters/Sora2.png")');
+		}
+
+		if (i == 59) {
+			//business card
+		}
+
+		if (i == 63) {
+			//work boss yells
+			changeCharacter('url("./images/characters/BossFinal.png")');
 			shakeScreen();
 		}
+
 	}
 	
 	/************************ PROGRAMMERS ONLY **********************
@@ -418,11 +479,13 @@ let storyLine = [
 
 	//changes character, also set which file to change, default use 1
 	function changeCharacter(file) {
-		$('.characterContainer span:nth-child(1)').css("background-image", file) 
+		$('.characterContainer span:nth-child(1)').css("background-image", file);
 	}
 
 	function changeBackground(file) {
-		$('#backgroundImg').css("background-image", file);
+		$('#backgroundImg').fadeOut(200, function() {
+			$('#backgroundImg').css("background-image", file);
+		}).fadeIn(300);
 	}
 
 	//loop specifies weather audio keeps playing or not
@@ -440,6 +503,133 @@ let storyLine = [
 		$('.conversationContainer').effect("shake", {times: 3}, 700);
 		$('.characterContainer').effect("shake", {times: 4}, 600);
 	}
+
+	function hideDialogue() {
+		$('.conversationContainer').hide();
+		disableEvents(false);
+	}
+
+	function showDialogue() {
+		$('.conversationContainer').show();
+		disableEvents(true);
+	}
+
+	function hideComputer(bool) {
+		if (bool) {
+			$('.computerContainer').css({
+				"visibility": "hidden"
+			});
+		} else {
+			$('.computerContainer').css({
+				"visibility": "visible"
+			});
+		}
+	}
+
+	function disableEvents(bool) {
+		if (bool) {
+			$('.computerContainer').css({
+				"pointer-events": "none"
+			});
+		} else {
+			$('.computerContainer').css({
+				"pointer-events": "all"
+			});
+		}
+	}
+
+	function changeComputerImg(file) {
+
+		$('#computerImg').css("background-image", file);
+	}
+
+	//used for scrolling through computer scene
+	//in the odd occasion that there is no scrolling involved in the scene.
+	function notScrolling() {
+		var tmp = true;
+		if ( $('.computer')[0].scrollHeight <= $('.computer')[0].clientHeight ) {
+			tmp = false;
+		} else {
+			tmp = true;
+		}
+
+		console.log(tmp);
+
+		if (!tmp) {
+
+			//full screen
+  			if (currentLocation == 6) {
+  				setTimeout(function() {
+					showDialogue();
+					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+				}, 5000); //after 5 seconds
+  			}
+
+  			//mid screen
+  			if (currentLocation == 8) {
+
+  				setTimeout(function() {
+					showDialogue();
+					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+				}, 4000); //after 4 seconds
+  			}
+  			
+  			//full screen
+  			if (currentLocation == 9) {
+  				setTimeout(function() {
+					showDialogue();
+					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+				}, 4000); //after 4 seconds
+  			}
+		}
+	}
+
+	//called when scrolling through interactive element
+	//basically shows dialogue at certain scroll points
+	jQuery(
+
+		$('.computer').scroll(function() {
+  			var y = $(this).scrollTop();
+  			var max = $(this)[0].scrollHeight - $(this)[0].clientHeight
+
+
+  			//full screen
+  			if (currentLocation == 6) {
+  				if (y == max) {
+    				setTimeout(function() {
+  						showDialogue();
+    					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+  					}, 500);
+  				}
+  			}
+
+  			//mid screen
+  			if (currentLocation == 8) {
+
+  				if (y > max*0.6) {
+
+  					setTimeout(function() {
+  						showDialogue();
+    					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+  					}, 100);
+  				}
+  			}
+  			
+  			//full screen
+  			if (currentLocation == 9) {
+  				if (y == max) {
+
+  					setTimeout(function() {
+  						showDialogue();
+    					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+  					}, 500);
+    				
+  				}
+  			}
+		})
+	);
+
+
 	
 });
 

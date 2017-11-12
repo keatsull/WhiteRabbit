@@ -164,29 +164,50 @@ Character Divs
 }
 
 .computerContainer {
-	width: 80vw;
-    height: 80vw;
+	width: 100vw;
+    height: 100vh;
     position: absolute;
     bottom: 0;
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-image: url('../images/characters/computer.png');
+	text-align: center;
+	pointer-events: none;
 }
 
 .computer {
 	background: white;
-    width: 75vw;
-    height: 55vw;
-    left: 2.5vw;
-    bottom: 8vw;
+    width: 90vw;
+    left: 5vw;
+    height: 80vh;
+    top: 5vh;
     position: absolute;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-.computerData {
-	
+.computer::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
 }
+
+.computer::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+#computerImg {
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: block;
+	width: 90vw;
+	height: 140vw;
+	position: relative;
+}
+
+
 /* add more if we need more than 5 characters */
 
 /*********************************************************************
@@ -576,7 +597,7 @@ MOBILE
 	color:white;
 }
 
-/* mobile */
+/* smaller desktop */
 @media only screen and (max-width: 1300px), (max-height: 1000px) {
 	/* Dialogue and Options */
 	.conversationContainer #title {
@@ -613,6 +634,7 @@ MOBILE
 	}
 }
 
+/* mobile desktop */
 @media only screen and (max-width: 500px), (max-height: 800px) {
 
 	/* MENUS */
@@ -714,6 +736,22 @@ MOBILE
 
 	#helpDialogue p {
 		font-size: 15px;
+	}
+
+	.computerContainer {
+	    background-image: none;
+	}
+
+	.computer {
+	    width: 100vw;
+	    height: 100vh;
+	  	left: 0;
+	  	top: 0;
+	}
+
+	#computerImg {
+		width: 100vw;
+		height: 150vw;
 	}
 
 }

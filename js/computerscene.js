@@ -1,4 +1,7 @@
 /* Created by Rhys Harrison & Keaten Sullivan, script Entered by Clifford Smith */
+
+var currentLocation = 0;
+
 $(document).ready(function(e) {
 
 	//This is the file that will store all the text dialogues and character
@@ -30,9 +33,11 @@ $(document).ready(function(e) {
 	//add more using ,''
 	let storyLine = [
 		'Ahahaha, So much crazy talk.',
-		'The professor here has one of those things, and the whole lecture hall hasnt mentioned a word of it!',
+		'The professor here has one of those things, and the whole lecture hall hasnt mentioned a word of it!', //hide dialogue
 		'Like it isnt even there!', 
-		'So, anyway, Whats the deal Takashi, have you talked to her yet?'
+		'So, anyway, Whats the deal Takashi, have you talked to her yet?',
+		'test', //show
+		'test'
 	];
 
 	//make sure too associate with storyline
@@ -40,7 +45,9 @@ $(document).ready(function(e) {
 		'Sora, at Work',
 		'Sora, at Work',
 		'Boss, outside Work',
-		'Boss, outside Work'
+		'Boss, outside Work',
+		'test',
+		'test'
 	];
 
 	//add more using ,''
@@ -65,7 +72,16 @@ $(document).ready(function(e) {
 		//console.log(i);
 
 		//use the value i to set when a background &/or character should change
-		if (i == 0) {
+		if (i == 1) {
+			hideDialogue();
+		}
+
+		if (i < 4) {
+			$('.computerData').html('<img id="computerImg" src="images/computerscenes/desktopmessageboard1.png" alt="image"/>');
+		}
+
+		if (i == 4) {
+			$('.computerData').html('<img id="computerImg" src="images/computerscenes/desktopmessageboard2.png" alt="image"/>');
 			hideDialogue();
 		}
 	}
@@ -128,7 +144,7 @@ $(document).ready(function(e) {
 			} 
 			
 			//store i
-			storeDialogueLocation(i);
+			currentLocation = i;
 
 		}
 	}
@@ -136,17 +152,25 @@ $(document).ready(function(e) {
 	//Click event, will look in the code to find the next dialogue option. 
 	function nextText(){
 
-			//enable previous button --disabled for computer scene, not needed.
-			/*if (i > 0) {
-				enableBtn("#prevBtn", true);
-			}*/
-
-			//store i
-			storeDialogueLocation(i);
-
-			//used for normal
+			//vars
 			var count = storyLine.length;
 			var count2 = charAndLocation.length;
+
+			//up i value
+			if (i < count-1) {
+				i++;
+			}
+
+			//enable previous button
+			if (i > 0) {
+				enableBtn("#prevBtn", true);
+			}
+
+			//store i for save/load purposes
+			console.log(i);
+			currentLocation = i;
+
+			//used for normal
 			currentDialogue = storyLine[i];
 
 			if(i < count && i < count2 ) {				
@@ -172,12 +196,6 @@ $(document).ready(function(e) {
 					$('.conversationContainer .optionContainer').append('<a href="'+link+'""><h3>Option '+n+'</h3><p>'+decision[j]+'</p></a>');
 				} 
 				enableBtn("#nextBtn", false);
-			}
-
-			
-
-			if (i < count-1) {
-				i++;
 			}
 			
 	}
@@ -235,16 +253,31 @@ $(document).ready(function(e) {
 		$('.conversationContainer').hide();
 	}
 
-	//computer scene reached end of div
-	jQuery(
-		function($) {
-		$('.computer').bind('scroll', function() {
-			if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight) {
-				//show dialogue
-				$('.conversationContainer').show();
-			}
-		});
+	function showDialogue() {
+		$('.conversationContainer').show();
 	}
+
+	//used for scrolling through computer scene
+	jQuery(
+
+		$('.computer').scroll(function() {
+  			var y = $(this).scrollTop();
+  			var max = $(this)[0].scrollHeight - $(this)[0].clientHeight
+
+  			//first scorllpoint
+  			if (currentLocation == 1) {
+  				if (y > max*0.2) {
+    				showDialogue();
+  				}
+  			}
+  			
+  			//second scrollpoint
+  			if (currentLocation >= 4) {
+  				if (y == max) {
+    				showDialogue();
+  				}
+  			}
+		})
 	);
 	
 	
