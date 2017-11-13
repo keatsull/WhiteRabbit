@@ -751,7 +751,8 @@ MOBILE
 
 	#computerImg {
 		width: 100vw;
-		height: 150vw;
+		height: 320vw;
+		background-size: cover;
 	}
 
 }

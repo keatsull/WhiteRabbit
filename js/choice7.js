@@ -21,7 +21,8 @@ $(document).ready(function(e) {
 			//i = 0;
 		//} else {
 			i = getDialogueLocation();
-			console.log(i);
+			//console.log(i);
+			currentLocation = i; //in case of computer scene.
 			setDidWeLoadGame(false); //application now wont go through this function
 			loadedGame = true;
 			showOverlayText('LOADED GAME');
@@ -268,75 +269,96 @@ let storyLine = [
 		if (i == 0) {
 			changeCharacter('url("")'); //empty
 			//changeCharacter('url("./images/characters/computer.png")');
-			changeBackground('url("./images/bgs/computerscenebg.png")');
-			changeComputerImg("url(./images/computerscenes/desktopmessageboard3.png)");
+			changeComputerImg("0b.png)");
 		}
+
 
 		//use the value i to set when a background &/or character should change
 		if (i == 6) {
 			hideDialogue();
 			//show computer
-			notScrolling();
+			changeComputerImg("0.png)");
+			notScrolling(); //check for window resolution and if it scrolls
 		}	
+
+		if (i < 6) {
+			changeComputerImg("0b.png)");
+		}
 
 		if (i == 7) {
 			//blurred background
 			$(".computer").animate({ scrollTop: 0 }, "slow");
-			changeComputerImg("url(./images/computerscenes/desktopmessageboard3.png)");
+			changeComputerImg("3.png)");
 		}
 
 		if (i == 8) {
 			hideDialogue();
-			changeComputerImg("url(./images/computerscenes/desktopmessageboard1.png)");
-			notScrolling();
+			changeComputerImg("1.png)");
+			notScrolling(); //check for window resolution and if it scrolls
 		}	
 
 		if (i == 9) {
 			hideDialogue();
-			changeComputerImg("url(./images/computerscenes/desktopmessageboard2.png)");
-			notScrolling();
+			changeComputerImg("2.png)");
+			notScrolling(); //check for window resolution and if it scrolls
 		}
 
 		if (i < 10) {
 			hideComputer(false);
+			changeCharacter('url("")'); //empty
+			changeBackground('url("./images/bgs/computerscenebg.png")');
 		}
 
-		if (i == 10) {
+		if (i >= 10) {
+			hideComputer(true);
+		}
+
+		if (i >= 10 && i < 15) {
 			//clock on wall background
 			//hide computer
+			changeCharacter('url("")'); //empty
 			changeBackground('url("./images/bgs/clockbg.png")');
 			hideComputer(true);
 		}
 
-		if (i == 15) {
+		if (i >= 15 && i < 20) {
 			//walks to work scene
+			changeCharacter('url("")'); //empty
 			changeBackground('url("./images/bgs/street8.jpg")');
 		}
 
-		if (i == 20) {
+		if (i >= 20 && i < 33) {
 			//work and boss
-			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 		}
 
-		if (i == 33) {
+		if (i >= 33 && i < 35) {
 			//work boss exits
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 			changeCharacter('url("")'); //empty
 		}
 
-		if (i == 35) {
+		if (i >= 35 && i < 59) {
 			//work and sora
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 			changeCharacter('url("./images/characters/Sora2.png")');
 		}
 
-		if (i == 59) {
+		if (i >= 59 && i < 63) {
 			//business card
 		}
 
 		if (i == 63) {
 			//work boss yells
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 			changeCharacter('url("./images/characters/BossFinal.png")');
 			shakeScreen();
+		}
+
+		if (i > 63) {
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
+			changeCharacter('url("./images/characters/BossFinal.png")');
 		}
 
 	}
@@ -482,10 +504,13 @@ let storyLine = [
 		$('.characterContainer span:nth-child(1)').css("background-image", file);
 	}
 
+	//changes background
 	function changeBackground(file) {
-		$('#backgroundImg').fadeOut(200, function() {
+		//testing a fade
+		/*$('#backgroundImg').fadeOut(200, function() {
 			$('#backgroundImg').css("background-image", file);
-		}).fadeIn(300);
+		}).fadeIn(300);*/
+		$('#backgroundImg').css("background-image", file);
 	}
 
 	//loop specifies weather audio keeps playing or not
@@ -526,6 +551,7 @@ let storyLine = [
 		}
 	}
 
+	//disables the computer div so user cannot interact with it.
 	function disableEvents(bool) {
 		if (bool) {
 			$('.computerContainer').css({
@@ -538,13 +564,21 @@ let storyLine = [
 		}
 	}
 
+	//changes the computer image for the scene
 	function changeComputerImg(file) {
-
-		$('#computerImg').css("background-image", file);
+		console.log($(window).width() );
+		//mobile version of the image
+		if ($(window).width() <= 500 || $(window).height() <= 800) {
+			$('#computerImg').css("background-image", "url(./images/computerscenes/mobile/"+file);
+		} else {
+			//desktop version
+			$('#computerImg').css("background-image", "url(./images/computerscenes/desktop/"+file);
+		}
 	}
 
 	//used for scrolling through computer scene
 	//in the odd occasion that there is no scrolling involved in the scene.
+	//this function hopefully never gets called, it will time the dialogue though
 	function notScrolling() {
 		var tmp = true;
 		if ( $('.computer')[0].scrollHeight <= $('.computer')[0].clientHeight ) {
@@ -561,7 +595,7 @@ let storyLine = [
   			if (currentLocation == 6) {
   				setTimeout(function() {
 					showDialogue();
-					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+					changeComputerImg("0b.png"); //blurred
 				}, 5000); //after 5 seconds
   			}
 
@@ -570,7 +604,7 @@ let storyLine = [
 
   				setTimeout(function() {
 					showDialogue();
-					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+					changeComputerImg("3.png"); //blurred
 				}, 4000); //after 4 seconds
   			}
   			
@@ -578,7 +612,7 @@ let storyLine = [
   			if (currentLocation == 9) {
   				setTimeout(function() {
 					showDialogue();
-					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+					changeComputerImg("3.png"); //blurred
 				}, 4000); //after 4 seconds
   			}
 		}
@@ -589,16 +623,15 @@ let storyLine = [
 	jQuery(
 
 		$('.computer').scroll(function() {
-  			var y = $(this).scrollTop();
-  			var max = $(this)[0].scrollHeight - $(this)[0].clientHeight
-
+  			var y = $(this).scrollTop(); //scroll location
+  			var max = $(this)[0].scrollHeight - $(this)[0].clientHeight //maximum scroll size
 
   			//full screen
   			if (currentLocation == 6) {
   				if (y == max) {
     				setTimeout(function() {
   						showDialogue();
-    					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+    					changeComputerImg("0b.png"); //blurred
   					}, 500);
   				}
   			}
@@ -610,7 +643,7 @@ let storyLine = [
 
   					setTimeout(function() {
   						showDialogue();
-    					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+    					changeComputerImg("3.png"); //blurred
   					}, 100);
   				}
   			}
@@ -621,7 +654,7 @@ let storyLine = [
 
   					setTimeout(function() {
   						showDialogue();
-    					$('#computerImg').css("background-image", "url(./images/computerscenes/desktopmessageboard3.png)");
+    					changeComputerImg("3.png"); //blurred
   					}, 500);
     				
   				}
