@@ -106,19 +106,29 @@ $(document).ready(function(e) {
 			changeBackground('url("./images/bgs/shop_interior1.png")');
 		}
 
-		else if(i >= 1 && i <= 6 )
+		else if(i >= 1 && i <= 5 )
 		{
 			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
 		}
 
-		else if( i >= 7 ){
-			changeCharacter('url("./images/characters/sora2.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');
+		else if(i == 6)
+		{
+			changeCharacter('url("./images/characters/BossFinal.png")');//null
 		}
 
-		if (i == 5) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+		else if( i >= 9 ){
+			changeCharacter('url("./images/characters/msg/MessagingAkira01.gif")');
+		}
+		else if( i >= 10 ){
+			changeCharacter('url("./images/characters/msg/MessagingAkira02.gif")');
+		}
+		
+		else if( i >= 11 ){
+			changeCharacter('url("./images/characters/msg/MessagingAkira03.gif")');
+		}
+
+		if (i == 1) {
+			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
 		}
 	}

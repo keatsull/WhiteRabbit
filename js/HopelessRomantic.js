@@ -290,22 +290,22 @@ $(document).ready(function(e) {
 		//use the value i to set when a background &/or character should change
 		if (i >= 0 && <= 10) {
 			changeCharacter('url("./images/characters/Sora2.png")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');			//cafe
+			changeBackground('url("./images/bgs/cafe_outside1.png")');			//cafe
 		} else if(i == 11){
 			changeCharacter('url("./images/characters/BossFinal.png")'); 		//null
 		}else if(i >= 12 && i <= 13){
-			changeBackground('url("./images/bgs/testbackground.png")');			//street
+			changeBackground('url("./images/bgs/street1.png")');			//street
 		}else if(i >= 14 && i <= 15){
-			changeBackground('url("./images/bgs/testbackground.png")');			//Takashis
+			changeBackground('url("./images/bgs/room_interior2.png")');			//Takashis
 		}else if(i >= 16 && i <= 18){
 			changeCharacter('url("./images/characters/BossFinal.png")');		
-			changeBackground('url("./images/bgs/testbackground.png")');			//book
+			changeBackground('url("./images/bgs/book.jpg")');			//book
 		}else if(i >= 19 && i <= 25){
 			changeCharacter('url("./images/characters/BossFinal.png")');		//note
-			changeBackground('url("./images/bgs/testbackground.png")');
+			changeBackground('url("./images/bgs/book.jpg")');
 		}else if(i >= 26 && i <= 29){
 			changeCharacter('url("./images/characters/BossFinal.png")');		//takashis
-			changeBackground('url("./images/bgs/testbackground.png")');
+			changeBackground('url("./images/bgs/room_interior2.png")');
 		}else if(i >= 30 && i <= 33){
 			changeCharacter('url("./images/characters/BossFinal.png")');		//phone
 			changeBackground('url("./images/bgs/testbackground.png")');
@@ -313,11 +313,11 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//null
 			changeBackground('url("./images/bgs/testbackground.png")');
 		}else if(i >= 38 && i <= 72){
-			changeCharacter('url("./images/characters/BossFinal.png")');		//Sora/takashis
-			changeBackground('url("./images/bgs/testbackground.png")');
+			changeCharacter('url("./images/characters/Sora2.png")');		//Sora/takashis
+			changeBackground('url("./images/bgs/room_interior2.png")');
 		}else if(i == 73){
 			changeCharacter('url("./images/characters/BossFinal.png")');		//Kaboom
-			changeBackground('url("./images/bgs/testbackground.png")');
+			changeBackground('url("./images/bgs/train.png")');
 		}
 
 		if (i == 3) {

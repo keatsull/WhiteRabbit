@@ -70,7 +70,7 @@ $(document).ready(function(e) {
 		//use the value i to set when a background &/or character should change
 		if (i == 0) {
 			changeCharacter('url("./images/characters/Sora2.png")');
-			changeBackground('url("./images/bgs/shop_interior1.png")'); //Cafe
+			changeBackground('url("./images/bgs/cafe_outside1.png")'); //Cafe
 
 		if (i == 0) {
 			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);

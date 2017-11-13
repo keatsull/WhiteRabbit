@@ -112,17 +112,18 @@ let storyLine = [
 		//use the value i to set when a background &/or character should change
 		if (i >= 1 && i <= 3) {
 			changeCharacter('url("./images/characters/Customer_animated.gif")');				//Phone
-			changeBackground('url("./images/bgs/shop_interior1.png")');							//Work
+			changeBackground('url("./images/bgs/shop_interior1.png")');							
 		} else if(i >= 4 && i <= 7) {
 			changeCharacter('');																//Null
-			changeBackground('url("./images/bgs/testbackground.png")');							//street
+			changeBackground('url("./images/bgs/street6.png")');							//street
 		} else if(i >=8){
+			changeBackground('url("./images/bgs/cafe_outside1.png")');	
 			changeCharacter('url("./images/characters/Sora2.png")');		
 		}
 
 		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			shakeScreen();
+			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+			//shakeScreen();
 		}
 	}
 	

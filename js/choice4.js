@@ -204,22 +204,22 @@ $(document).ready(function(e) {
 		}
 		else if(i >=11 && i <= 15)
 		{
-			changeBackground('url("./images/bgs/shop_interior1.png")'); //Show street here, might have an additional stage showing the string.
+			changeBackground('url("./images/bgs/street1.png")'); //Show street here, might have an additional stage showing the string.
 			changeCharacter('url("./images/characters/sora2.png")');
 		}
 		else if(i == 16){
-			changeBackground('url("./images/bgs/shop_interior1.png")'); //black background to show blacking out.
+			changeBackground('url("./images/bgs/blackbackground.png")'); //black background to show blacking out.
 
 		}		
 		else if(i >= 17){
-			changeBackground('url("./images/bgs/shop_interior1.png")'); //Takashis apartment
+			changeBackground('url("./images/bgs/room_interior2.png")'); //Takashis apartment
 		}
 		else if(i >= 27){
 			changeCharacter('url("./images/characters/sora2.png")'); //Takashis phone with Kira
 		}
 
 		if (i == 16) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
 		}
 

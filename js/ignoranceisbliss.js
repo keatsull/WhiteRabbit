@@ -208,15 +208,14 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/Sora2.png")');
 			changeBackground('url("./images/bgs/shop_interior1.png")');			//Cafe
 		} else if (i == 7){
-			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');			//Book?
+			changeBackground('url("./images/bgs/book.jpg")');			//Book?
 		}
 		else if (i >= 8 && i <= 9 ){
 			changeCharacter('url("./images/characters/BossFinal.png")');		//null
-			changeBackground('url("./images/bgs/testbackground.png")');			//Street
+			changeBackground('url("./images/bgs/street11.png")');			//Street
 		}
 		else if (i == 10 ){	
-			changeBackground('url("./images/bgs/testbackground.png")');			//Takashis
+			changeBackground('url("./images/bgs/room_interior2.png")');			//Takashis
 		}
 		else if (i >= 11 && i <= 15 ){
 			changeCharacter('url("./images/characters/BossFinal.png")');		//phome
@@ -226,13 +225,13 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//null
 		}
 		else if (i == 17 ){
-			changeBackground('url("./images/bgs/testbackground.png")');			//Black Screen
+			changeBackground('url("./images/bgs/blackbackground.jpg")');			//Black Screen
 		}
 		else if (i >= 18 && i <= 20 ){
-			changeBackground('url("./images/bgs/testbackground.png")');			//Street
+			changeBackground('url("./images/bgs/street11.png")');			//Street
 		}
 		else if (i >= 21 && i <= 23){
-			changeBackground('url("./images/bgs/testbackground.png")');			//Apartment
+			changeBackground('url("./images/bgs/room_interior2.png")');			//Apartment NEEDS Change
 		}
 		else if (i >= 24 && i <= 27 ){
 			changeCharacter('url("./images/characters/Sora2.png")');
@@ -244,18 +243,18 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/BossFinal.png")');      //null, Remove Sora, adds effect
 		}
 		else if (i >= 38 && i <= 41 ){
-			changeCharacter('url("./images/characters/BossFinal.png")');		//Oh noes, you have been stabbed screen.
-			changeBackground('url("./images/bgs/testbackground.png")');
+																			//Oh noes, you have been stabbed screen.
+			changeBackground('url("./images/bgs/stabbingblood.png")');
 		}
 		else if (i >= 42 && i <= 45){
-			changeBackground('url("./images/bgs/testbackground.png")');			//black screen of die-dead
+			changeBackground('url("./images/bgs/blackbackground.png")');			//black screen of die-dead
 		}
 
 
 
 
-		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+		if (i == 38) {
+			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
 		}
 	}

@@ -90,10 +90,23 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")'); //Change to phone
+		if (i == 0) {
+			changeCharacter('url("./images/characters/msg/MessagingAkira06_2_.gif")'); 
 			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else if (i >= 5 && i <= 7){
+		}
+		else if(i == 1){
+			changeCharacter('url("./images/characters/msg/MessagingAkira07_2_.gif")'); 
+		}
+		else if(i == 2){
+			changeCharacter('url("./images/characters/msg/Customer_animated.gif")'); //msg
+		}
+		else if(i == 3){
+			changeCharacter('url("./images/characters/msg/Customer_animated.gif")'); //msg
+		}
+		else if(i == 4){
+			changeCharacter('url("./images/characters/msg/Customer_animated.gif")'); //msg
+		}
+		else if (i >= 5 && i <= 7){
 			changeCharacter('url("./images/characters/BossFinal.png")'); //change to customer W/O string
 		}
 		else if(i == 8){

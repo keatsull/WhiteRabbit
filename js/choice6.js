@@ -228,8 +228,8 @@ let storyLine = [
 		if (i == 0){
 																							//clock
 		}else if (i >= 1 && i <= 7) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');			// Null
-			changeBackground('url("./images/bgs/testbackground.png")'); 					// Takashis Apartment
+				// Null
+			changeBackground('url("./images/bgs/room_interior2.png")'); 					// Takashis Apartment
 		} else if (i >= 8 && i <= 20) {
 			changeCharacter('url("./images/characters/BossFinal.png")');
 			changeBackground('url("./images/bgs/shop_interior1.png")');
