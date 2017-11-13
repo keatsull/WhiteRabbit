@@ -102,6 +102,58 @@ button:focus {outline:0;}
 /* TAFARA insert CSS in here dont forget to create a branch git branch NovelNav, git checkout NovelNav */
 
 /*********************************************************************
+Notification
+*********************************************************************/
+#notification {
+	z-index: 3000;
+	width: 350px;
+	height: 100px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	margin-top: 10px;
+	margin-right: 10px;
+	border-radius: 20px;
+	border-width: 2px;
+	border-color: white;
+	background-color: rgba(0, 0, 0, 0.9);
+	display: none;
+}
+
+#notification h3 {
+	font-family: 'Rajdhani';
+	font-weight: 700;
+	font-size: 20px;
+	color: white;
+	top: 0;
+	position: relative;
+	margin-left: 10px;
+	margin-top: -15px;
+}
+
+#notifInnerContainer {
+	top: 0;
+	margin-left: 5px;
+}
+
+#notification p {
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	color: white;
+	margin-top: 30px;
+}
+
+#notification img {
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/*********************************************************************
 Character Divs
 *********************************************************************/
 .characterContainer {
@@ -654,6 +706,22 @@ MOBILE
 		visibility: visible;
 	}
 
+	/* Notifications */
+	#notification {
+		margin: 0;
+		margin-top: 10px;
+		width: 90%;
+		left: 5%;
+	}
+
+	#notification h3 {
+		font-size: 15px;
+		margin-top: -5px;
+	}
+
+	#notification p {
+		font-size: 12px;
+	}
 
 	/* Dialogue and Options */
 	.conversationContainer {

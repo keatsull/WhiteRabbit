@@ -83,6 +83,7 @@ $(document).ready(function(e) {
 		if (i == 3) {
 			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
+			updateNotification("hopeless romantic"); //test
 		}
 	}
 	

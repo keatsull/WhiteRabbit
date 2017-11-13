@@ -61,6 +61,38 @@ function showOverlayText(text) {
 	$('#overlayText').delay(2000).hide(0);
 }
 
+//updates notification must call type
+function updateNotification(type) {
+
+	img = "";
+	title = "";
+
+	if (type == "hopeless romantic") {
+		img="hopelessromantic.png"
+		title="Hopeless Romantic"
+	}
+
+	if (type == "conspiracy") {
+		img="conspiracy.png"
+		title="Conspiracy Theorist"
+	}
+
+	if (type == "ignorance is bliss") {
+		img="ignoranceisbliss.png"
+		title="Ignorance is Bliss"
+	}
+
+	//fills html
+	$('#notification').html('<img src="./images/achievements/'+img+'" alt="img"/>'+'<div id="notifInnerContainer"><p>Unlocked Achievement</p><h3>'+title+'</h3></div>');
+
+	//shows and then hides the notification
+	$('#notification').fadeIn(300, function() {
+		$('#notification').css('display', 'all');
+	}).delay(2000).fadeOut(300, function() {
+		$('#notification').css('display', 'none');
+	});
+}
+
 
 
 
