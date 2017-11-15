@@ -347,6 +347,8 @@ let storyLine = [
 
 		if (i >= 59 && i < 63) {
 			//business card
+			changeBackground('url("./images/bgs/computerscenebg.png")');
+			changeCharacter('url("./images/characters/BusinessCard.png")');
 		}
 
 		if (i == 63) {
@@ -578,7 +580,6 @@ let storyLine = [
 
 	//used for scrolling through computer scene
 	//in the odd occasion that there is no scrolling involved in the scene.
-	//this function hopefully never gets called, it will time the dialogue though
 	function notScrolling() {
 		var tmp = true;
 		if ( $('.computer')[0].scrollHeight <= $('.computer')[0].clientHeight ) {
@@ -587,34 +588,40 @@ let storyLine = [
 			tmp = true;
 		}
 
-		console.log(tmp);
+		var max = $(this)[0].scrollHeight - $(this)[0].clientHeight //maximum scroll size
+
+		//in case a user doesn't scroll during a scene
+		var time1 = 5000;
+		var time2 = 4000;
 
 		if (!tmp) {
+			time1 = 8000;
+			time2 = 6000;
+		}
 
-			//full screen
-  			if (currentLocation == 6) {
-  				setTimeout(function() {
-					showDialogue();
-					changeComputerImg("0b.png"); //blurred
-				}, 5000); //after 5 seconds
-  			}
+		//full screen
+		if (currentLocation == 6) {
+			setTimeout(function() {
+				showDialogue();
+				changeComputerImg("0b.png"); //blurred
+			}, time1); //after 5 seconds or 8
+		}
 
-  			//mid screen
-  			if (currentLocation == 8) {
-
-  				setTimeout(function() {
-					showDialogue();
-					changeComputerImg("3.png"); //blurred
-				}, 4000); //after 4 seconds
-  			}
-  			
-  			//full screen
-  			if (currentLocation == 9) {
-  				setTimeout(function() {
-					showDialogue();
-					changeComputerImg("3.png"); //blurred
-				}, 4000); //after 4 seconds
-  			}
+		//mid screen
+		if (currentLocation == 8) {
+			setTimeout(function() {
+				var scr = 0.6*max;
+				showDialogue();
+				changeComputerImg("3.png"); //blurred
+			}, time2); //after 4 seconds or 6
+		}
+		
+		//full screen
+		if (currentLocation == 9) {
+			setTimeout(function() {
+				showDialogue();
+				changeComputerImg("3.png"); //blurred
+			}, time2); //after 4 seconds or 6
 		}
 	}
 
