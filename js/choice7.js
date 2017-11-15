@@ -289,7 +289,7 @@ let storyLine = [
 			changeBackground('url("./images/bgs/testbackground.png")'); 			
 		}else if (i >= 17 && i <= 21) {
 			changeCharacter('url("./images/characters/Customer_animated.gif")');			// Clock
-			changeBackground('url("./images/bgs/testbackground.png")'); 					
+			changeBackground('url("./images/bgsclock1.am.png")'); 					
 		}else if (i >= 22 && i <= 24) {
 			changeCharacter('url("./images/characters/Customer_animated.gif")');			// Null
 			changeBackground('url("./images/bgs/testbackground.png")'); 					// Takashis Apartment

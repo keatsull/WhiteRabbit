@@ -226,7 +226,7 @@ let storyLine = [
 
 		//use the value i to set when a background &/or character should change
 		if (i == 0){
-																							//clock
+			changeBackground('url("./images/bgsclock1.am.png")'); 																	//clock
 		}else if (i >= 1 && i <= 7) {
 				// Null
 			changeBackground('url("./images/bgs/room_interior2.png")'); 					// Takashis Apartment
@@ -247,7 +247,7 @@ let storyLine = [
 			changeCharacter('url("./images/characters/BossFinal.png")');
 		}
 
-		if (i == 3) {
+		if (i == 1) {
 			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
 		}

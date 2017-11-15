@@ -101,6 +101,28 @@
 
 	<!-- used for information overlay -->
 	<div id="overlayText"></div>
+
+	<!-- Background Music -->
+	<audio id = "bgMusic" autoplay loop >
+	<source src="audio/bg/bg1.mp3" type="audio/ogg">
+	</audio>
+
+	<script>
+	
+		let isSoundOn = true;
+		if(isSoundOn == true)
+		{
+			//Adjusts music volume, set the number from 0.0 to 1.0 to increase or decrease volume
+			var bgMusic = document.getElementById("bgMusic");
+			bgMusic.volume = 0.5;	
+
+		}
+		else
+		{
+			var bgMusic = document.getElementById("bgMusic");
+			bgMusic.volume = 0.0;	
+		}
+	</script>
 	
 </body>
 
