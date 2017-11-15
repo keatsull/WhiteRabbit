@@ -15,6 +15,10 @@ function setDidWeLoadGame(bool) {
 	localStorage.setItem('didWeLoadGame', bool);
 }
 
+function setFirstLoad(bool) {
+	localStorage.setItem('firstLoad', bool);
+}
+
 function saveGame(loc) {
 	var local = loc.split('/').pop();
 	localStorage.setItem('lastSave', local);
@@ -34,6 +38,10 @@ function getDidWeLoadGame() {
 
 function getSave() {
 	return localStorage.getItem('lastSave');
+}
+
+function getFirstLoad() {
+	return localStorage.getItem('firstLoad');
 }
 
 function getDialogueLocation() {

@@ -33,35 +33,28 @@ $(document).ready(function(e) {
 
 	if (i == 0) {
 		enableBtn("#prevBtn", false);
-		showUI(".optionContainer", false);
+		enableBtn("#nextBtn", false);
 	}
 
 	//Story Arrays
 	//replace, delete and add more as necessary
 	//add more using ,''
 	let storyLine = [
-		'Ahahaha, So much crazy talk.',
-		'The professor here has one of those things, and the whole lecture hall hasnt mentioned a word of it!',
-		'Like it isnt even there!', 
-		'So, anyway, Whats the deal Takashi, have you talked to her yet?'
+		'You better have read that help files!'
 	];
 
 	//make sure too associate with storyline
 	let charAndLocation = [
-		'Sora, at Work',
-		'Sora, at Work',
-		'Boss, outside Work',
-		'Boss, outside Work'
+		''
 	];
 
 	//add more using ,''
 	let decision = [
-		'No,not yet', 
-		'Actually, todays the day!'
+		'Click to Continue to Story'
 	];
 
 	//links for decision, likely only use first 2
-	let link1 = '#';
+	let link1 = 'choice1.html';
 	let link2 = '#';
 	let link3 = '#';
 	let link4 = '#';
@@ -73,17 +66,10 @@ $(document).ready(function(e) {
 
 		//use the value i to set when a background &/or character should change
 		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
 			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');
-		}
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
+			nextText(); //call this cause this is only used as a helpfile
 
-		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			shakeScreen();
-			updateNotification("hopeless romantic"); //test
 		}
 	}
 	

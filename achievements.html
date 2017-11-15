@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+
+<head>
+	<title>Fate Denier by Team White Rabbit</title>
+	<link rel="stylesheet" type="text/css" href="../css/achievements.css">
+	<script src = "js/core.js"></script>
+
+</head>
+
+
+
+
+<body>
+	<!--Background container-->
+	<div id="backgroundImage"></div>
+
+	<h1 id = "achievements">Achievements</h3>
+
+	<div id = "achievementOne"></div>
+	<div id = "achievementTwo"></div>
+	<div id = "achievementThree"></div>
+
+
+
+	<a id = "backButton" href = "../index.html"> Back to Title</a>
+
+	<audio id = "bgMusic" autoplay loop >
+	<source src="../audio/bg/achieveaudio.mp3" type="audio/ogg">
+	</audio>
+
+	<script>
+
+		//Set this to false to turn off sound.  
+	
+
+		if(isSoundOn == true)
+		{
+			//Adjusts music volume, set the number from 0.0 to 1.0 to increase or decrease volume
+			var bgMusic = document.getElementById("bgMusic");
+			bgMusic.volume = 0.5;	
+
+		}
+		else
+		{
+			var bgMusic = document.getElementById("bgMusic");
+			bgMusic.volume = 0.0;	
+		}
+	</script>
+</body>
+
+
+</html>

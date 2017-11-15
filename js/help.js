@@ -1,5 +1,18 @@
 /* Created by Keaten Sullivan  */
 $(document).ready(function(e){
+
+    //get current location
+    var loc = window.location.href;
+    var local = loc.split('/').pop();
+    //console.log(local);
+
+    //if on novel.html we will show the help files
+    if(local == "novel.html") {
+        $('#helpOverlay').css("visibility", "visible");
+            $('#helpOverlay').delay(0).animate({'opacity': '1'}, 300);
+            getChoices();
+    }
+
     $("#menuHelpBtn").click(function(){
     	$('#helpOverlay').css("visibility", "visible");
         $('#helpOverlay').delay(0).animate({'opacity': '1'}, 300);

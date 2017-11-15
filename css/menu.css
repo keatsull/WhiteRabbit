@@ -1,0 +1,223 @@
+/* created by Rhys, mobile edited by Keaten */
+
+/*Fonts*/
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rajdhani Regular'), local('Rajdhani-Regular'), url(https://fonts.gstatic.com/s/rajdhani/v6/tz3398jtBIhi1rrADn6BZnYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rajdhani Bold'), local('Rajdhani-Bold'), url(https://fonts.gstatic.com/s/rajdhani/v6/kcO_Mk7pjy8jlu86STaVz4gp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+/**********************************************************************************************/
+body {
+	background-color: black;
+	margin: 0 0;
+	padding: 0 0;
+}
+
+button:focus {outline:0;}
+
+/*The background image, copied from style.css*/
+#backgroundImage {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	margin: 0 auto;
+	z-index: -100;
+	background: url('../images/bgs/titlebackground.png') no-repeat center center fixed; 
+	background-size: cover;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-color: rgba(0, 0, 0, .5);
+	overflow-x: hidden;
+}
+
+/*For the group logo in the bottom corner, as a nice touch*/
+#groupLogo{
+	position: fixed;
+	right: 10px;
+	bottom: 20px;
+	max-height: 30%;
+	max-width: 30%;
+}
+
+#logoImage {
+	position: fixed;
+	top: 10%;
+	max-height: 30%;
+	margin-top: -20px;
+}
+
+#navMenu {
+	text-align: center;
+	position: fixed;
+	top: 40%;
+	width: 100%;
+	position: fixed;
+}
+
+#navMenu ul {
+	list-style-type:none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navMenu li {
+	display:block;
+    height: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*For the images*/
+img{
+	position: relative;
+	max-width: 80%; 
+	display: block;
+    margin: 0 auto;
+}
+ /*For links to page*/
+a {
+	font-size: 55px;
+	max-width: 40%;
+	color:white;  
+	font-family:Rajdhani;
+	font-weight: 700;
+	/*** Uncomment for a border ***/ 
+	border-style: solid;
+	border-color: white;
+	background-color: rgba(0, 0, 0, .5);
+	padding: 0 20px;
+	border-width: 3px;
+}
+
+button {
+	font-size: 55px;
+	color:white;  
+	font-family:Rajdhani;
+	font-weight: 700;
+	/*** Uncomment for a border ***/ 
+	border-style: solid;
+	border-width: 3px;
+	border-color: white;
+	background-color: rgba(0, 0, 0, .5);
+	padding: 0 20px;
+	margin-top: -5px;
+	cursor: pointer;
+}
+
+/*Each of these are for the menu items, with links to their respective pages*/
+#startStory{
+	
+}
+
+#loadStory{
+	
+}
+
+#achievements{
+	
+}
+
+#helpMenu{
+
+}
+
+#extraMenu{
+	visibility: hidden;
+}
+
+	/*This will remove the 'link' attributes from the links, to make it more game-like*/
+a:link {
+	text-decoration:none;
+	color:white;
+} 
+a:visited {
+  	text-decoration:none;
+  	color:white;
+} 
+
+a:hover {
+  	text-decoration:none;
+  	color:red;
+} 
+a:active {
+  	text-decoration:none;
+  	color: white;
+} 
+
+button:visited {
+	text-decoration:none;
+  	color:red;
+}
+
+button:hover {
+  	text-decoration:none;
+  	color:red;
+} 
+
+button:active {
+  	text-decoration:none;
+  	color: white;
+} 
+
+
+ /* smaller desktop */
+@media only screen and (max-width: 1300px), (max-height: 1000px) {
+	a {
+		font-size: 40px;
+	}
+
+	button {
+		font-size: 40px;
+		margin-top: -4px;
+	}
+
+	#navMenu li {
+		height: 60px;
+		margin-bottom: 10px;
+	}
+
+	#navMenu {
+		top: 30%;
+	}
+}
+
+/* mobile desktop */
+@media only screen and (max-width: 500px), (max-height: 800px) {
+
+	a {
+		font-size: 35px;
+	}
+
+	button {
+		font-size: 35px;
+		margin-top: -3px;
+	}
+
+	#navMenu li {
+		height: 50px;
+		margin-bottom: 10px;
+	}
+
+	#navMenu {
+		top: 20%;
+	}
+
+}
+

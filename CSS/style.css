@@ -35,7 +35,7 @@ body {
 	position: fixed;
 	margin: 0 auto;
 	z-index: -100;
-	background: url('../images/shop_interior1.png') no-repeat center center fixed; /*replace me with wanted background*/
+	/*background: url('../images/shop_interior1.png') no-repeat center center fixed; /*replace me with wanted background*/
 	background-size: cover;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
