@@ -86,14 +86,14 @@ $(document).ready(function(e) {
 
 		//use the value i to set when a background &/or character should change
 		if (i == 0) {
-			changeCharacter('url("./images/characters/msg/MessagingAkira05_1.gif")'); 
+			changeCharacter('url("./images/characters/msg/MessagingAkira05_1_.gif")'); 
 			changeBackground('url("./images/bgs/shop_interior1.png")');
 		}
 		else if( i == 1 ){
-			changeCharacter('url("./images/characters/msg/MessagingAkira06_1.gif")');
+			changeCharacter('url("./images/characters/msg/MessagingAkira06_1_.gif")');
 		}
 		else if( i == 2 ){
-			changeCharacter('url("./images/characters/msg/MessagingAkira07_1.gif")');
+			changeCharacter('url("./images/characters/msg/MessagingAkira07_1_.gif")');
 		}
 		else if (i >= 3 && i <= 5){
 			changeCharacter('url("./images/characters/BossFinal.png")'); //change to customer W/O string

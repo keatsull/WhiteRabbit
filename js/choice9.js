@@ -45,7 +45,7 @@ $(document).ready(function(e) {
 
 	];
 
-	//make sure too associate with storyline
+	//make sure to associate with storyline
 	let charAndLocation = [
 		'Sora'
 	];
@@ -73,8 +73,8 @@ $(document).ready(function(e) {
 			changeBackground('url("./images/bgs/cafe_outside1.png")'); //Cafe
 
 		if (i == 0) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			shakeScreen();
+			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+			//shakeScreen();
 		}
 	}
 	

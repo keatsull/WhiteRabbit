@@ -292,31 +292,31 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/Sora2.png")');
 			changeBackground('url("./images/bgs/cafe_outside1.png")');			//cafe
 		} else if(i == 11){
-			changeCharacter('url("./images/characters/BossFinal.png")'); 		//null
+			changeCharacter('url("./images/characters/emptySprite.png")');		//null
 		}else if(i >= 12 && i <= 13){
 			changeBackground('url("./images/bgs/street1.png")');			//street
 		}else if(i >= 14 && i <= 15){
 			changeBackground('url("./images/bgs/room_interior2.png")');			//Takashis
 		}else if(i >= 16 && i <= 18){
-			changeCharacter('url("./images/characters/BossFinal.png")');		
+			changeCharacter('url("./images/characters/emptySprite.png")');		
 			changeBackground('url("./images/bgs/book.jpg")');			//book
 		}else if(i >= 19 && i <= 25){
 			changeCharacter('url("./images/characters/BossFinal.png")');		//note
 			changeBackground('url("./images/bgs/book.jpg")');
 		}else if(i >= 26 && i <= 29){
-			changeCharacter('url("./images/characters/BossFinal.png")');		//takashis
+			changeCharacter('url("./images/characters/emptySprite.png")');		//takashis
 			changeBackground('url("./images/bgs/room_interior2.png")');
 		}else if(i >= 30 && i <= 33){
 			changeCharacter('url("./images/characters/BossFinal.png")');		//phone
 			changeBackground('url("./images/bgs/testbackground.png")');
 		}else if(i >= 34 && i <= 37){
-			changeCharacter('url("./images/characters/BossFinal.png")');		//null
+			changeCharacter('url("./images/characters/emptySprite.png")');			//null
 			changeBackground('url("./images/bgs/testbackground.png")');
 		}else if(i >= 38 && i <= 72){
 			changeCharacter('url("./images/characters/Sora2.png")');		//Sora/takashis
 			changeBackground('url("./images/bgs/room_interior2.png")');
 		}else if(i == 73){
-			changeCharacter('url("./images/characters/BossFinal.png")');		//Kaboom
+			changeCharacter('url("./images/characters/emptySprite.png")');			//Kaboom
 			changeBackground('url("./images/bgs/train.png")');
 		}
 

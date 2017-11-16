@@ -104,6 +104,7 @@ $(document).ready(function(e) {
 		//use the value i to set when a background &/or character should change
 		if (i == 0) {
 			changeBackground('url("./images/bgs/shop_interior1.png")');
+			changeCharacter('url("./images/characters/emptySprite.png")');
 		}
 
 		else if(i >= 1 && i <= 5 )
@@ -111,9 +112,9 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/BossFinal.png")');
 		}
 
-		else if(i == 6)
+		else if(i >= 6 && i <= 8)
 		{
-			changeCharacter('url("./images/characters/BossFinal.png")');//null
+			changeCharacter('url("./images/characters/emptySprite.png")');//null
 		}
 
 		else if( i >= 9 ){

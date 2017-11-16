@@ -390,14 +390,14 @@ $(document).ready(function(e) {
 
 		//use the value i to set when a background &/or character should change
 		if (i >= 0 && i <= 4) {
-			changeCharacter('');												//null
+			changeCharacter('url("./images/characters/emptySprite.png")');												//null
 			changeBackground('url("./images/bgs/shop_interior1.png")');
 		} 
 		else if (i >= 5 && i <= 7) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//phone
 		} 
 		else if (i == 8 ) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//null
+			changeCharacter('url("./images/characters/emptySprite.png")');			//null
 		}
 		else if (i >= 9 && i <= 11 ) {
 			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
@@ -406,6 +406,7 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//kira	
 		}
 		else if (i >= 31 && i <= 37) {
+			changeCharacter('url("./images/characters/emptySprite.png")');	
 			changeBackground('url("./images/bgs/librarycomp2.jpg")');			//computer/null
 		}
 		else if (i >= 38 && i <= 54) {
@@ -413,13 +414,13 @@ $(document).ready(function(e) {
 			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
 		}
 		else if (i == 55 ) {
-			changeCharacter('url("./images/characters/Sora2.png")');		//sora
+			changeCharacter('url("./images/characters/Sora2.png")');			//sora
 		}
 		else if (i >= 56 && i <= 60 ) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
 		}
 		else if (i >= 61 && i <= 66) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//computer/null
+			changeCharacter('url("./images/characters/emptySprite.png")');			//computer/null
 			changeBackground('url("./images/bgs/librarycomp2.jpg")');
 		}
 		else if (i >= 67 && i <= 72) {
@@ -435,15 +436,15 @@ $(document).ready(function(e) {
 			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
 		}
 		else if (i == 77 ) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//null
-			changeBackground('url("./images/bgs/blackbackground.jpg")');			//blackscreen (transistion)
+			changeCharacter('url("./images/characters/emptySprite.png")');		//null
+			changeBackground('url("./images/bgs/blackbackground.jpg")');		//blackscreen (transistion)
 		}
 		else if (i >= 78 && i <= 96 ) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
-			changeBackground('url("./images/bgs/street11.png")');			//Hq
+			changeBackground('url("./images/bgs/street11.png")');				//Hq
 		}
 		else if (i == 97 ) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//null
+			changeCharacter('url("./images/characters/emptySprite.png")');		//null
 			changeBackground('url("./images/bgs/testbackground.png")');
 		}
 		else if (i >= 98 && i <= 101 ) {
@@ -452,13 +453,14 @@ $(document).ready(function(e) {
 		}
 		else if (i >= 102 && i <= 105) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
-			changeBackground('url("./images/bgs/street11.png")');			//hq
+			changeBackground('url("./images/bgs/street11.png")');				//hq
 		}
 		else if (i == 106) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//Kaboom (null)
+			changeCharacter('url("./images/characters/emptySprite.png")');			//Kaboom (null)
 			changeBackground('url("./images/bgs/testbackground.png")');			//Special KaBOOM bg
 		}
 		else if (i == 107) {	
+			changeCharacter('url("./images/characters/emptySprite.png")');	
 			changeBackground('url("./images/bgs/train.png")');			//End screen on train
 		}
 

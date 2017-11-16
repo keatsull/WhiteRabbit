@@ -41,7 +41,7 @@ $(document).ready(function(e) {
 	//add more using ,''
 let storyLine = [
 
-		'**Takashi finishes work and message Sora**,
+		'**Takashi finishes work and message Sora**',
 
 		'Message: Hey, it’s Takashi, I just finished my shift, do you still want to grab that coffee?',
 
@@ -114,7 +114,7 @@ let storyLine = [
 			changeCharacter('url("./images/characters/Customer_animated.gif")');				//Phone
 			changeBackground('url("./images/bgs/shop_interior1.png")');							
 		} else if(i >= 4 && i <= 7) {
-			changeCharacter('');																//Null
+			changeCharacter('url("./images/characters/emptySprite.png")');															
 			changeBackground('url("./images/bgs/street6.png")');							//street
 		} else if(i >=8){
 			changeBackground('url("./images/bgs/cafe_outside1.png")');	

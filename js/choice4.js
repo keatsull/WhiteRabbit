@@ -196,7 +196,7 @@ $(document).ready(function(e) {
 		} 
 		else if (i >= 1 && i <= 7 ) 
 		{
-			changeCharacter('url("./images/characters/BossFinal.png")'); //Null entry, no character
+			changeCharacter('url("./images/characters/emptySprite.png")');
 		}
 		else if(i >= 8 && i <= 10)
 		{
@@ -209,7 +209,7 @@ $(document).ready(function(e) {
 		}
 		else if(i == 16){
 			changeBackground('url("./images/bgs/blackbackground.png")'); //black background to show blacking out.
-
+			changeCharacter('url("./images/characters/emptySprite.png")');
 		}		
 		else if(i >= 17){
 			changeBackground('url("./images/bgs/room_interior2.png")'); //Takashis apartment

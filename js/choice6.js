@@ -226,23 +226,31 @@ let storyLine = [
 
 		//use the value i to set when a background &/or character should change
 		if (i == 0){
-			changeBackground('url("./images/bgsclock1.am.png")'); 																	//clock
-		}else if (i >= 1 && i <= 7) {
-				// Null
-			changeBackground('url("./images/bgs/room_interior2.png")'); 					// Takashis Apartment
-		} else if (i >= 8 && i <= 20) {
+			changeBackground('url("./images/bgsclock1.am.png")'); 	
+			changeCharacter('url("./images/characters/emptySprite.png")');		
+			playAudio('"./audio/effect/clock.m4a"', false);				
+		}else if (i >= 1 && i <= 4) {
+			changeCharacter('url("./images/characters/emptySprite.png")');
+			changeBackground('url("./images/bgs/room_interior2.png")'); 				
+		}
+		else if (i >= 5 && i <= 7) {
+			changeCharacter('url("./images/characters/emptySprite.png")');
+			changeBackground('url("./images/bgs/street6.png")'); 						
+		}
+
+		 else if (i >= 8 && i <= 20) {
 			changeCharacter('url("./images/characters/BossFinal.png")');
 			changeBackground('url("./images/bgs/shop_interior1.png")');
 		} else if (i >= 21 && i <= 22){
-																							//Null
+			changeCharacter('url("./images/characters/emptySprite.png")');																			
 		} else if (i >= 23 && i <= 35){
-			changeCharacter('url("./images/characters/Sora2.png")');						//Sora
+			changeCharacter('url("./images/characters/Sora2.png")');			
 		} else if (i >= 36 && i <= 38){
-																							//Null
+			changeCharacter('url("./images/characters/emptySprite.png")');																		
 		} else if (i >= 39 && i <= 46){
 			changeCharacter('url("./images/characters/Sora2.png")');	
 		} else if (i >= 47 && i <= 50){
-			changeCharacter('url("./images/characters/Sora2.png")');						//Null
+			changeCharacter('url("./images/characters/emptySprite.png")');			//Null
 		} else if (i >= 51){
 			changeCharacter('url("./images/characters/BossFinal.png")');
 		}
