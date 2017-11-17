@@ -194,9 +194,14 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/Customer_animated.gif")');
 			changeBackground('url("./images/bgs/shop_interior1.png")');
 		} 
-		else if (i >= 1 && i <= 7 ) 
+		else if (i >= 1 && i <= 3 ) 
 		{
 			changeCharacter('url("./images/characters/emptySprite.png")');
+		}
+		else if (i >= 4 && i <= 7 ) 
+		{
+			changeCharacter('url("./images/characters/Sora2.png")');
+			changeBackground('url("./images/bgs/street11.png")');
 		}
 		else if(i >= 8 && i <= 10)
 		{

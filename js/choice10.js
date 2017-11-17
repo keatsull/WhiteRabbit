@@ -41,13 +41,13 @@ $(document).ready(function(e) {
 	//add more using ,''
 	let storyLine = [
 		
-		'I’m studying visual arts, mainly painting but i dislike how strict they are when it come to art.',
+		'I’m studying visual arts, mainly painting, but I dislike how strict they are when it come to art.',
 
 		'People always seem to push their way of doing things, it would be better if we had freedom.',
 
-		'Sora smiles',
+		'***Sora smiles***',
 
-		'I agree',
+		'I agree.',
 
 	];
 
@@ -77,17 +77,17 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
+		if (i <= 4) {
+			changeCharacter('url("./images/characters/Sora2.png")');
+			changeBackground('url("./images/bgs/cafe_outside1.png")');
 		} else {
 			changeCharacter('url("./images/characters/BossFinal.png")');
 			changeBackground('url("./images/bgs/testbackground.png")');
 		}
 
 		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			shakeScreen();
+			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+			//shakeScreen();
 		}
 	}
 	

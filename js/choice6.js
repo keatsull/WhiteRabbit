@@ -250,7 +250,7 @@ let storyLine = [
 		} else if (i >= 39 && i <= 46){
 			changeCharacter('url("./images/characters/Sora2.png")');	
 		} else if (i >= 47 && i <= 50){
-			changeCharacter('url("./images/characters/emptySprite.png")');			//Null
+			changeCharacter('url("./images/characters/emptySprite.png")');			
 		} else if (i >= 51){
 			changeCharacter('url("./images/characters/BossFinal.png")');
 		}
