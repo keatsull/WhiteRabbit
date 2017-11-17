@@ -1,3 +1,4 @@
+<!-- Created by Keaten Sullivan, user data entered by Clifford Smith, used https://codepen.io/oknoblich/pen/vfJxr?editors=1000-->
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="Description" content="Fate Denier Visual Novel">
@@ -14,12 +15,26 @@
 	<script src="js/help.js"></script>
 	<script src="js/mobilemenu.js"></script>
 	<script src="js/scene1.js"></script>
+	<script>
+		$(document).ready(function(e){
+			$("#exitCreditsBtn").click(function(){
+				window.location.href = 'index.html';
+			});
+		});
+	</script>
 </head>
 
 <body>
+
+	<button id="exitCreditsBtn"></button>
+
+	<!-- wrapper that contains the scrolling text -->
 	<div class="wrapper">
+		<!-- Title -->
 		<div class="title"><img src="images/logos/title-wht.png"/></div>
 		<div class="name">By</div>
+
+		<!-- To add a new Job/Name just add <div class="job">ENTER TEXT HERE</div><div class="name">ENTER TEXT HERE</div>-->
 		<div class="job">Test</div>
 		<div class="name">Test</div>
 		<div class="job">Test</div>
@@ -30,6 +45,11 @@
 		<div class="name">Test</div>
 		<div class="job">Test</div>
 		<div class="name">Test</div>
+
+		<!-- final -->
+		<div class="name">Thank You</div>
+		<div class="title"><img src="images/logos/logo-wht.png"/></div>
+
 	</div>
 </body>
 
