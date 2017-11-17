@@ -122,14 +122,14 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/emptySprite.png")');//null
 		}
 
-		else if( i >= 9 ){
+		else if( i == 9 ){
 			changeCharacter('url("./images/characters/msg/MessagingAkira01.gif")');
 		}
-		else if( i >= 10 ){
+		else if( i == 10 ){
 			changeCharacter('url("./images/characters/msg/MessagingAkira02.gif")');
 		}
 		
-		else if( i >= 11 ){
+		else if( i == 11 ){
 			changeCharacter('url("./images/characters/msg/MessagingAkira03.gif")');
 		}
 
