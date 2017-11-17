@@ -588,7 +588,7 @@ let storyLine = [
 			tmp = true;
 		}
 
-		var max = $(this)[0].scrollHeight - $(this)[0].clientHeight //maximum scroll size
+		//var max = $(this)[0].scrollHeight - $(this)[0].clientHeight //maximum scroll size
 
 		//in case a user doesn't scroll during a scene
 		var time1 = 5000;
