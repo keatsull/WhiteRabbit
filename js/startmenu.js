@@ -6,6 +6,14 @@ $(document).ready(function(e){
         loadGame();
     });
 
+    $("#startMenuAchBtn").click(function(){
+        showAchievements();
+    });
+
+    $("#achCloseBtn").click(function(){
+        hideAchievements();
+    });
+
     //checks to see if its the first time we have played, if so show help
     $("#startStoryBtn").click(function(){
         if (getFirstLoad() === null || !getFirstLoad()) {

@@ -19,6 +19,18 @@ $(document).ready(function(e){
     $("#mobileMenuLoadBtn").click(function(){
         loadGame();
     });
+
+    //shows achievements
+    $("#mobileMenuAchBtn").click(function() {
+        //console.log("here");
+        showAchievements();
+        hideMobileMenu(); //hides menu
+    });
+
+    //closes achievements
+    $("#achCloseBtn").click(function(){
+        hideAchievements();
+    });
 });
 
 function hideMobileMenu() {

@@ -318,6 +318,7 @@ let storyLine = [
 			//hide computer
 			changeCharacter('url("")'); //empty
 			changeBackground('url("./images/bgs/clockbg.png")');
+			
 			hideComputer(true);
 		}
 
@@ -347,7 +348,7 @@ let storyLine = [
 
 		if (i >= 59 && i < 63) {
 			//business card
-			changeBackground('url("./images/bgs/computerscenebg.png")');
+			changeBackground('url("./images/bgs/shop_interior1.png")');
 			changeCharacter('url("./images/characters/BusinessCard.png")');
 		}
 

@@ -42,7 +42,7 @@ $(document).ready(function(e) {
 	let storyLine = [
 		'The “right time?” You just have to talk to her right away.',
 
-		'Be confident about yourself, that’s all there is to it.',
+		'Be confident about yourself, that’s it.',
 
 		'Confidence is overrated.',
 

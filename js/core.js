@@ -19,6 +19,20 @@ function setFirstLoad(bool) {
 	localStorage.setItem('firstLoad', bool);
 }
 
+function setAchievement(type) {
+	if (type == "hopelessromantic") {
+		return localStorage.setItem('hopelessromantic', true);
+	}
+
+	if (type == "conspiracy") {
+		return localStorage.setItem('conspiracy', true);
+	}
+
+	if (type == "ignoranceisbliss") {
+		return localStorage.setItem('ignoranceisbliss', true);
+	}
+}
+
 function saveGame(loc) {
 	var local = loc.split('/').pop();
 	localStorage.setItem('lastSave', local);
@@ -48,6 +62,20 @@ function getDialogueLocation() {
 	return parseInt(localStorage.getItem('dialogueLocation'));
 }
 
+function getAchievement(type) {
+	if (type == "hopelessromantic") {
+		return localStorage.getItem('hopelessromantic');
+	}
+
+	if (type == "conspiracy") {
+		return localStorage.getItem('conspiracy');
+	}
+
+	if (type == "ignoranceisbliss") {
+		return localStorage.getItem('ignoranceisbliss');
+	}
+}
+
 function loadGame() {
 
 	//get items
@@ -75,19 +103,22 @@ function updateNotification(type) {
 	img = "";
 	title = "";
 
-	if (type == "hopeless romantic") {
+	if (type == "hopelessromantic") {
 		img="hopelessromantic.png"
 		title="Hopeless Romantic"
+		setAchievement("hopelessromantic");
 	}
 
 	if (type == "conspiracy") {
 		img="conspiracy.png"
 		title="Conspiracy Theorist"
+		setAchievement("conspiracy");
 	}
 
-	if (type == "ignorance is bliss") {
+	if (type == "ignoranceisbliss") {
 		img="ignoranceisbliss.png"
 		title="Ignorance is Bliss"
+		setAchievement("ignoranceisbliss");
 	}
 
 	//fills html
@@ -99,6 +130,32 @@ function updateNotification(type) {
 	}).delay(2000).fadeOut(300, function() {
 		$('#notification').css('display', 'none');
 	});
+}
+
+function showAchievements() {
+	$('#achievementsOverlay').css("visibility", "visible");
+    $('#achievementsOverlay').delay(0).animate({'opacity': '1'}, 300);
+
+    $('#hopelessromantic').css('opacity', '0.5');
+    $('#ignoranceisbliss').css('opacity', '0.5');
+    $('#conspiracy').css('opacity', '0.5');
+
+    if (getAchievement("hopelessromantic")) {
+    	$('#hopelessromantic').css('opacity', '1');
+    }
+
+    if (getAchievement("ignoranceisbliss")) {
+    	$('#ignoranceisbliss').css('opacity', '1');
+    }
+
+    if (getAchievement("conspiracy")) {
+    	$('#conspiracy').css('opacity', '1');
+    }
+}
+
+function hideAchievements() {
+	$('#achievementsOverlay').delay(0).animate({'opacity': '0'}, 300);
+    $('#achievementsOverlay').delay(300).css("visibility", "hidden");
 }
 
 

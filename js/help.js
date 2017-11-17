@@ -19,6 +19,7 @@ $(document).ready(function(e){
         getChoices();
     });
 
+    //shows help menu
     $("#mobileMenuHelpBtn").click(function(){
         $('#helpOverlay').css("visibility", "visible");
         $('#helpOverlay').delay(0).animate({'opacity': '1'}, 300);
@@ -28,11 +29,14 @@ $(document).ready(function(e){
         getChoices();
     });
 
+    //closes helpmenu
     $("#closeBtn").click(function(){
         $('#helpOverlay').delay(0).animate({'opacity': '0'}, 300);
         $('#helpOverlay').delay(300).css("visibility", "hidden");
     });
 
+
+    //checks if there are choices on the display, if so shows a help overlay on top
     function getChoices() {
 
     	$('#helpOptions').html('');  //empty
