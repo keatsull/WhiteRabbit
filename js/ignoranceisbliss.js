@@ -216,39 +216,49 @@ $(document).ready(function(e) {
 			changeBackground('url("./images/bgs/street11.png")');			//Street
 		}
 		else if (i == 10 ){	
+			changeCharacter('url("./images/characters/emptySprite.png")');
 			changeBackground('url("./images/bgs/room_interior2.png")');			//Takashis
 		}
 		else if (i >= 11 && i <= 15 ){
 			changeCharacter('url("./images/characters/emptySprite.png")');			//phome
-			changeBackground('url("./images/bgs/testbackground.png")');
+			changeBackground('url("./images/bgs/room_interior2.png")');	
 		}
 		else if (i == 16 ){
-			changeCharacter('url("./images/characters/emptySprite.png")');			//null
+			changeCharacter('url("./images/characters/emptySprite.png")');
+			changeBackground('url("./images/bgs/room_interior2.png")');				//null
 		}
 		else if (i == 17 ){
-			changeBackground('url("./images/bgs/blackbackground.jpg")');			//Black Screen
+			changeBackground('url("./images/bgs/blackbackground.jpg")');	
+			changeCharacter('url("./images/characters/emptySprite.png")');		//Black Screen
 		}
 		else if (i >= 18 && i <= 20 ){
-			changeBackground('url("./images/bgs/street11.png")');			//Street
+			changeBackground('url("./images/bgs/street11.png")');		
+			changeCharacter('url("./images/characters/emptySprite.png")');	//Street
 		}
 		else if (i >= 21 && i <= 23){
-			changeBackground('url("./images/bgs/room_interior2.png")');			//Apartment NEEDS Change
+			changeBackground('url("./images/bgs/room_interior2.png")');	
+			changeCharacter('url("./images/characters/emptySprite.png")');		//Apartment NEEDS Change
 		}
 		else if (i >= 24 && i <= 27 ){
 			changeCharacter('url("./images/characters/Sora2.png")');
+			changeBackground('url("./images/bgs/room_interior2.png")');
 		}
 		else if (i >= 28 && i <= 36){
-			changeCharacter('url("./images/characters/BossFinal.png")');	//Evil Sora
+			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeBackground('url("./images/bgs/room_interior2.png")');	//Evil Sora
 		}
 		else if (i == 37 ){
-			changeCharacter('url("./images/characters/emptySprite.png")');	    //null, Remove Sora, adds effect
+			changeCharacter('url("./images/characters/emptySprite.png")');
+			changeBackground('url("./images/bgs/room_interior2.png")');	    //null, Remove Sora, adds effect
 		}
 		else if (i >= 38 && i <= 41 ){
 																			//Oh noes, you have been stabbed screen.
 			changeBackground('url("./images/bgs/stabbingblood.png")');
+			changeCharacter('url("./images/characters/emptySprite.png")');
 		}
 		else if (i >= 42 && i <= 45){
-			changeBackground('url("./images/bgs/blackbackground.png")');			//black screen of die-dead
+			changeBackground('url("./images/bgs/blackbackground.png")');
+			changeCharacter('url("./images/characters/emptySprite.png")');			//black screen of die-dead
 		}
 
 

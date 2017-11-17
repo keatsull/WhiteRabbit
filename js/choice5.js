@@ -112,9 +112,9 @@ $(document).ready(function(e) {
 
 		'Message: Don’t worry about it, things have always worked out. Anyways I’ve got some good news.', //36
 
-		'I’ve found some information about what these manifestations are.',
+		'Message: I’ve found some information about what these manifestations are.',
 
- 		'Go to this website, I’ll send a link to your computer.', //38
+ 		'Message: Go to this website, I’ll send a link to your computer.', //38
 
 		'**Takashi goes to his computer to open the link, it looks like a weird format he is not used to seeing**',
 
@@ -197,21 +197,23 @@ $(document).ready(function(e) {
 		else if (i >= 1 && i <= 3 ) 
 		{
 			changeCharacter('url("./images/characters/emptySprite.png")');
+			changeBackground('url("./images/bgs/shop_interior1.png")');
 		}
 
 		else if (i >= 4 && i <= 7 ) 
 		{
 			changeCharacter('url("./images/characters/Sora2.png")');
-			changeBackground('url("./images/bgs/street11.png")');
+			changeBackground('url("./images/bgs/street1.png")');
 		}
 		else if(i >= 8 && i <= 10)
 		{
 			changeCharacter('url("./images/characters/BossFinal.png")'); //Correct
+			changeBackground('url("./images/bgs/shop_interior1.png")');
 		}
 		else if(i >=11 && i <= 15)
 		{
 			changeBackground('url("./images/bgs/street1.png")'); //Show street here, might have an additional stage showing the string.
-			changeCharacter('url("./images/characters/sora2.png")');
+			changeCharacter('url("./images/characters/string.gif")');
 		}
 		else if(i == 16){
 			changeBackground('url("./images/bgs/blackbackground.png")'); //black background to show blacking out.
@@ -220,14 +222,24 @@ $(document).ready(function(e) {
 		}		
 		else if(i >= 17){
 			changeBackground('url("./images/bgs/room_interior2.png")'); //Takashis apartment
+			changeCharacter('url("./images/characters/emptySprite.png")');	
 		}
-		else if(i >= 27){
+		else if(i >= 27 && i <= 38){
 			changeCharacter('url("./images/characters/sora2.png")'); //Takashis phone with Kira
+			changeBackground('url("./images/bgs/room_interior2.png")'); //Takashis apartment
+			
 		}
 
-		if (i == 16) {
+		else if(i >= 39 ){
+			changeCharacter('url("./images/characters/sora2.png")'); //Takashis phone with Kira
+			changeBackground('url("./images/bgs/computerbg.png")'); 
+
+		}
+
+		if (i == 25) {
 			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
+			playAudio('"./audio/effect/phone.mp3"', false);
 		}
 
 	}

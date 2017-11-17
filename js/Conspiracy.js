@@ -391,48 +391,55 @@ $(document).ready(function(e) {
 		//use the value i to set when a background &/or character should change
 		if (i >= 0 && i <= 4) {
 			changeCharacter('url("./images/characters/emptySprite.png")');												//null
-			changeBackground('url("./images/bgs/shop_interior1.png")');
+			changeBackground('url("./images/bgs/street11.png")');
 		} 
 		else if (i >= 5 && i <= 7) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//phone
+			changeBackground('url("./images/bgs/street11.png")');
 		} 
 		else if (i == 8 ) {
+			changeBackground('url("./images/bgs/street11.png")');		
 			changeCharacter('url("./images/characters/emptySprite.png")');			//null
 		}
 		else if (i >= 9 && i <= 11 ) {
+			changeCharacter('url("./images/characters/emptySprite.png")');
 			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
 		}
 		else if (i >= 12 && i <= 30) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//kira	
+			changeCharacter('url("./images/characters/Akira.png")');
+			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//kira	
 		}
 		else if (i >= 31 && i <= 37) {
 			changeCharacter('url("./images/characters/emptySprite.png")');	
 			changeBackground('url("./images/bgs/librarycomp2.jpg")');			//computer/null
 		}
 		else if (i >= 38 && i <= 54) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeCharacter('url("./images/characters/Akira.png")');		//kira
 			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
 		}
 		else if (i == 55 ) {
-			changeCharacter('url("./images/characters/Sora2.png")');			//sora
+			changeCharacter('url("./images/characters/Sora2.png")');
+			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//sora
 		}
 		else if (i >= 56 && i <= 60 ) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeCharacter('url("./images/characters/Akira.png")');		//kira
+			changeBackground('url("./images/bgs/librarycomp1.jpg")');
 		}
 		else if (i >= 61 && i <= 66) {
 			changeCharacter('url("./images/characters/emptySprite.png")');			//computer/null
 			changeBackground('url("./images/bgs/librarycomp2.jpg")');
 		}
 		else if (i >= 67 && i <= 72) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeCharacter('url("./images/characters/Akira.png")');		//kira
 			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
 		}
 		else if(i == 73){
+			changeCharacter('url("./images/characters/emptySprite.png")');
 			changeBackground('url("./images/bgs/bag.jpg")');	
 				}
 
 		else if (i >= 74 && i <= 76) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeCharacter('url("./images/characters/Akira.png")');		//kira
 			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
 		}
 		else if (i == 77 ) {
@@ -440,7 +447,7 @@ $(document).ready(function(e) {
 			changeBackground('url("./images/bgs/blackbackground.jpg")');		//blackscreen (transistion)
 		}
 		else if (i >= 78 && i <= 96 ) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeCharacter('url("./images/characters/Akira.png")');		//kira
 			changeBackground('url("./images/bgs/street11.png")');				//Hq
 		}
 		else if (i == 97 ) {
@@ -452,7 +459,7 @@ $(document).ready(function(e) {
 			changeBackground('url("./images/bgs/testbackground.png")');			//phone
 		}
 		else if (i >= 102 && i <= 105) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeCharacter('url("./images/characters/Akira.png")');		//kira
 			changeBackground('url("./images/bgs/street11.png")');				//hq
 		}
 		else if (i == 106) {

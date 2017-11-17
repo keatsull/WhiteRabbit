@@ -7,8 +7,6 @@ $(document).ready(function(e) {
 	//names for use in the corresponding scene. 
 
 	var currentDialogue = '';
-
-	setFirstLoad(true); //we have now played the game before, start menu will go to choice1.html instead of novel.html
 	
 	//To iterate through the code. 
 	var i = 0;
@@ -104,35 +102,40 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i >= 0) {
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		}
-
 		if (i == 0) {
+			changeBackground('url("./images/bgs/shop_interior1.png")');
 			changeCharacter('url("./images/characters/emptySprite.png")');
 		}
 
 		else if(i >= 1 && i <= 5 )
 		{
-			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeBackground('url("./images/bgs/shop_interior1.png")');
+			changeCharacter('url("./images/characters/bossAngry.png")');
 		}
 
 		else if(i >= 6 && i <= 8)
 		{
+			changeBackground('url("./images/bgs/shop_interior1.png")');
 			changeCharacter('url("./images/characters/emptySprite.png")');//null
 		}
 
-		else if( i >= 9 ){
+		else if( i == 9 ){
+			changeBackground('url("./images/bgs/shop_interior1.png")');
 			changeCharacter('url("./images/characters/msg/MessagingAkira01.gif")');
 		}
-		else if( i >= 10 ){
+		else if( i == 10 ){
+			changeBackground('url("./images/bgs/shop_interior1.png")');
 			changeCharacter('url("./images/characters/msg/MessagingAkira02.gif")');
 		}
 		
-		else if( i >= 11 ){
+		else if( i == 11 ){
+			changeBackground('url("./images/bgs/shop_interior1.png")');
 			changeCharacter('url("./images/characters/msg/MessagingAkira03.gif")');
 		}
 
+		if (i == 6){
+			playAudio('"./audio/effect/phone.mp3"', false);
+		}
 		if (i == 1) {
 			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();

@@ -228,7 +228,7 @@ let storyLine = [
 		if (i == 0){
 			changeBackground('url("./images/bgsclock1.am.png")'); 	
 			changeCharacter('url("./images/characters/emptySprite.png")');		
-			playAudio('"./audio/effect/clock.m4a"', false);				
+			playAudio('"./audio/effect/clock.mp3"', false);				
 		}else if (i >= 1 && i <= 4) {
 			changeCharacter('url("./images/characters/emptySprite.png")');
 			changeBackground('url("./images/bgs/room_interior2.png")'); 				
@@ -242,17 +242,23 @@ let storyLine = [
 			changeCharacter('url("./images/characters/BossFinal.png")');
 			changeBackground('url("./images/bgs/shop_interior1.png")');
 		} else if (i >= 21 && i <= 22){
-			changeCharacter('url("./images/characters/emptySprite.png")');																			
+			changeCharacter('url("./images/characters/emptySprite.png")');		
+			changeBackground('url("./images/bgs/shop_interior1.png")');																	
 		} else if (i >= 23 && i <= 35){
-			changeCharacter('url("./images/characters/Sora2.png")');			
+			changeCharacter('url("./images/characters/Sora2.png")');	
+			changeBackground('url("./images/bgs/shop_interior1.png")');		
 		} else if (i >= 36 && i <= 38){
-			changeCharacter('url("./images/characters/emptySprite.png")');																		
+			changeCharacter('url("./images/characters/emptySprite.png")');
+			changeBackground('url("./images/bgs/shop_interior1.png")');																		
 		} else if (i >= 39 && i <= 46){
 			changeCharacter('url("./images/characters/Sora2.png")');	
+			changeBackground('url("./images/bgs/shop_interior1.png")');
 		} else if (i >= 47 && i <= 50){
-			changeCharacter('url("./images/characters/emptySprite.png")');			//Null
+			changeCharacter('url("./images/characters/emptySprite.png")');
+			changeBackground('url("./images/bgs/shop_interior1.png")');			//Null
 		} else if (i >= 51){
-			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeCharacter('url("./images/characters/Boss.png")');
+			changeBackground('url("./images/bgs/shop_interior1.png")');
 		}
 
 		if (i == 1) {

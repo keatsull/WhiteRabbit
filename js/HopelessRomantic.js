@@ -292,10 +292,13 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/Sora2.png")');
 			changeBackground('url("./images/bgs/cafe_outside1.png")');			//cafe
 		} else if(i == 11){
+			changeBackground('url("./images/bgs/cafe_outside1.png")');	
 			changeCharacter('url("./images/characters/emptySprite.png")');		//null
 		}else if(i >= 12 && i <= 13){
+			changeCharacter('url("./images/characters/emptySprite.png")');
 			changeBackground('url("./images/bgs/street1.png")');			//street
 		}else if(i >= 14 && i <= 15){
+			changeCharacter('url("./images/characters/emptySprite.png")');
 			changeBackground('url("./images/bgs/room_interior2.png")');			//Takashis
 		}else if(i >= 16 && i <= 18){
 			changeCharacter('url("./images/characters/emptySprite.png")');		
