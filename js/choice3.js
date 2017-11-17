@@ -41,20 +41,22 @@ $(document).ready(function(e) {
 	//add more using ,''
 	let storyLine = [
 		'That’s it!',
+
 		'If you walk up to her with that sort of confidence you might just stand a chance.',
 
 		'“Might just stand a chance?”',
+
 		'Thanks for the words of support Akira.',
 
-		'Anytime', 
+		'Anytime.', 
 
-		'A Customer appears in front, ready to make a purchase, Takashi places the phone down and greets the customer.',
+		'**A Customer appears in front, ready to make a purchase, Takashi places the phone down and greets the customer.**',
 
-		'Takashi Oh! H-hey, just this?',
+		'Oh! HH-hey, just this?',
 
-		'Customer Yes, please',
+		'Yes, please.',
 
-		'Suddenly, a strange animated string attached to the customer warps into appearance, wriggling in the air.'
+		'**Suddenly, a strange animated string attached to the customer warps into appearance, wriggling in the air.**'
 	];
 
 	//make sure too associate with storyline
@@ -88,17 +90,27 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
+		if (i == 0) {
+			changeCharacter('url("./images/characters/msg/MessagingAkira04_2_.gif")'); 
 			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
-			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');
 		}
-
-		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			shakeScreen();
+		else if(i == 1){
+			changeCharacter('url("./images/characters/msg/MessagingAkira05_2_.gif")'); 
+		}
+		else if(i == 2){
+			changeCharacter('url("./images/characters/msg/MessagingAkira06_2_.gif")');  //msg
+		}
+		else if(i == 3){
+			changeCharacter('url("./images/characters/msg/MessagingAkira07_2_.gif")');//msg
+		}
+		else if(i == 4){
+			changeCharacter('url("./images/characters/msg/Customer_animated.gif")'); //msg
+		}
+		else if (i >= 5 && i <= 7){
+			changeCharacter('url("./images/characters/BossFinal.png")'); //change to customer W/O string
+		}
+		else if(i == 8){
+			changeCharacter('url("./images/characters/Customer_animated.gif")');
 		}
 	}
 	

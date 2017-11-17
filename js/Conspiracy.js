@@ -41,207 +41,221 @@ $(document).ready(function(e) {
 	//add more using ,''
 	let storyLine = [
 
-		'TAKASHI finishes work and starts to walk to Kiras university',
+		'**Takashi finishes work and starts to walk to Kiras university**', //0
 
-		'“I hope this is important i could of asked sora out to the cafe after work!”',
-		'“From what i saw last night this Destined cult seems insane, and seem to know what the true nature of the string that i see”',
-		'“I better let kira know i am going to his university now”',
+		'“I hope this is important, I could of asked Sora out to the cafe after work!”',
 
-		'TAKASHI pulls out phone and starts massaging kira',
+		'“From what I saw last night, this Destined cult seem insane and also seem to know what the true nature of the string that I see”', //2
 
-		'Message: Hey kira omw to the uni now, you would not believe it but i got her number today',
+		'“I better let Kira know I am going to his university now”',
 
-		'Message: Yeah about that…. Nvm we will talk when you arrive.',
+		'**Takashi pulls out phone and starts massaging Kira**', //4
 
-		'“I thought he would of been happier for me, maybe he discovered something researching that got him down”',
+		'Message: Hey Kira, omw to the uni now, you would not believe it.. But I got her number today!',
 
-		'Takashi puts away his phone and patiently walks to the university',
-		'Takashi arrives at the university and enters the library',
+		'Message: Yeah, about that….... Nvm we will talk when you arrive.', //6
 
- 		'“Kira always spends most of his time in the library though not on the things a student should, mostly crazy conspiracy theories, i’m amazed he get’s high marks”',
+		'“I thought he would of been happier for me, maybe he has discovered something doing research that got him down”',
 
-		'TAKASHI spots kira in the corner hardly visible in front of one of the public computers',
+		'**Takashi puts away his phone and patiently walks to the university**', //8
 
-		'Hi kira so what did you want to talk about?',
+		'**Takashi arrives at the university and enters the library**',
 
-		'Grab a seat, i’ll show you ',
+ 		'“Kira always spends most of his time in the library. Though not on the things a student should be doing, mostly looking up crazy conspiracy theories, I’m amazed he get’s high marks”', //10
 
-		'“As blunt as always”',
+		'**Takashi spots Kira in the corner hardly visible in front of one of the public computers**',
 
-		'TAKASHI grabs a seat and looks at the computer screen while listening to kira',
+		'Hi kira, So what did you want to talk about?', //12
 
-		'So i went digging last night and found a lot of interesting information surrounding the destined organisation',
+		'Grab a seat, I’ll show you.',
 
-		'Organisation? I thought it was a cult',
+		'“As blunt as always”', //14
 
-		'Yeah that’s what i thought too, until i hacked the website',
-		'i found that the site was getting funding from an organisation called the “international committee of 9”, and i mean a lot of funding like 6 digit funds, multiple times over the past 6 months',
+		'**Takashi grabs a seat and looks at the computer screen while listening to Kira**',
 
-		'Yeah but what does this have to do with us',
+		'So I went digging last night and found a lot of interesting information surrounding the destined organisation.', //16
 
-		'It has everything to do with us, the destined hunt fate deniers like us, for some reason they think we are dangerous',
+		'Organisation? I thought it was a cult.',
 
-		'Why all we can do is see manifestations on people',
+		'Yeah, that’s what I thought too, until I hacked the website.', //18
 
-		'Apparently that’s not all we can do, i found some documents on the “international committee of 9” they were behind password protection but not hard to access if you know what you are doing',
+		'I found that the site was getting funding from an organisation called the “International Committee of 9” and I mean a lot of funding. Like 6 digit funds, happening multiple times over the past 6 months.',
 
-		'“It is like kira does not know there is a law against this stuff” ',
+		'Yeah, but what does this have to do with us?', //20
 
-		'The document states that there have been many people which have prevented “world unification” whatever that means, they even have a list of names, and guess what they call them….fate deniers',
+		'It has everything to do with us as the destined hunt fate deniers like us. For some reason, they think we are dangerous.',
 
-		'Kira pulls up a document with many names of dictators and assassinated officials all over the world, even presidents of countries that were later invaded',
+		'Why? All we can do is see manifestations on people.', //22
 
-		'This is some heavy stuff kira are you sure we should be delving into this?',
+		'Apparently that’s not all we can do, I found some documents on the “International Committee of 9”. They were behind password protection, but not hard to access if you know what you are doing.',
 
-		'I was feeling the same thing, but at this point i no longer care about consequences, i’m sick of not knowing what these experiences we are having are',
+		'“It is like Kira does not know there is a law against this stuff” ', //24
 
-		'As far as i can tell we are no closer to figuring that out then before',
+		'The document states that there have been many people which have prevented “world unification” whatever that means, they even have a list of names, and guess what they call them….fate deniers.',
 
-		'Ok then',
+		'**Kira pulls up a document with many names of dictators and assassinated officials all over the world, even presidents of countries that were later invaded**', //26
 
-		'Kira pulls up a document caltled MKManifest', 
+		'This is some heavy stuff Kira, Are you sure we should be delving into this?',
 
-		'The document states ',
+		'I was feeling the same thing, but at this point I no longer care about consequences, I’m sick of not knowing what these experiences we are having are.', //28
 
-		'patient 1104:		shows increased performance in both leadership and cognitive function compared to his normal counterpart, conclusion not yet made.',
+		'As far as I can tell we are no closer to figuring that out then before.',
 
-		'Patient 1104 update:		Interest and passion fades when forced to comply, but when left to self applies effort far exceeding that of normal counterpart, conclusion not yet made',
+		'Ok then.', //30
 
-		'Patient 1104 update:		Hallucinations starting to manifest, string like object is seen on other children, symptoms of disconnection from the others have resulted in anti social behaviour, conclusion not yet made  ',
+		'**Kira pulls up a document caltled MKManifest**', 
 
-		'Patient 1104 update:		Hallucinations have no longer any effect on the patient but there seems to now be secrecy between the children with the patient’s activity amongst the group, conclusion not yet made',
+		'The document states..', //32
 
-		'Patient 1104 final:		I.Q is 100% high than normal humans, patient has caused an uprising in all patients, extra guards were needed for security of scientific assets, conclusion fate deniers are an extreme risk to society and the committee of 9 needs a special task force for immediate elimination.',
+		'PATIENT 1104 Inital:		Shows increased performance in both leadership and cognitive function compared to his normal counterpart, conclusions not yet made.',
 
-		'What on earth have you found kira? ',
-		'This is insane are you telling me that we are being hunted?',
+		'PATIENT 1104 update 4:		Interest and passion fades when forced to comply, but when left to ones self, subject applies effort far exceeding that of the normal counterpart, conclusions not yet made.', //34
 
-		'The reason you passed out yesterday was because they were trying to find out if you were a fd and unfortunately it seems they now know you are',
+		'PATIENT 1104 update 7:		Hallucinations starting to manifest, string like object is seen on the other children, symptoms of disconnection from the others have resulted in anti-social behaviour, conclusions not yet made.',
+
+		'PATIENT 1104 update 18:	Hallucinations have no longer any effect on the patient, but there seems to now be secrecy between the children with the patient’s activity amongst the group, conclusions not yet made.', //36
+
+		'PATIENT 1104 final:		I.Q is 100% higher than normal humans, patient has caused a sense of uprising in all patients, extra guards were needed for security of the scientific assets, conclusion: fate deniers are an extreme risk to society and the Committee of 9 needs a special task force for immediate elimination.',
+
+		'What on earth have you found Kira? ', //38
+
+		'This is insane. Are you telling me that we are being hunted?',
+
+		'The reason you passed out yesterday was because they were trying to find out if you were a fd and unfortunately it seems they now know that you are.', //40
 
 		'How do you know that?',
 
-		'The message board i linked to you last night, the kidnapping was for you and the reason you past out was because they manifested a fate string onto you',
+		'The message board I linked to you last night, the kidnapping was for you and the reason you past out was because they manifested a fate string onto you.', //42
 
-		'But who would of done that it was a slow day?',
+		'But who would of done that? It was a slow day.',
 
-		'Can you think of anyone that was there?',
+		'Can you think of anyone that was there?', //44
 
-		'Sora….',
+		'Well, there was Sora….',
 
-		'Hmmm',
+		'Hmmm..', //46
 
 		'What?',
 
-		'I was thinking that skylimit which was talking on the messageboard was her it would make sense she even gave you her number only a day after you blacked out',
+		'I was thinking that the user called \'skylimit\' on the messageboard was her. It would make sense, since she even gave you her number only a day after you blacked out.', //48
 
-		'It’s probably only a coincidence ',
+		'It’s probably only a coincidence.',
 
-		'I don’t think so skylimit I.P address is in this town',
+		'I don’t think so, skylimit\'s I.P address is located in this town.', //50
 
-		'ARE YOU SERIOUS!',
+		'ARE YOU SERIOUS!?',
 
-		'Not just that but the I.P address is sometimes logged in from this library',
+		'Not just that, but the I.P address is sometimes logged in from this library.', //52
 
 		'….',
 
-		'Look behind you',
+		'Look behind you.', //54
 
-		'As kira turns around he sees a person in the distance it’s sora she goes to the same uni as kira ',
+		'**As Kira turns around he sees a person in the distance, it’s Sora and it seems that she goes to the same uni as Kira**',
 
-		'SORA!',
+		'SORA!', //56
 
-		'Be quiet, or she will see us',
-		'I never thought it was her…. But there is only one way to find out',
+		'Be quiet! Or she will see us!',
+
+		'I never thought it was her…. But there is only one way to find out', //58
 
 		'How?',
 
-		'We go on the messageboard if skylimit is active and logged in from this library it must be her',
+		'We go on the messageboard if skylimit is active and logged in from this library it must be her.', //60
 
-		'Kira pulls up the message board ',
+		'**Kira pulls up the message board**',
 
-		'SKYLIMIT: I confronted the subject today will be getting information on him in the future',
+		'SKYLIMIT: I confronted the subject today. Will be getting information on him in the future.', //62
 
-		'DR CRAZE: How do you know for sure',
+		'DR CRAZE: How do you know for sure?',
 
-		'SKYLIMIT: He has my number, he believes we are going out to a cafe, i’ll collect information then',
+		'SKYLIMIT: He has my number, he believes we are going out to a cafe, I’ll collect information then.', //64
 
-		'DR CRAZE: Good job, and what is his name',
+		'DR CRAZE: Good job, and what is his name?',
 
-		'SKYLIMIT: Takashi',
+		'SKYLIMIT: Takashi.', //66
 
-		'Kira closes down the internet and shuts down the vpn he was using and turns off the computer then turns to talk to Takashi',
+		'**Kira closes down the internet and shuts down the VPN he was using and turns off the computer then turns to talk to Takashi**',
 
-		'It would seem that you were right ',
+		'It would seem that you were right.', //68
 
 		'What are we supposed to do?',
 
-		'We have to find out more but for now that is impossible while these people are after us',
+		'We have to find out more, but for now that is impossible while these people are after us', //70
 
-		'I agree we have to lose them',
+		'I agree, we have to lose them',
 
-		'Like always i’m one step ahead of you takashi',
+		'Like always I’m one step ahead of you takashi', //72
 
-		'Kira reaches down and open a duffle bag inside is what looks like explosives',
+		'**Kira reaches down and open a duffle bag inside is what looks like explosives**',
 
-		'Have you lost your mind ',
+		'Have you lost your mind!?', //74
 
-		'I know where their hq is we hit it tonight',
+		'I know where their HQ is, we will hit it tonight.',
 
-		'Ok ',
+		'Ok.', //76
 
-		'Takashi and kira quietly leave the library and walk towards the hq',
+		'**Takashi and Kira quietly leave the library and walk towards the HQ**',
 
-		'A lot can happen in a few days, it’s amazing….',
-		'You know what takashi i’m going to miss this place, sure it was boring but it was peaceful',
-		'That is before our eyes were opened ',
+		'A lot can happen in a few days, it’s amazing….', //78
 
-		'We have only been living here for a few years',
-		'At Least this way we leave with a bang',
+		'You know what Takashi, I’m going to miss this place, sure it was boring but at least it was peaceful.',
 
-		'Hahahaha i havnt heard a joke from you in a long time takashi',
-		'Either way we are nearly there are you ready?',
+		'That is before our eyes were opened.', //80
 
-		'Yeah let’s do this',
+		'We have only been living here for a few years.',
 
-		'Takashi and kira approach and apartment it looks bland and nothing unusual',
+		'At Least this way we leave with a hell of a bang.', //82
 
-		'wait , are you serious! This is just a normal apartment',
+		'Hahahaha, I haven\'t heard a joke from you in a long time Takashi!',
 
-		'Is it?',
-		'This is the place',
+		'Either way, we are nearly there, are you ready?', //84
 
-		'WAIT!',
+		'Yeah.. Let’s do this.',
+
+		'**Takashi and Kira approach an apartment, it looks bland and nothing out the usual**', //86
+
+		'Wait! Are you serious!? This is just a normal apartment..',
+
+		'Is it?', //88
+
+		'This is the place.',
+
+		'WAIT!!!', //90
+
 		'How do we know for certain?',
 
-		'I suppose we don’t',
+		'I suppose we don’t.', //92
 
-		'Let me check inside ',
+		'Let me check inside.',
 
-		'ok be careful',
-		'I’ll plant the explosives while i wait',
+		'Ok, be careful.', //94
 
-		'Don’t do anything hasty',
+		'I’ll plant the explosives while I wait.',
 
-		'Takashi approaches the front of the apartment and hears a voice that sounds like it’s on the phone',
+		'Don’t do anything hasty.', //96
 
-		'What do you mean takashi is not at his apartment he finished work hours ago!',
+		'**Takashi approaches the front of the apartment and hears a voice that sounds like it’s on the phone**',
+
+		'What do you mean takashi is not at his apartment!? He finished work hours ago!', //98
 
 		'“KIRA WAS RIGHT!”',
 
-		'He has to be taken care of along with that nosy kid, Kira, we must not lose our secrecy, all the patients have to be removed or it all comes back on us',
+		'He has to be taken care of along with that nosy kid, Kira, we must not lose our secrecy, all the patients have to be removed or it all comes back on us.', //100
 
 		'“Are we the patients?”',
 
-		'TAKASHI starts to shake realising the reality of the situation and makes his way back to kira',
+		'**Takashi starts to shake realising the reality of the situation and makes his way back to Kira**', //102
 
-		'So what happened is it the right place',
+		'So.. what happened? Is it the right place?',
 
-		'…….yeah it’s the right place',
+		'…….Yeah it’s the right place.', //104
 
-		'Don’t worry this should slow them down while we get our footing some place else',
+		'Don’t worry, this should slow them down for a bit while we get our footing somewhere else.',
 
-		'Kira lets off the explosive as they walk away ',
-		'Takashi and kira then catch the train to anywhere but here',
+		'**Kira lets off the explosive as they walk away**', //106
+
+		'**Takashi and Kira then catch the train to anywhere but here**'
 		
 
 	];
@@ -285,6 +299,7 @@ $(document).ready(function(e) {
 		'MKManifest',
 		'MKManifest',
 		'MKManifest',
+		'MKManifest',
 		'Takashi',
 		'Takashi',
 		'Kira',
@@ -353,7 +368,6 @@ $(document).ready(function(e) {
 		'Kira',
 		'Takashi',
 		'Kira',
-		'&nbsp',
 		'&nbsp',
 		'&nbsp'
 	];
@@ -375,17 +389,84 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
+		if (i >= 0 && i <= 4) {
+			changeCharacter('url("./images/characters/emptySprite.png")');												//null
 			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
-			changeCharacter('url("./images/characters/BossFinal.png")');
+		} 
+		else if (i >= 5 && i <= 7) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//phone
+		} 
+		else if (i == 8 ) {
+			changeCharacter('url("./images/characters/emptySprite.png")');			//null
+		}
+		else if (i >= 9 && i <= 11 ) {
+			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
+		}
+		else if (i >= 12 && i <= 30) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//kira	
+		}
+		else if (i >= 31 && i <= 37) {
+			changeCharacter('url("./images/characters/emptySprite.png")');	
+			changeBackground('url("./images/bgs/librarycomp2.jpg")');			//computer/null
+		}
+		else if (i >= 38 && i <= 54) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
+		}
+		else if (i == 55 ) {
+			changeCharacter('url("./images/characters/Sora2.png")');			//sora
+		}
+		else if (i >= 56 && i <= 60 ) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+		}
+		else if (i >= 61 && i <= 66) {
+			changeCharacter('url("./images/characters/emptySprite.png")');			//computer/null
+			changeBackground('url("./images/bgs/librarycomp2.jpg")');
+		}
+		else if (i >= 67 && i <= 72) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
+		}
+		else if(i == 73){
+			changeBackground('url("./images/bgs/bag.jpg")');	
+				}
+
+		else if (i >= 74 && i <= 76) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
+		}
+		else if (i == 77 ) {
+			changeCharacter('url("./images/characters/emptySprite.png")');		//null
+			changeBackground('url("./images/bgs/blackbackground.jpg")');		//blackscreen (transistion)
+		}
+		else if (i >= 78 && i <= 96 ) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeBackground('url("./images/bgs/street11.png")');				//Hq
+		}
+		else if (i == 97 ) {
+			changeCharacter('url("./images/characters/emptySprite.png")');		//null
 			changeBackground('url("./images/bgs/testbackground.png")');
+		}
+		else if (i >= 98 && i <= 101 ) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//shadow
+			changeBackground('url("./images/bgs/testbackground.png")');			//phone
+		}
+		else if (i >= 102 && i <= 105) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeBackground('url("./images/bgs/street11.png")');				//hq
+		}
+		else if (i == 106) {
+			changeCharacter('url("./images/characters/emptySprite.png")');			//Kaboom (null)
+			changeBackground('url("./images/bgs/testbackground.png")');			//Special KaBOOM bg
+		}
+		else if (i == 107) {	
+			changeCharacter('url("./images/characters/emptySprite.png")');	
+			changeBackground('url("./images/bgs/train.png")');			//End screen on train
 		}
 
 		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			shakeScreen();
+			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+			//shakeScreen();
 		}
 	}
 	

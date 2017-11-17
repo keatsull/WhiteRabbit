@@ -41,33 +41,35 @@ $(document).ready(function(e) {
 	//add more using ,''
 let storyLine = [
 
-		'Takashi finishes work and message Sora',
+		'**Takashi finishes work and message Sora**',
 
-		'Message: Hey it’s takashi i just finished my shift, you still want to grab that coffee?',
+		'Message: Hey, it’s Takashi, I just finished my shift, do you still want to grab that coffee?',
 
-		'Message: yeah , do you know the cafe two blocks down from your work i’m there now i always have a coffee here before heading home :D',
+		'Message: Yeah, do you know the cafe two blocks down from your work? I’m there now, I always have a coffee here before heading home :D',
 
-		'Message: Ok heading there now',
+		'Message: Ok, heading there now :)',
 
-		'Takashi heads out of the convenient store and starts walking down to the cafe',
+		'**Takashi heads out of the convenient store and starts walking down to the cafe**',
 
-		'“She is beautiful and she’s an artist, why would she agree to meet me?, now that i think about it i don’t have much to talk about, all i ever talk about with kira is the fate string"',
-		'"i’ll have to use wit, the boss fell for my lies so will she.”',
+		'“She is beautiful and she’s an artist, why would she agree to meet me? Now that I think about it, I don’t have much to talk about. All I ever talk about with Kira is the fate string"',
 
-		'Takashi arrives at the cafe and sees sora through the window, she spots him and waves, takashi waves back and enters the cafe, it’s called "The long journey cafe"',
+		'"I’ll have to use wit, the boss fell for my lies, so will she.”',
 
-		'Hi sora, it’s funny i’ve never been to this cafe even though it’s two blocks away from work',
+		'**Takashi arrives at the cafe and sees sora through the window, she spots him and waves, Takashi waves back and enters the cafe, it’s called "The long journey cafe"**',
 
-		'You have to come here more often their ice cream is the best',
+		'Hi Sora, it’s funny i’ve never been to this cafe even though it’s two blocks away from work',
 
-		'As takashi takes his seat and grabs the menu he  sees two big glasses which seemed to have had ice cream in them',
+		'Really? You have to come here more often! Their ice cream is the best',
 
-		'“How can she eat so much!....”',
+		'**As takashi takes his seat and grabs the menu. He sees two big glasses which seemed to have had ice cream in them**',
+
+		'“How can she eat so much...?”',
 
 		'Are you going to order?',
 
-		'Oh…. right haha ',
-		'I’ll have a coffee and a slice of cake',
+		'Oh…. right, haha',
+
+		'I’ll have a coffee and a slice of cake.'
 
 	];
 
@@ -87,13 +89,13 @@ let storyLine = [
 		'Takashi',
 		'Sora',
 		'Takashi',
-		'Takashi',
+		'Takashi'
 	];
 
 	//add more using ,''
 	let decision = [
-		'So i saw your business card are you an artist?', 
-		'So what are you studying at university?'
+		'So, I saw your business card, are you an artist?', 
+		'So, what are you studying at university?'
 	];
 
 	//links for decision, likely only use first 2
@@ -108,17 +110,20 @@ let storyLine = [
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
-			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');
+		if (i >= 1 && i <= 3) {
+			changeCharacter('url("./images/characters/Customer_animated.gif")');				//Phone
+			changeBackground('url("./images/bgs/shop_interior1.png")');							
+		} else if(i >= 4 && i <= 7) {
+			changeCharacter('url("./images/characters/emptySprite.png")');															
+			changeBackground('url("./images/bgs/street6.png")');							//street
+		} else if(i >=8){
+			changeBackground('url("./images/bgs/cafe_outside1.png")');	
+			changeCharacter('url("./images/characters/Sora2.png")');		
 		}
 
 		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			shakeScreen();
+			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+			//shakeScreen();
 		}
 	}
 	

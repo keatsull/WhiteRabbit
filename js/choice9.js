@@ -40,20 +40,18 @@ $(document).ready(function(e) {
 	//replace, delete and add more as necessary
 	//add more using ,''
 	let storyLine = [
-
-		'I’ve always loved painting it allows me to escape',
-
+		'I\’ve always loved painting it allows me to escape'
 	];
 
 	//make sure too associate with storyline
 	let charAndLocation = [
-		'Sora',
+		'Sora'
 	];
 
 	//add more using ,''
 	let decision = [
 		'So how long have you lived around here?', 
-	/* greyed out choice */	'So why did you choose art?'
+		'So, why did you choose art?' //greyed out choice
 	];
 
 	//links for decision, likely only use first 2
@@ -68,17 +66,10 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
-			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');
-		}
-
-		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			shakeScreen();
+		//use the value i to set when a background &/or character should change
+		if (i == 0) {
+			changeCharacter('url("./images/characters/Sora2.png")');
+			changeBackground('url("./images/bgs/cafe_outside1.png")'); //Cafe
 		}
 	}
 	
@@ -192,7 +183,6 @@ $(document).ready(function(e) {
 					} else {
 						$('.conversationContainer .optionContainer').append('<a href="'+link+'"><h3>Option '+n+'</h3><p>'+decision[j]+'</p></a>');
 					}
-					
 				} 
 				enableBtn("#nextBtn", false);
 			}
@@ -225,7 +215,7 @@ $(document).ready(function(e) {
 
 	//changes character, also set which file to change, default use 1
 	function changeCharacter(file) {
-		$('.characterContainer span:nth-child(1)').css("background-image", file) 
+		$('.characterContainer span:nth-child(1)').css("background-image", file)
 	}
 
 	function changeBackground(file) {

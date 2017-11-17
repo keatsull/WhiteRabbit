@@ -40,127 +40,142 @@ $(document).ready(function(e) {
 	//replace, delete and add more as necessary
 	//add more using ,''
 	let storyLine = [
-'Excuse me? Look I don’t have time for games, my bus arrives in a minute.',
+		'There you are, thank you.', // 1
 
-		'The Customer exits the convenient store.',
+		'**The Customer exits the convenient store.**', // 2
 
-		'Am I losing my mind?', 
+		'Am I losing my mind?', // 3
 
-		'TAKASHI notices a girl standing outside the convenient store beside a bus stop.',
+		'**TAKASHI notices a girl standing outside the convenient store beside a bus stop.**', //4
 
-		'It’s her!',
-		'She always gets off the bus at this time',
-		'Okay Takashi, you’ve already told Akira You’d do it.',
-		'Now’s the time to make yourself known!',
-		'BOSS i’m going on break for 5 can you handle the front?',
+		'It’s her!', //5
 
-		'Bloody hell takashi! It’s a bit out of the blue',
+		'That girl always gets off the bus at this time',//6
 
-		'Sorry i really need 5 minutes',
+		'She doesn’t know who I am, how do I approach her?', //7
 
-		'Ahh fine ',
+		'BOSS! I’m going on break for 5, can you handle the front?',//8
 
-		'Takashi quickly leaves the store but as he exits a Strange animated strings warps into appearance',
-		'this time the string is attached to Takashi',
+		'Bloody hell, takashi! It’s a bit out of the blue.',//9
 
-		'Wah!',
-		'No, not now!',
-		'Not Again!',
+		'Sorry, I really need 5 minutes',//10
 
-		'TAKASHI ARE YOU ALRIGHT!',
+		'Ahh fine, go ahead. ',//11
 
-		'ARRRrrr',
-		'dammit not again',
- 		'I was so close to talking to that girl!',
- 		'I’ll probably never have the courage again, why now!',
-		'this hasn’t happened since me and kira were kids',
-		'brings back bad memories all that time spent in hospital….',
-		'I should let Kira know.',
+		'**Takashi quickly leaves the store but as he exits a Strange animated strings warps into appearance**',//12
 
-		'“Beap beap beap”',
+		'**This time the string is attached to Takashi!!!**', //13 
 
-		'Takashi pulls out phone',
+		'WAH!!', //14
+
+		'NO, not now!', //15
+
+		'Not Again!', //16
+
+		'TAKASHI ARE YOU ALRIGHT?!', //17
+
+		'ARRRrrrgggggh' , //18
+
+		'Damn it, not again.',
+
+ 		'I was so close to talking to that girl!', //20
+
+ 		'I’ll probably never have the courage again, why now?!',
+
+		'This hasn’t happened since Kira and I were kids', //22
+
+		'It brings back bad memories of all that time spent in hospital….',
+
+		'I should let Kira know.', //24
+
+		'**Beep** **beep** **beep**',
+
+		'**Takashi pulls out phone**', //26
 
 		'"Speak of the devil"',
 
-		'Message: Hey how did it go did you end up talking to her?',
+		'Message: Hey, how did it go? Did you end up talking to her?', //28
 
-		'Message: Nah one of those things appeared on me again, i blacked out and woke up at home',
+		'Message: Nah, one of those things appeared on me again, I blacked out and woke up at home.',
 
-		'Message: WHAT!!!!! I thought those days were over, didn’t the doctor say that you grew out of it? The string should no longer manifest on you.',
+		'Message: WHAT!?! I thought those days were over, didn’t the doctor say that you grew out of it? The string should no longer manifest on you.', //30
 
-		'Message: I’ve never trusted doctors, besides how could they know, there is no diagnosis for this type of thing',
+		'Message: I’ve never trusted doctors, besides how could they know, there is no diagnosis for this type of thing.',
 
-		'Message: Hmmm….well do you know how you got home?',
+		'Message: Hmmm…well do you know how you got home?', //32
 
-		'Message: No I completely blacked out again',
+		'Message: No idea, I completely blacked out again.',
 
-		'Message: well it can’t be helped maybe your boss helped you home.',
+		'Message: Well, it can’t be helped. Maybe your boss helped you home.', //34
 
-		'Message: I’ll probably get fired this time he already sounded annoyed during my shift and now this….',
+		'Message: Hah, I’ll probably get fired this time, since he already sounded annoyed during my shift and now this happened….',
 
-		'Message: Don’t worry about it, things have always worked out anyways i’ve got some good news',
-		'i’ve found some information about what these manifestations are',
- 		'go to this website I’ll send a link to your computer',
+		'Message: Don’t worry about it, things have always worked out. Anyways I’ve got some good news.', //36
 
-		'Takashi goes to his computer to open the link it looks weird a format he is not use to seeing',
+		'I’ve found some information about what these manifestations are.',
 
-		'Message: we can talk more after i’m finished at Uni',
+ 		'Go to this website, I’ll send a link to your computer.', //38
 
-		'Message: Ok i’ll have a look now',
+		'**Takashi goes to his computer to open the link, it looks like a weird format he is not used to seeing**',
 
-		'Message: We’ll talk later'
+		'Message: We can talk more after i’m finished at Uni.', //40
+
+		'Message: Ok, I’ll have a look now.',
+
+		'Message: We’ll talk later.' //42
 
 	];
 
 	//make sure too associate with storyline
 	let charAndLocation = [
-		'Customer',
+		'Customer', //1
 		'&nbsp',
-		'Takashi',
+		'Takashi', //3
 		'&nbsp',
+		'Takashi', //5
 		'Takashi',
+		'Takashi',//7
 		'Takashi',
+		'Boss',//9
 		'Takashi',
-		'Takashi',
-		'Takashi',
-		'Boss',
-		'Takashi',
-		'Boss',
+		'Boss',//11
 		'&nbsp',
+		'&nbsp',//13
+		'Takashi',
+		'Takashi',//15
+		'Takashi',
+		'Boss',//17
+		'Takashi',
+		'Takashi',//19
+		'Takashi',
+		'Takashi',//21
+		'Takashi',
+		'Takashi',//23
+		'Takashi',
+		'&nbsp', //25
 		'&nbsp',
-		'Takashi',
-		'Takashi',
-		'Takashi',
-		'Boss',
-		'Takashi',
-		'Takashi',
-		'Takashi',
-		'Takashi',
-		'Takashi',
-		'Takashi',
-		'Takashi',
-		'&nbsp',
-		'&nbsp',
-		'Takashi',
+		'Takashi', //27
 		'Kira',
-		'Takashi',
+		'Takashi', //29
 		'Kira',
-		'Takashi',
+		'Takashi', //31
 		'Kira',
-		'Takashi',
+		'Takashi', //33
 		'Kira',
-		'Takashi',
+		'Takashi', //35
 		'Kira',
+		'Kira', //37
 		'Kira',
-		'Takashi',
-		'Kira'
+		'&nbsp',//39
+		'Kira',
+		'Takashi', //41
+		'Kira' 
 	];
 
 	//add more using ,''
 	let decision = [
-		'I feel so tired after what happened and i can’t miss my shift tomorrow \n i’ll have to just have a quick nap and meet up with kira and learn tabout what he found then, he will understand ',
-		'I am tired but i bet i can spend some time on researching what kira found'
+		'I feel so tired after what happened and I can’t miss my shift tomorrow \n I’ll have to just have a quick nap and meet up with Kira and learn tabout what he found then, he will understand. ',
+		'I am tired but I bet I can spend some time on researching what Kira found.'
 	];
 
 	//links for decision, likely only use first 2
@@ -174,19 +189,47 @@ $(document).ready(function(e) {
 
 		console.log('here'+i);
 
-		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
+		//Identical to scene 4, Needs some additions
+		if (i == 0) {
 			changeCharacter('url("./images/characters/Customer_animated.gif")');
 			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
-			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');
+		} 
+		else if (i >= 1 && i <= 3 ) 
+		{
+			changeCharacter('url("./images/characters/emptySprite.png")');
 		}
 
-		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+		else if (i >= 4 && i <= 7 ) 
+		{
+			changeCharacter('url("./images/characters/Sora2.png")');
+			changeBackground('url("./images/bgs/street11.png")');
+		}
+		else if(i >= 8 && i <= 10)
+		{
+			changeCharacter('url("./images/characters/BossFinal.png")'); //Correct
+		}
+		else if(i >=11 && i <= 15)
+		{
+			changeBackground('url("./images/bgs/street1.png")'); //Show street here, might have an additional stage showing the string.
+			changeCharacter('url("./images/characters/sora2.png")');
+		}
+		else if(i == 16){
+			changeBackground('url("./images/bgs/blackbackground.png")'); //black background to show blacking out.
+			changeCharacter('url("./images/characters/emptySprite.png")');
+
+		}		
+		else if(i >= 17){
+			changeBackground('url("./images/bgs/room_interior2.png")'); //Takashis apartment
+		}
+		else if(i >= 27){
+			changeCharacter('url("./images/characters/sora2.png")'); //Takashis phone with Kira
+		}
+
+		if (i == 16) {
+			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
 		}
+
 	}
 	
 	/************************ PROGRAMMERS ONLY **********************

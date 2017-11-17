@@ -7,6 +7,8 @@ $(document).ready(function(e) {
 	//names for use in the corresponding scene. 
 
 	var currentDialogue = '';
+
+	setFirstLoad(true); //we have now played the game before, start menu will go to choice1.html instead of novel.html
 	
 	//To iterate through the code. 
 	var i = 0;
@@ -58,10 +60,13 @@ $(document).ready(function(e) {
 
 		'**Takashi pulls out his phone**',
 
-		'KIRA Hahahaha so much crazy talk.',
-		'The professor here has one of those things',
-		'and the whole lecture hall hasn’t mentioned a word of it! Like it isn’t even there!',
-		'So what’s the deal takashi, Have you talked to her yet?'
+		'Hahahaha so much crazy talk!',
+
+		'The professor here has one of those things..',
+
+		'..and the whole lecture hall hasn’t mentioned a word of it! Like it isn’t even there!',
+
+		'So, anyway, what’s the deal takashi? Have you talked to her yet?'
 	];
 
 	//make sure too associate with storyline
@@ -99,23 +104,37 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i == 0) {
+		if (i >= 0) {
 			changeBackground('url("./images/bgs/shop_interior1.png")');
 		}
 
-		else if(i >= 1 && i <= 6 )
+		if (i == 0) {
+			changeCharacter('url("./images/characters/emptySprite.png")');
+		}
+
+		else if(i >= 1 && i <= 5 )
 		{
 			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
 		}
 
-		else if( i == 7 ){
-			changeCharacter('url("./images/characters/sora2.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');
+		else if(i >= 6 && i <= 8)
+		{
+			changeCharacter('url("./images/characters/emptySprite.png")');//null
 		}
 
-		if (i == 5) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+		else if( i >= 9 ){
+			changeCharacter('url("./images/characters/msg/MessagingAkira01.gif")');
+		}
+		else if( i >= 10 ){
+			changeCharacter('url("./images/characters/msg/MessagingAkira02.gif")');
+		}
+		
+		else if( i >= 11 ){
+			changeCharacter('url("./images/characters/msg/MessagingAkira03.gif")');
+		}
+
+		if (i == 1) {
+			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
 		}
 	}

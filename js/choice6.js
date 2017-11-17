@@ -41,98 +41,111 @@ $(document).ready(function(e) {
 	//add more using ,''
 let storyLine = [
 
-		'Takashi looks at the clock on the wall',
+		'**Takashi looks at the clock on the wall**', //0
 
-		'What! how did it get so late i have work soon',
-		'man i hope i dont get fired',
-		'the boss seemed annoyed aswell as i passed out',
-		'i will have to hurry',
+		'What! How did it get so late? *sighs* I have work soon.',
 
-		'Takashi struggles to put on his uniform and then starts to walk to work' ,
+		'Man, I hope I don\'t get fired.',
 
-		'the boss will probably not be happy about what happened hopefully i can lawyer my way around it, hopefully i can find what is behind this so it can prevent it from happening again.',
-		'Wonder what kira discovered?',
+		'The boss seemed annoyed as I passed out, also. ',
 
+		'So, I will have to hurry.',
 
-		'Well look who it is, thought you would take the day off after what happened yesterday',
+		'**Takashi struggles to put on his uniform and then starts to walk to work**' , //5
 
-		'Sorry' ,
-		'did you help me home?',
+		'The boss will probably not be happy about what happened, hopefully I can lawyer my way around it and hopefully I can find out what is behind this so it can prevent it from happening again.',
 
-		'Yeah i had to pull you off the floor',
-		'I was going to call an ambulance but you told me not to' ,
-		'said it happens occasionally then I drove you home',
-		'you were out of it like you were sleepwalking',
-		'WTH was that all about?',
+		'Though, I wonder what kira discovered?',
 
-		'I have Low Blood sugar and occasionally pass out',
+		'Well look who it is. I thought you would take the day off after what happened yesterday.', //8
+
+		'Sorry about that. ' ,
+
+		'Did you help me get home?',
+
+		'Yeah, I had to pull you off the floor.',
+
+		'I was going to call an ambulance, but you told me not to.' ,
+
+		'You said it happens occasionally and then I drove you home.',
+
+		'You were out of it, like you were sleepwalking.',
+
+		'What the hell was that all about?',
+
+		'I have Low Blood sugar and occasionally pass out and it leaves me drained afterwards.',
 
 		'First time i’m hearing about it….',
 
-		'Sorry i should of told you earlier',
+		'Sorry, I should of told you earlier.',
 
-		'Well it does not matter now besides it was already toward the end of your shift when you blacked out and you came into work today so i’ll let you off this time.',
+		'Well, it does not matter now. Besides it was already toward the end of your shift when you blacked out and you came into work today, so I’ll let you off this time.',
 
-		'“Is he trying to be nice? Either way he believed the lie time to just get today over with and talk to kira about the website”',
+		'“Is he trying to be nice? Either way he believed the lie. It\'s time to just get today over with and talk to kira about the website”',
 
-		'Boss heads out the back of the shop and leaves the front to takashi',
-		'takashi goes behind the counter and starts his shift',
+		'**Boss heads out the back of the shop and leaves the front to takashi**', //21
 
-		'Mystery girl approaches the counter',
+		'**Takashi goes behind the counter and starts his shift**',
 
-		'Ok I’m not gonna mess this up again',
-		'“Play it cool”',
+		'**The Mystery girl approaches the counter**', //23
+
+		'Ok, I’m not gonna mess this up again.',
+
+		'“Play it cool, Takashi.”',
 
 		'Hi….',
 
-		'….hi',
+		'…....Hi',
 
-		'i saw you pass out yesterday is everything okay',
+		'I saw you pass out yesterday, is everything okay?',
 
-		'Uhh yeah everything is fine' ,
-		'Just low blood sugar' ,
+		'Uhh yeah, everything is fine' ,
 
-		'i’m glad you are okay',
+		'Just low blood sugar.' ,
+
+		'I’m glad you are okay',
 
 		'“This is so surreal”',
 
-		'Well i got to go to uni i’ll see you later…. Um i never caught your name',
+		'Well, I got to go to uni, I’ll see you later…. Um I never caught your name.',
 
-		'It’s takashi and yours?',
+		'It’s Takashi and yours?',
 
-		'Sora….anyways i have to go',
+		'Sora….anyways I have to go',
 
-		'Sora turns to leave',
+		'**Sora turns to leave**', //36
 
-		'“Where is that courage come on ask her OUT!”',
-		'Wait….',
+		'“Where is that courage come on ask her OUT!?”',
 
-		'Sora turns back a little surprised',
+		'Wait!',
+
+		'**Sora turns back a little surprised**', //39
 
 		'“This might seem a bit hasty”',
+
 		'Would you like to get a coffee sometime?',
 
 		'….',
 
 		'“FFS! Takashi you are a moron”',
 
-		'Um… sure',
+		'Um… sure.',
 
-		'Sora starts to blush and approaches the counter again',
+		'**Sora starts to blush and approaches the counter again**',
 
-		'Here is my number',
+		'Here is my number.',
 
-		'Sora places a business card called ‘sora’s modern art’ on the counter and leaves',
+		'**Sora places a business card called ‘Sora’s Modern Art’ on the counter and leaves**', //47
 
-		'“Wow that actually worked!! Maybe what kira said about confidence is true”',
+		'“Wow that actually worked!! Maybe what Kira said about confidence is true”',
 
-		'Takashi looks at the business card',
+		'**Takashi looks at the business card**',
 
 		'“She must be doing a creative arts degree”',
 
-		'TAKASHI! What are you doing just standing around get to work!',
+		'TAKASHI! What are you doing just standing around get to work!', //51
 
-		'Sorry boss will get to it',
+		'Sorry boss will get to it.',
 
 
 	];
@@ -196,8 +209,8 @@ let storyLine = [
 
 	//add more using ,''
 	let decision = [
-		'hopefully she is free after i finish work', 
-	/* greyed out choice*/	'i have to meet up with kira after work \n I will have to message sora tomorrow'  
+		'Hopefully she is free after I finish work', 
+	/* greyed out choice*/	'I have to meet up with kira after work, \n I will have to message Sora tomorrow.'  
 	];
 
 	//links for decision, likely only use first 2
@@ -212,16 +225,38 @@ let storyLine = [
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
-			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/testbackground.png")');
+		if (i == 0){
+			changeBackground('url("./images/bgsclock1.am.png")'); 	
+			changeCharacter('url("./images/characters/emptySprite.png")');		
+			playAudio('"./audio/effect/clock.m4a"', false);				
+		}else if (i >= 1 && i <= 4) {
+			changeCharacter('url("./images/characters/emptySprite.png")');
+			changeBackground('url("./images/bgs/room_interior2.png")'); 				
+		}
+		else if (i >= 5 && i <= 7) {
+			changeCharacter('url("./images/characters/emptySprite.png")');
+			changeBackground('url("./images/bgs/street6.png")'); 						
 		}
 
-		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+		 else if (i >= 8 && i <= 20) {
+			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeBackground('url("./images/bgs/shop_interior1.png")');
+		} else if (i >= 21 && i <= 22){
+			changeCharacter('url("./images/characters/emptySprite.png")');																			
+		} else if (i >= 23 && i <= 35){
+			changeCharacter('url("./images/characters/Sora2.png")');			
+		} else if (i >= 36 && i <= 38){
+			changeCharacter('url("./images/characters/emptySprite.png")');																		
+		} else if (i >= 39 && i <= 46){
+			changeCharacter('url("./images/characters/Sora2.png")');	
+		} else if (i >= 47 && i <= 50){
+			changeCharacter('url("./images/characters/emptySprite.png")');			//Null
+		} else if (i >= 51){
+			changeCharacter('url("./images/characters/BossFinal.png")');
+		}
+
+		if (i == 1) {
+			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
 		}
 	}

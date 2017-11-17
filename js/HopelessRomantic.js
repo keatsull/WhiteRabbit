@@ -41,140 +41,153 @@ $(document).ready(function(e) {
 	//add more using ,''
 	let storyLine = [
 		
-		'I’ve always loved the difficulty in replicating beauty',
+		'I’ve always loved the difficulty in replicating beauty.', //0
 
-		'Beauty seems to be wasted if it is not free',
+		'Beauty seems to be wasted if it is not free.',
 
-		'Sure but isn’t that the point of art to capture beauty and lock it inside a canvas?',
-
+		'Sure, but isn’t the point of art to capture beauty and lock it inside a canvas?', //2
+ 
 		'“I can’t help but think everyone here is locked in a canvas tied by string”',
-		'Perhaps but if you pluck a flower it withers',
 
-		'Sora smile',
+		'Perhaps, but if you pluck a flower it withers.', //4
 
-		'Hmm….when painted it doesn’t',
+		'**Sora smiles**',
 
-		'Soras phone buzzes she quickly looks and seems mildly alarmed',
+		'Hmm….when painted it doesn’t',//6
 
-		'Sorry i have to go, can we catch up later',
+		'**Sora\'s phone buzzes she quickly looks and seems mildly alarmed**',
 
-		'Sure not a problem',
+		'Sorry, I have to go, can we catch up later.', //8
 
-		'Feel free to message me later if you’d like',
+		'Sure, not a problem.',
 
-		'Sora quickly leaves the cafe but drops a book out of her bag as she leaves Takashi picks it up it looks really old',
-		'Takashi runs out of the cafe to catch sora but she is no where to be seen',
+		'Feel free to message me later if you’d like.', //10
 
-		'“It must be an art reference or something, i’ll have to return this to her I’ll message her when i get home”',
+		'**Sora quickly leaves the cafe but drops a book out of her bag. Takashi picks it up, it looks really old**',
 
-		'Takashi arrives home', 
+		'**Takashi runs out of the cafe to catch sora but she is no where to be seen**', //12
 
-		'That book….there is something weird about that book',
+		'“It must be an art reference or something, I’ll have to return this to her. I’ll message her when i get home”',
 
-		'Takashi opens the old latin book it’s title is ‘Novus ordo seclorum’', 
+		'**Takashi arrives home**',  //14
 
-		'“Wth is this, some of these symbols are the same as on the website that kira linked”',
+		'That book….There is something weird about that book.',
 
-		'While flipping through the pages a note falls from amongst the pages it’s in english',
+		'**Takashi opens the old latin book it’s title is ‘Novus ordo seclorum’**',  //16
 
-		'“This could be a note written by sora”',
+		'“What the hell is this? Some of these symbols are the same as on the website that Kira linked”',
 
-		'I want to leave, this is getting out of hand and the others have lost their minds, they really believe their serving a greater purpose, can you help me transfer or even better quit?',
+		'While flipping through the pages a note falls from amongst the pages. It’s in english.', //18
 
- 		'“I have a feeling she isn’t just talking about university here i’ll have to keep reading”',
+		'“This could be a note written by Sora”',
 
-		'Takashi continues reading',
-		'The subject is innocent, we have been brainwashed by the organisation please can you help?',
-		'to: Dr craze',
+		'I want to leave, this is getting out of hand and the others have lost their minds, they really believe their serving a greater purpose, can you help me transfer or even better, quit?', //20
+
+ 		'“I have a feeling she isn’t just talking about university here, I’ll have to keep reading”',
+
+		'**Takashi continues reading**', //22
+
+		'The subject is innocent, we have been brainwashed by the organisation. Please, can you help?',
+
+		'To: Dr. Craze:', //24
 
 		'WAIT A SECOND!',
-		'Dr craze was on the message board!',
-		'Skylimit and dr craze were talking about some crazy kidnapping or something.',
 
-		'I’ll have to message sora and get an explanation for this',
+		'Dr. Craze was on the message board!', //26
 
-		'TAKASHI pulls out his phone and starts to message sora',
+		'Skylimit and Dr Craze were talking about some crazy kidnapping or something.',
 
-		'Message: Hi sora you dropped a book at the cafe today it was titled Novus ordo seclorum, pretty weird title, anyways feel free to come around to get it or i can give it to you tomorrow at work',
+		'I’ll have to message Sora and get an explanation for this.', //28
 
-		'Message: Can i come around now i really need that book',
+		'**Takashi pulls out his phone and starts to message Sora**',
 
-		'“This book must be important, why exactly does she have it in her possession i’ll have to confront her when she arrives”',
-		'Message: Ok no problem ',
+		'Message: Hi Sora, you dropped a book at the cafe today. It was titled Novus ordo seclorum, pretty weird title. Anyway, feel free to come around to get it or I can give it to you tomorrow at work', //30
 
-		'TAKASHI messages his address to sora and waits patiently',
+		'Message: Can I come around now? I really need that book.',
 
-		'KNOCK knock knock',
+		'“This book must be important, why exactly does she have it in her possession? I’ll have to confront her when she arrives”', //32
 
-		'That must be her',
+		'Message: Ok, No problem.',
 
-		'TAKASHI answers the door',
+		'**Takashi messages his address to Sora and waits patiently**', //34
 
-		'Sorry for coming over so urgently ',
+		'**KNOCK KNOCK KNOCK**',
 
-		'Don’t stress i don’t mind, so what is so important about this book?',
+		'That must be her.', //36
 
-		'I need it for university',
+		'**Takashi answers the door**',
+
+		'Sorry for coming over so urgently.', //38
+
+		'Don’t stress, I don’t mind, so what is so important about this book?',
+
+		'I need it for university.', //40
 
 		'Really? Why would you need a latin book for art? There are not even any pictures for reference in it. ',
 
-		'How much have you read?',
+		'..How much have you read?', //42
 
-		'I can’t read latin but i know the symbols are not something an art student should be interested in.',
+		'I can’t read latin but I know the symbols are not something an art student should be interested in.',
 
-		'….',
+		'….', //44
 
 		'And can you explain this',
 
-		'TAKASHI hands over the note that fell out of the book when he opened it',
+		'**Takashi hands over the note that fell out of the book when he opened it**', //46
 
 		'So you found the note…. How much do you know?',
 
-		'I know that you are in in trouble and i can help',
+		'I know that you are in in trouble and I can help', //48
 
-		'And how exactly can you help, do you understand what i’m part of',
+		'How exactly can you help? Do you understand what I’m part of?',
 
-		'“I think i understand now she must be part of the cult, but why would she ask dr craze for help in the note? That man sounded insane”',
-		'Your part of the destined',
+		'“I think I understand now she must be part of the cult, but why would she ask Dr. Craze for help in the note? That man sounded insane”', //50
 
-		'Sora seems surprised',
+		'Your part of the destined.',
 
-		'What i can’t figure out is why would you put your trust in dr craze that man’s unstable',
+		'**Sora seems surprised**', //52
 
-		'I know that now, they were never planning to let me go, and you of all people might be able to help',
+		'What I can’t figure out is why would you put your trust in Dr. Craze. That man’s unstable',
+
+		'I know that now, they were never planning to let me go, and you of all people might be able to help', //54
 
 		'What is that supposed to mean?',
 
-		'Well your special Takashi, we didn’t go to the cafe for no reason i was asked to get information on you.',
+		'Well, you\'re special Takashi. We didn’t go to the cafe for no reason, I was asked to get information on you.', //56
 
-		'“So i was the one that was going to get kidnapped, but why me”',
-		'Why am i special?',
+		'“So I was the one that was going to get kidnapped, but why me?”',
 
-		'The organisation hunts people like you takashi, people which are disconnected from fate, you are dangerous to them. ',
-		'Have you ever been puzzled by the reason you can see the string while others are oblivious?',
+		'Why am I special?', //58
+
+		'The organisation hunts people like you Takashi, people which are disconnected from fate, you are dangerous to them. ',
+
+		'Have you ever been puzzled by the reason you can see the string while others are completely oblivious to it?', //60
 
 		'My whole life….',
 
-		'The organisation known as the “Destined” call people like you “fate deniers”',
-		'no one knows when it started but from what i have experienced they have immense resources at their disposal and are hell bent on stopping fate deniers getting in their way',
-		'you see takashi you can ignore fate and can crush their plans.',
+		'The organisation known as the “Destined” call people like you “fate deniers”.', //62
 
-		'How? I’ve always been able to see the string but never have i experienced any powers like you describe?',
+		'No one knows when it started, but from what I have experienced they have immense resources at their disposal and are hell bent on stopping fate deniers getting in the way.',
 
-		'With my help, i’ll show you but only if you help me',
+		'You see Takashi. You can ignore fate and can crush their plans.', //64
 
-		'why are you telling me all this?',
-		'Are we not enemies if what you say is true?',
+		'How? I’ve always been able to see the string but never have I experienced any powers like you describe.',
 
-		'I’m done with the destined i want to be free, after our date at the cafe i came to notice that you are innocent in all this and so am i.',
+		'With my help, I’ll show you but only if you help me.', //66
 
-		'So what are we to do?',
+		'Why are you telling me all this?',
 
-		'We will have to leave this place, they know where i am and who you are, if you trust me we will have to leave now.',
+		'Are we not enemies if what you say is true?', //68
 
-		'Okay i’ll trust you', 
+		'I’m done with the destined, I just want to be free. After our date at the cafe, I came to notice that you are innocent in all this and so am I.',
 
-		'Takashi frantically packs his belongings and leaves with sora as he leaves he sees flames starting to emerge from his apartment and can here a large explosion in the distance',
+		'So what are we to do?', //70
+
+		'We will have to leave this place, they know where I am and who you are, if you trust me we will have to leave now.',
+
+		'Okay.. I’ll trust you', //72
+
+		'**Takashi frantically packs his belongings and leaves with sora as he leaves he sees flames starting to emerge from his apartment and can here a large explosion in the distance**',
 
 
 	];
@@ -275,12 +288,36 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i <= 2) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else {
-			changeCharacter('url("./images/characters/BossFinal.png")');
+		if (i >= 0 && <= 10) {
+			changeCharacter('url("./images/characters/Sora2.png")');
+			changeBackground('url("./images/bgs/cafe_outside1.png")');			//cafe
+		} else if(i == 11){
+			changeCharacter('url("./images/characters/emptySprite.png")');		//null
+		}else if(i >= 12 && i <= 13){
+			changeBackground('url("./images/bgs/street1.png")');			//street
+		}else if(i >= 14 && i <= 15){
+			changeBackground('url("./images/bgs/room_interior2.png")');			//Takashis
+		}else if(i >= 16 && i <= 18){
+			changeCharacter('url("./images/characters/emptySprite.png")');		
+			changeBackground('url("./images/bgs/book.jpg")');			//book
+		}else if(i >= 19 && i <= 25){
+			changeCharacter('url("./images/characters/BossFinal.png")');		//note
+			changeBackground('url("./images/bgs/book.jpg")');
+		}else if(i >= 26 && i <= 29){
+			changeCharacter('url("./images/characters/emptySprite.png")');		//takashis
+			changeBackground('url("./images/bgs/room_interior2.png")');
+		}else if(i >= 30 && i <= 33){
+			changeCharacter('url("./images/characters/BossFinal.png")');		//phone
 			changeBackground('url("./images/bgs/testbackground.png")');
+		}else if(i >= 34 && i <= 37){
+			changeCharacter('url("./images/characters/emptySprite.png")');			//null
+			changeBackground('url("./images/bgs/testbackground.png")');
+		}else if(i >= 38 && i <= 72){
+			changeCharacter('url("./images/characters/Sora2.png")');		//Sora/takashis
+			changeBackground('url("./images/bgs/room_interior2.png")');
+		}else if(i == 73){
+			changeCharacter('url("./images/characters/emptySprite.png")');			//Kaboom
+			changeBackground('url("./images/bgs/train.png")');
 		}
 
 		if (i == 3) {
