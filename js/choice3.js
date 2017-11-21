@@ -98,27 +98,26 @@ $(document).ready(function(e) {
 		}
 
 		if (i == 0) {
-			changeCharacter('url("./images/characters/msg/MessagingAkira04_2_.gif")'); 
-			
+			changeCharacter('url("./images/characters/msg/MessagingAkira05_2_.gif")'); 
 		}
 
 		if(i == 1){
 			changeCharacter('url("./images/characters/msg/MessagingAkira05_2_.gif")'); 
 		}
 
-		if(i == 2){
+		if(i >= 2 && i < 4){
 			changeCharacter('url("./images/characters/msg/MessagingAkira06_2_.gif")');  //msg
 		}
 		
-		if(i == 3){
+		if(i == 4){
 			changeCharacter('url("./images/characters/msg/MessagingAkira07_2_.gif")');//msg
 		}
 		
-		if(i == 4){
-			changeCharacter('url("./images/characters/Customer_animated.gif")'); //msg
+		if(i == 5){
+			changeCharacter('url("./images/characters/CustomerAppear.gif")'); //msg
 		}
 
-		if (i >= 5) {
+		if (i >= 8) {
 			bgMusic.volume = 0.0;	
 			bgAudio.volume = 0.5;
 		} else {
@@ -126,8 +125,8 @@ $(document).ready(function(e) {
 			bgAudio.volume = 0;
 		}
 		
-		if (i >= 5 && i <= 7){
-			changeCharacter('url("./images/characters/BossFinal.png")'); //change to customer W/O string
+		if (i >= 6 && i <= 7){
+			changeCharacter('url("./images/characters/Customer.gif")'); //change to customer W/O string
 		}
 		
 		if(i == 8){

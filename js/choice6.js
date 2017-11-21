@@ -219,6 +219,11 @@ let storyLine = [
 	let link3 = '#';
 	let link4 = '#';
 
+	changeBgAudio("./audio/bg/bgm0101_Solo(Piano)_Em_BPM063.mp3"); //this is the other background music
+	changeBgAudio2("./audio/bg/Space-for-Thought.mp3");
+	bgAudio.volume = 0.0;
+	bgAudio2.volume = 0.0;
+
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
@@ -226,7 +231,7 @@ let storyLine = [
 
 		//use the value i to set when a background &/or character should change
 		if (i >= 0 && i < 4) {
-			changeBackground('url("./images/clockbg.png")'); 
+			changeBackground('url("./images/bgs/clockbg.png")'); 
 		}
 
 		if (i == 0) {
@@ -242,6 +247,31 @@ let storyLine = [
 			changeCharacter('url("")'); //empty
 			changeBackground('url("./images/bgs/room_interior2.jpg")'); 				
 		}
+
+		if (i < 5) {
+			bgMusic.volume = 0.5;
+			bgAudio.volume = 0;
+			bgAudio2.volume = 0;
+		}
+
+		if (i >= 5 && i < 23) {
+			bgAudio.volume = 0.5;
+			bgMusic.volume = 0;
+			bgAudio2.volume = 0;
+		}
+
+		if (i >= 23 && i < 47) {
+			bgAudio2.volume = 0.5;
+			bgMusic.volume = 0;
+			bgAudio.volume = 0;
+		}
+
+		if (i >= 47) {
+			bgAudio.volume = 0.5;
+			bgMusic.volume = 0;
+			bgAudio2.volume = 0;
+		}
+
 		
 		if (i >= 5 && i <= 7) {
 			changeCharacter('url("")'); //empty
@@ -249,26 +279,30 @@ let storyLine = [
 		}
 
 		if (i >= 8 && i <= 20) {
-			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeCharacter('url("./images/characters/Boss.png")');
 			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 		} 
 		if (i >= 21 && i <= 22){
 			changeCharacter('url("")'); //empty																		
 		} 
+
+		if (i == 21) {
+			playAudio("./audio/effect/Creeky-Interior-Door.mp3");
+		}
 		if (i >= 23 && i <= 35){
-			changeCharacter('url("./images/characters/Sora2.png")');			
+			changeCharacter('url("./images/characters/Sora.gif")');			
 		} 
 		if (i >= 36 && i <= 38){
 			changeCharacter('url("")'); //empty																	
 		} 
 		if (i >= 39 && i <= 46){
-			changeCharacter('url("./images/characters/Sora2.png")');	
+			changeCharacter('url("./images/characters/Sora.gif")');	
 		} 
 		if (i >= 47 && i <= 50){
-			changeCharacter('url("")'); //empty	
+			changeCharacter('url("./images/characters/BusinessCard.png")'); //empty	
 		} 
 		if (i >= 51){
-			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeCharacter('url("./images/characters/BossAngry.png")');
 		}
 
 	}
@@ -429,6 +463,17 @@ let storyLine = [
 		}
 	}
 
+	//other background music
+	function changeBgAudio(file) {
+		$('#bgAudio').html('<source src='+file+' type="audio/mpeg">');
+	}
+
+	//other background music
+	function changeBgAudio2(file) {
+		$('#bgAudio2').html('<source src='+file+' type="audio/mpeg">');
+	}
+
+	//shakes the screen
 	function shakeScreen() {
 		$('.conversationContainer').effect("shake", {times: 3}, 700);
 		$('.characterContainer').effect("shake", {times: 4}, 600);

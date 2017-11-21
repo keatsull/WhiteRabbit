@@ -66,11 +66,11 @@ $(document).ready(function(e) {
 
 		'**Takashi pulls out phone and messages Sora**',
 
-		'Hi Sora, you dropped a book at the cafe, do you want to meet up tomorrow so I can return it?',  //12
+		'Message: Hi Sora, you dropped a book at the cafe, do you want to meet up tomorrow so I can return it?',  //12
 
-		'Oh good! I was worried when I thought I lost it, but I need the book urgently. Can you please bring it to my place?',
+		'Message: Oh good! I was worried when I thought I lost it, but I need the book urgently. Can you please bring it to my place?',
 
-		'Umm..Sure, I can bring it over.', //14
+		'Message: Umm..Sure, I can bring it over.', //14
 
 		'**Sora sends through her address**',
 
@@ -197,6 +197,9 @@ $(document).ready(function(e) {
 	let link3 = '#';
 	let link4 = '#';
 
+	changeBgAudio("./audio/bg/Autumn-of-Life_Looping.mp3"); //this is the other background music
+	bgAudio.volume = 0.0;
+
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
@@ -204,7 +207,7 @@ $(document).ready(function(e) {
 
 		//use the value i to set when a background &/or character should change
 		if (i >= 0 && i <= 6) {
-			changeCharacter('url("./images/characters/Sora2.png")');
+			changeCharacter('url("./images/characters/Sora.gif")');
 			changeBackground('url("./images/bgs/cafe_outside1.jpg")');			//Cafe
 		}
 		
@@ -220,6 +223,14 @@ $(document).ready(function(e) {
 		
 		if (i == 10 ){	
 			changeBackground('url("./images/bgs/room_interior2.jpg")');			//Takashis
+		}
+
+		if (i >= 10) {
+			bgAudio.volume = 0.5;
+			bgMusic.volume = 0;
+		} else {
+			bgAudio.volume = 0;
+			bgMusic.volume = 0.5;
 		}
 		
 		if (i >= 11 && i <= 15 ){
@@ -248,11 +259,11 @@ $(document).ready(function(e) {
 		}
 		
 		if (i >= 24 && i <= 27 ){
-			changeCharacter('url("./images/characters/Sora2.png")');
+			changeCharacter('url("./images/characters/Sora.gif")');
 		}
 		
 		if (i >= 28 && i <= 36){
-			changeCharacter('url("./images/characters/BossFinal.png")');	//Evil Sora
+			changeCharacter('url("./images/characters/Sora.gif")');	//Evil Sora
 		}
 		
 		if (i == 37 ){
@@ -433,6 +444,11 @@ $(document).ready(function(e) {
 		} else {
 			$('#audioContainer').html('<audio autoplay><source src='+file+' type="audio/mpeg"></audio>');
 		}
+	}
+
+	//other background music
+	function changeBgAudio(file) {
+		$('#bgAudio').html('<source src='+file+' type="audio/mpeg">');
 	}
 
 	function shakeScreen() {

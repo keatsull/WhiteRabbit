@@ -79,10 +79,13 @@ $(document).ready(function(e) {
 	let link3 = '#';
 	let link4 = '#';
 
+	changeBgAudio("./audio/bg/Hypnotic-Puzzle2.mp3"); //this is the other background music
+	bgAudio.volume = 0;
+
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
-		console.log('here'+i);
+		//console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
 		if (i >= 0) {
@@ -100,12 +103,18 @@ $(document).ready(function(e) {
 		if( i == 2 ){
 			changeCharacter('url("./images/characters/msg/MessagingAkira07_1_.gif")');
 		}
+
+		if (i == 3){
+			changeCharacter('url("./images/characters/CustomerAppear.gif")'); //change to customer W/O string
+		}
 		
-		if (i >= 3 && i <= 5){
-			changeCharacter('url("./images/characters/BossFinal.png")'); //change to customer W/O string
+		if (i >= 4 && i <= 5){
+			changeCharacter('url("./images/characters/Customer.gif")'); //change to customer W/O string
 		}
 		
 		if(i == 6) {
+			bgAudio.volume = 0.5;
+			bgMusic.volume = 0;
 			changeCharacter('url("./images/characters/Customer_animated.gif")');
 		}
 	}

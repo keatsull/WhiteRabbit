@@ -107,21 +107,23 @@
 	<audio id = "bgMusic" autoplay loop >
 	<source src="audio/bg/bg1.mp3" type="audio/ogg">
 	</audio>
-
+	<audio id="bgAudio" loop autoplay></audio>
 	<script>
 	
 		let isSoundOn = true;
-		if(isSoundOn == true)
-		{
+		var bgAudio = document.getElementById("bgAudio")
+		var bgMusic = document.getElementById("bgMusic");
+
+		if(isSoundOn) {
 			//Adjusts music volume, set the number from 0.0 to 1.0 to increase or decrease volume
-			var bgMusic = document.getElementById("bgMusic");
+			
 			bgMusic.volume = 0.5;	
+			bgAudio.volume = 0.5;
 
 		}
-		else
-		{
-			var bgMusic = document.getElementById("bgMusic");
+		else {
 			bgMusic.volume = 0.0;	
+			bgAudio.volume = 0;
 		}
 	</script>
 	

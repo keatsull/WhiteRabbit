@@ -42,7 +42,7 @@ $(document).ready(function(e) {
 	let storyLine = [
 		'Excuse me? Look, I don’t have time for games, my bus arrives in a minute.', // 1
 
-		'**The Customer exits the convenient store.**', // 1
+		'**The Customer exits the convenient store.**', // 2
 
 		'Am I losing my mind?', // 3
 
@@ -112,9 +112,9 @@ $(document).ready(function(e) {
 
 		'Message: Don’t worry about it, things have always worked out. Anyways I’ve got some good news.', //36
 
-		'I’ve found some information about what these manifestations are.',
+		'Message: I’ve found some information about what these manifestations are.',
 
- 		'Go to this website, I’ll send a link to your computer.', //38
+ 		'Message: Go to this website, I’ll send a link to your computer.', //38
 
 		'**Takashi goes to his computer to open the link, it looks like a weird format he is not used to seeing**',
 
@@ -191,8 +191,18 @@ $(document).ready(function(e) {
 		//console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i >= 0 && i < 11) {
+		if (i >= 0 && i < 3) {
 			changeBackground('url("./images/bgs/shop_interior1.jpg")');
+		}
+
+		if (i > 2 && i < 7) {
+			changeCharacter('url("./images/characters/Sora.gif")');
+			changeBackground('url("./images/bgs/street1.jpg")');
+		}
+
+		if (i >= 7) {
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
+			changeCharacter('url("./images/characters/BossAngry.png")');
 		}
 
 		if (i == 0) {
@@ -206,27 +216,28 @@ $(document).ready(function(e) {
 			bgAudio.volume = 0;
 		}
 
-		if (i >= 11 && i < 18) {
+		if (i >= 11 && i < 17) {
 			bgMusic.volume = 0.0;	
 			bgAudio.volume = 0.5;
 		}
 
-		if (i > 18) {
+		if (i >= 17) {
 			bgMusic.volume = 0.5;
 			bgAudio.volume = 0;
 		}
 
-		if (i >= 1 && i <= 7 ) {
+		if (i >= 1 && i <= 2 ) {
 			changeCharacter('url("")'); //empty
 		}
 		
 		if(i >= 8 && i <= 10) {
-			changeCharacter('url("./images/characters/BossFinal.png")'); //Correct
+			changeCharacter('url("./images/characters/BossAngry.png")'); //Correct
 		}
+
 		
 		if(i >= 11 && i <= 15) {
 			changeBackground('url("./images/bgs/street1.jpg")'); //Show street here, might have an additional stage showing the string.
-			changeCharacter('url("./images/characters/sora2.png")');
+			changeCharacter('url("./images/characters/string.gif")');
 		}
 		
 		if(i == 16) {
@@ -238,9 +249,14 @@ $(document).ready(function(e) {
 		if(i >= 17) {
 			changeBackground('url("./images/bgs/room_interior2.jpg")'); //Takashis apartment
 		}
+
+		if (i == 24) {
+
+			playAudio('"./audio/effect/SynthChime10.mp3"', false);
+		}
 		
-		if(i >= 27) {
-			changeCharacter('url("./images/characters/sora2.png")'); //Takashis phone with Kira
+		if(i >= 25) {
+			changeCharacter('url("./images/characters/handwithphone.png")'); //Takashis phone with Kira
 		}
 
 	}

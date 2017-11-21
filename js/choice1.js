@@ -42,11 +42,11 @@ $(document).ready(function(e) {
 	//replace, delete and add more as necessary
 	//add more using ,''
 	let storyLine = [
-		'**TAKASHI, wearing work uniform, stands behind the counters sleeping.**',
+		'**TAKASHI, wearing work uniform, stands behind the counters sleeping.**', //0
 
 		'Wake up Takashi, Stop sleeping on the Job!',
 
-		'*Yawns* My bad.. it has not been busy for a while',
+		'*Yawns* My bad.. it has not been busy for a while',  //2
 
 		'Imagine what a customer would think if they saw you like that! Do you have any common sense?',
 
@@ -54,7 +54,7 @@ $(document).ready(function(e) {
 
 		'Better hope not',
 
-		'**The Boss goes to back of store. Takashi\'s phone buzzes**',
+		'**The Boss goes to back of store. Takashi\'s phone buzzes**', //6 phone buzzes
 
 		'That must be Akira',
 
@@ -112,24 +112,29 @@ $(document).ready(function(e) {
 			changeCharacter('url("")'); //empty
 		}
 
-		else if(i >= 1 && i <= 5 )
+		if(i >= 1 && i <= 5 )
 		{
-			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeCharacter('url("./images/characters/BossAngry.png")');
 		}
 
-		else if(i >= 6 && i <= 8)
+		if(i >= 6 && i <= 8)
 		{
 			changeCharacter('url("")'); //empty
 		}
 
-		else if( i == 9 ){
+		if (i == 6) {
+			playAudio("./audio/effect/SynthChime10.mp3", false);
+		}
+
+		if( i == 9 ){
 			changeCharacter('url("./images/characters/msg/MessagingAkira01.gif")');
 		}
-		else if( i == 10 ){
+
+		if( i >= 10 && i < 12 ){
 			changeCharacter('url("./images/characters/msg/MessagingAkira02.gif")');
 		}
 		
-		else if( i == 11 ){
+		if( i == 12 ){
 			changeCharacter('url("./images/characters/msg/MessagingAkira03.gif")');
 		}
 

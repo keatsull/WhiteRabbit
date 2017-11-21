@@ -68,7 +68,7 @@ $(document).ready(function(e) {
 		//use the value i to set when a background &/or character should change
 		//use the value i to set when a background &/or character should change
 		if (i >= 0) {
-			changeCharacter('url("./images/characters/Sora2.png")');
+			changeCharacter('url("./images/characters/Sora.gif")');
 			changeBackground('url("./images/bgs/cafe_outside1.jpg")'); //Cafe
 		}
 	}

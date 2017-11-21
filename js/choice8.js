@@ -57,7 +57,7 @@ let storyLine = [
 
 		'**Takashi arrives at the cafe and sees sora through the window, she spots him and waves, Takashi waves back and enters the cafe, it’s called "The long journey cafe"**',
 
-		'Hi Sora, it’s funny i’ve never been to this cafe even though it’s two blocks away from work',
+		'Hi Sora, it’s funny i’ve never been to this cafe even though it’s two blocks away from work', //8
 
 		'Really? You have to come here more often! Their ice cream is the best',
 
@@ -104,6 +104,9 @@ let storyLine = [
 	let link3 = '#';
 	let link4 = '#';
 
+	changeBgAudio("./audio/bg/Space-for-Thought.mp3"); //this is the other background music
+	bgAudio.volume = 0.0;
+
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
@@ -111,18 +114,25 @@ let storyLine = [
 
 		//use the value i to set when a background &/or character should change
 		if (i >= 0 && i <= 3) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');				//Phone
+			changeCharacter('url("./images/characters/handwithphone.png")');				//Phone
 			changeBackground('url("./images/bgs/shop_interior1.jpg")');							
 		}
 
 		if(i >= 4 && i <= 7) {
-			changeCharacter('url("./images/characters/emptySprite.png")');															
+			changeCharacter('url("")');															
 			changeBackground('url("./images/bgs/street6.jpg")');							//street
 		} 
 
+		if (i <8) {
+			bgAudio.volume = 0;
+			bgMusic.volume = 0.5;	
+		}
+
 		if(i >=8) {
 			changeBackground('url("./images/bgs/cafe_outside1.jpg")');	
-			changeCharacter('url("./images/characters/Sora2.png")');		
+			changeCharacter('url("./images/characters/Sora.gif")');
+			bgAudio.volume = 0.5;
+			bgMusic.volume = 0;	
 		}
 	}
 	
@@ -280,6 +290,11 @@ let storyLine = [
 		} else {
 			$('#audioContainer').html('<audio autoplay><source src='+file+' type="audio/mpeg"></audio>');
 		}
+	}
+
+	//other background music
+	function changeBgAudio(file) {
+		$('#bgAudio').html('<source src='+file+' type="audio/mpeg">');
 	}
 
 	function shakeScreen() {

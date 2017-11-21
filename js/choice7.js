@@ -261,17 +261,21 @@ let storyLine = [
 	let link3 = '#';
 	let link4 = '#';
 
+	changeBgAudio("./audio/bg/bgm0101_Solo(Piano)_Em_BPM063.mp3"); //this is the other background music
+	changeBgAudio2("./audio/bg/Space-for-Thought.mp3");
+	bgAudio.volume = 0.0;
+	bgAudio2.volume = 0.0;
+
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
 		console.log('here'+i);
 
-		if (i == 0) {
+		if (i == 0 && i < 6) {
 			changeCharacter('url("")'); //empty
 			//changeCharacter('url("./images/characters/computer.png")');
 			changeComputerImg("0b.png)");
 		}
-
 
 		//use the value i to set when a background &/or character should change
 		if (i == 6) {
@@ -279,10 +283,6 @@ let storyLine = [
 			//show computer
 			changeComputerImg("0.png)");
 			notScrolling(); //check for window resolution and if it scrolls
-		}	
-
-		if (i < 6) {
-			changeComputerImg("0b.png)");
 		}
 
 		if (i == 7) {
@@ -318,19 +318,24 @@ let storyLine = [
 			//hide computer
 			changeCharacter('url("")'); //empty
 			changeBackground('url("./images/bgs/clockbg.png")');
-			
+			playAudio('"./audio/effect/clock.m4a"', true);	
+			bgMusic.volume = 0;
 			hideComputer(true);
 		}
 
 		if (i >= 15 && i < 20) {
 			//walks to work scene
+			stopAudio();
+			bgAudio.volume = 0.5;
+			bgAudio2.volume = 0;
+			bgMusic.volume = 0;
 			changeCharacter('url("")'); //empty
 			changeBackground('url("./images/bgs/street8.jpg")');
 		}
 
 		if (i >= 20 && i < 33) {
 			//work and boss
-			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeCharacter('url("./images/characters/Boss.png")');
 			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 		}
 
@@ -343,11 +348,17 @@ let storyLine = [
 		if (i >= 35 && i < 59) {
 			//work and sora
 			changeBackground('url("./images/bgs/shop_interior1.jpg")');
-			changeCharacter('url("./images/characters/Sora2.png")');
+			changeCharacter('url("./images/characters/Sora.gif")');
+			bgAudio.volume = 0;
+			bgAudio2.volume = 0.5;
+			bgMusic.volume = 0;
 		}
 
 		if (i >= 59 && i < 63) {
 			//business card
+			bgMusic.volume = 0.5;
+			bgAudio.volume = 0;
+			bgAudio2.volume = 0;
 			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 			changeCharacter('url("./images/characters/BusinessCard.png")');
 		}
@@ -355,13 +366,13 @@ let storyLine = [
 		if (i == 63) {
 			//work boss yells
 			changeBackground('url("./images/bgs/shop_interior1.jpg")');
-			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeCharacter('url("./images/characters/Boss.png")');
 			shakeScreen();
 		}
 
 		if (i > 63) {
 			changeBackground('url("./images/bgs/shop_interior1.jpg")');
-			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeCharacter('url("./images/characters/Boss.png")');
 		}
 
 	}
@@ -567,9 +578,23 @@ let storyLine = [
 		}
 	}
 
+	//other background music
+	function changeBgAudio(file) {
+		$('#bgAudio').html('<source src='+file+' type="audio/mpeg">');
+	}
+
+	//other background music
+	function changeBgAudio2(file) {
+		$('#bgAudio2').html('<source src='+file+' type="audio/mpeg">');
+	}
+
+	function stopAudio() {
+		$('#audioContainer').html('');
+	}
+
 	//changes the computer image for the scene
 	function changeComputerImg(file) {
-		console.log($(window).width() );
+		//console.log($(window).width() );
 		//mobile version of the image
 		if ($(window).width() <= 500 || $(window).height() <= 800) {
 			$('#computerImg').css("background-image", "url(./images/computerscenes/mobile/"+file);
@@ -601,6 +626,7 @@ let storyLine = [
 		}
 
 		//full screen
+		console.log(currentLocation);
 		if (currentLocation == 6) {
 			setTimeout(function() {
 				showDialogue();
@@ -611,8 +637,8 @@ let storyLine = [
 		//mid screen
 		if (currentLocation == 8) {
 			setTimeout(function() {
-				var scr = 0.6*max;
 				showDialogue();
+				
 				changeComputerImg("3.png"); //blurred
 			}, time2); //after 4 seconds or 6
 		}

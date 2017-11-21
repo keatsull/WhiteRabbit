@@ -191,9 +191,19 @@ $(document).ready(function(e) {
 
 		//console.log('here'+i);
 
-		//Identical to scene 4, Needs some additions
-		if (i >= 0) {
+		//use the value i to set when a background &/or character should change
+		if (i >= 0 && i < 3) {
 			changeBackground('url("./images/bgs/shop_interior1.jpg")');
+		}
+
+		if (i > 2 && i < 7) {
+			changeCharacter('url("./images/characters/Sora.gif")');
+			changeBackground('url("./images/bgs/street1.jpg")');
+		}
+
+		if (i >= 7) {
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
+			changeCharacter('url("./images/characters/BossAngry.png")');
 		}
 
 		if (i == 0) {
@@ -207,52 +217,47 @@ $(document).ready(function(e) {
 			bgAudio.volume = 0;
 		}
 
-		if (i >= 11 && i < 18) {
+		if (i >= 11 && i < 17) {
 			bgMusic.volume = 0.0;	
 			bgAudio.volume = 0.5;
 		}
 
-		if (i > 18) {
+		if (i >= 17) {
 			bgMusic.volume = 0.5;
 			bgAudio.volume = 0;
 		}
-		
-		if (i >= 1 && i <= 3 ) {
+
+		if (i >= 1 && i <= 2 ) {
 			changeCharacter('url("")'); //empty
-		}
-
-		if (i >= 4 && i <= 7 ) {
-			changeCharacter('url("./images/characters/Sora2.png")');
-		}
-
-		if (i >= 4 && i < 11) {
-			changeBackground('url("./images/bgs/street11.jpg")');
 		}
 		
 		if(i >= 8 && i <= 10) {
-			changeCharacter('url("./images/characters/BossFinal.png")'); //Correct
+			changeCharacter('url("./images/characters/BossAngry.png")'); //Correct
 		}
+
 		
-		if(i >=11 && i <= 15)  {
+		if(i >= 11 && i <= 15) {
 			changeBackground('url("./images/bgs/street1.jpg")'); //Show street here, might have an additional stage showing the string.
-			changeCharacter('url("./images/characters/sora2.png")');
+			changeCharacter('url("./images/characters/string.gif")');
 		}
 		
 		if(i == 16) {
 			changeBackground('url("")'); //black background to show blacking out.
-			shakeScreen();
-		}	
-
-		if (i >= 16 && i < 27) {
 			changeCharacter('url("")'); //empty
-		}	
+			shakeScreen();
+		}
 		
 		if(i >= 17) {
 			changeBackground('url("./images/bgs/room_interior2.jpg")'); //Takashis apartment
 		}
+
+		if (i == 24) {
+
+			playAudio('"./audio/effect/SynthChime10.mp3"', false);
+		}
 		
-		if(i >= 27) {
-			changeCharacter('url("./images/characters/sora2.png")'); //Takashis phone with Kira
+		if(i >= 25) {
+			changeCharacter('url("./images/characters/handwithphone.png")'); //Takashis phone with Kira
 		}
 
 	}

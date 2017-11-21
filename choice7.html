@@ -106,6 +106,34 @@
 
 	<!-- used for information overlay -->
 	<div id="overlayText"></div>
+
+	<!-- Background Music -->
+	<audio id = "bgMusic" autoplay loop >
+	<source src="audio/bg/The-Inspector-Arrives_Looping.mp3" type="audio/ogg">
+	</audio>
+	<audio id="bgAudio" loop autoplay></audio>
+	<audio id="bgAudio2" loop autoplay></audio>
+
+	<script>
+	
+		let isSoundOn = true;
+		var bgAudio = document.getElementById("bgAudio")
+		var bgMusic = document.getElementById("bgMusic");
+		var bgAudio2 = document.getElementById("bgAudio2");
+
+		if(isSoundOn) {
+			//Adjusts music volume, set the number from 0.0 to 1.0 to increase or decrease volume
+			
+			bgMusic.volume = 0.5;	
+			bgAudio.volume = 0.5;
+			bgAudio2.volume = 0.5;
+		}
+		else {
+			bgMusic.volume = 0.0;	
+			bgAudio.volume = 0;
+			bgAudio2.volume = 0;
+		}
+	</script>
 	
 </body>
 
