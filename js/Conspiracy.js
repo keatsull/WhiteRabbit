@@ -414,10 +414,11 @@ $(document).ready(function(e) {
 		}
 
 		if (i > 25 && i < 38) {
-			changeCharacter('url("./images/characters/topsecret.jpg")');	
+			changeCharacter('url("./images/characters/Akira.gif")');	
 		}
 		
 		if (i >= 31 && i <= 37) {
+			changeCharacter('url("")');	
 			changeBackground('url("./images/bgs/librarycomp2.jpg")');			//computer/null
 		}
 		
@@ -434,12 +435,12 @@ $(document).ready(function(e) {
 		}
 		
 		if (i >= 56 && i <= 60 ) {
-			changeCharacter('url("./images/characters/Boss.png")');		//kira
+			changeCharacter('url("./images/characters/Akira.gif")');		//kira
 		}
 		
 		if (i >= 61 && i <= 66) {
 			changeCharacter('url("")');			//computer/null
-			changeBackground('url("./images/bgs/computerscenes/desktop/3.png")');
+			changeBackground('url("./images/computerscenes/desktop/3.png")');
 		}
 		
 		if (i >= 67 && i <= 72) {
@@ -458,32 +459,27 @@ $(document).ready(function(e) {
 
 		if (i == 77 ) {
 			changeCharacter('url("")');		//empty
-			changeBackground('url("")');		//blackscreen (transistion)
+			changeBackground('url("")');	//blackscreen (transistion)
 		}
 		
 		if (i >= 78 && i <= 96 ) {
-			changeCharacter('url("./images/characters/Boss.png")');		//kira
+			changeCharacter('url("./images/characters/Akira.gif")');		//kira
 			changeBackground('url("./images/bgs/street4.jpg")');				//Hq
 		}
 		
-		if (i == 97 ) {
-			changeCharacter('url("")');		//null
-			changeBackground('url("")');
-		}
-		
-		if (i >= 98 && i <= 101 ) {
+		if (i >= 97 && i <= 101 ) {
 			changeCharacter('url("")');		//shadow
-			changeBackground('url("./images/bgs/soraaparement.jpg")');
+			changeBackground('url("./images/bgs/soraapartment.jpg")');	
 		}
 		
 		if (i >= 102 && i <= 105) {
 			changeCharacter('url("./images/characters/Akira.gif")');		//kira
-			changeBackground('url("./images/bgs/soraaparement.jpg")');			//hq
+			changeBackground('url("./images/bgs/street4.jpg")');		//hq
 		}
 		
 		if (i == 106) {
 			changeCharacter('url("")');			//Kaboom (null)
-			changeBackground('url("")');			//Special KaBOOM bg
+			changeBackground('url("./images/bgs/street4.jpg")');
 			playAudio("./audio/effect/Explosion8.mp3", false);
 		}
 		

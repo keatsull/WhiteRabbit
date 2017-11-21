@@ -288,8 +288,8 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i >= 0 && <= 10) {
-			changeCharacter('url("./images/characters/Sora2.png")');
+		if (i >= 0 && i <= 10) {
+			changeCharacter('url("./images/characters/Sora.gif")');
 			
 		} 
 
@@ -325,7 +325,7 @@ $(document).ready(function(e) {
 		}
 
 		if(i >= 30 && i <= 33){
-			changeCharacter('url("./images/characters/BossFinal.png")');		//phone
+			changeCharacter('url("./images/characters/phoneinhand.png")');		//phone
 			changeBackground('url("")');
 		}
 
