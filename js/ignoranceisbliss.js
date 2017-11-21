@@ -188,12 +188,11 @@ $(document).ready(function(e) {
 
 	//add more using ,''
 	let decision = [
-		'Credits',
-		'Main menu'
+		'',
 	];
 
 	//links for decision, likely only use first 2
-	let link1 = '#';
+	let link1 = 'endcredits.html';
 	let link2 = '#';
 	let link3 = '#';
 	let link4 = '#';
@@ -206,58 +205,78 @@ $(document).ready(function(e) {
 		//use the value i to set when a background &/or character should change
 		if (i >= 0 && i <= 6) {
 			changeCharacter('url("./images/characters/Sora2.png")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');			//Cafe
-		} else if (i == 7){
+			changeBackground('url("./images/bgs/cafe_outside1.jpg")');			//Cafe
+		}
+		
+		if (i == 7){
 			changeBackground('url("./images/bgs/book.jpg")');	
-			changeCharacter('url("./images/characters/emptySprite.png")');			//Book?
+			changeCharacter('url("")');			//Book?
 		}
-		else if (i >= 8 && i <= 9 ){
-			changeCharacter('url("./images/characters/emptySprite.png")');		//null
-			changeBackground('url("./images/bgs/street11.png")');			//Street
+		
+		if (i >= 8 && i <= 9 ){
+			changeCharacter('url("")');		//null
+			changeBackground('url("./images/bgs/street11.jpg")');			//Street
 		}
-		else if (i == 10 ){	
-			changeBackground('url("./images/bgs/room_interior2.png")');			//Takashis
+		
+		if (i == 10 ){	
+			changeBackground('url("./images/bgs/room_interior2.jpg")');			//Takashis
 		}
-		else if (i >= 11 && i <= 15 ){
-			changeCharacter('url("./images/characters/emptySprite.png")');			//phome
-			changeBackground('url("./images/bgs/testbackground.png")');
+		
+		if (i >= 11 && i <= 15 ){
+			changeCharacter('url("./images/characters/handwithphone.png")');	//phone
+			
 		}
-		else if (i == 16 ){
-			changeCharacter('url("./images/characters/emptySprite.png")');			//null
+
+		if (i >= 11 && i < 17) {
+			changeBackground('url("./images/bgs/room_interior2.jpg")');	
 		}
-		else if (i == 17 ){
-			changeBackground('url("./images/bgs/blackbackground.jpg")');			//Black Screen
+		
+		if (i == 16 ){
+			changeCharacter('url("")');			//null
 		}
-		else if (i >= 18 && i <= 20 ){
-			changeBackground('url("./images/bgs/street11.png")');			//Street
+		
+		if (i == 17 ){
+			changeBackground('url("")');			//Black Screen
 		}
-		else if (i >= 21 && i <= 23){
-			changeBackground('url("./images/bgs/room_interior2.png")');			//Apartment NEEDS Change
+		
+		if (i >= 18 && i <= 20 ){
+			changeBackground('url("./images/bgs/street11.jpg")');			//Street
 		}
-		else if (i >= 24 && i <= 27 ){
+		
+		if (i >= 21 && i <= 37){ //was 23
+			changeBackground('url("./images/bgs/soraapartment.jpg")');			//Apartment NEEDS Change
+		}
+		
+		if (i >= 24 && i <= 27 ){
 			changeCharacter('url("./images/characters/Sora2.png")');
 		}
-		else if (i >= 28 && i <= 36){
+		
+		if (i >= 28 && i <= 36){
 			changeCharacter('url("./images/characters/BossFinal.png")');	//Evil Sora
 		}
-		else if (i == 37 ){
-			changeCharacter('url("./images/characters/emptySprite.png")');	    //null, Remove Sora, adds effect
+		
+		if (i == 37 ){
+			changeCharacter('url("")');	    //null, Remove Sora, adds effect
 		}
-		else if (i >= 38 && i <= 41 ){
-																			//Oh noes, you have been stabbed screen.
-			changeBackground('url("./images/bgs/stabbingblood.png")');
-		}
-		else if (i >= 42 && i <= 45){
-			changeBackground('url("./images/bgs/blackbackground.png")');			//black screen of die-dead
-		}
-
-
-
 
 		if (i == 38) {
-			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
 		}
+
+		else if (i >= 38 && i <= 41 ){
+			//Oh noes, you have been stabbed screen.
+			changeBackground('url("./images/bgs/stabbingblood.jpg")');
+		}
+		else if (i >= 42 && i <= 45){
+			changeBackground('url("")');			//black screen of die-dead
+		}
+
+		if(i == 45) {
+			updateNotification("ignoranceisbliss"); //achievement earned
+		}
+
+
+		
 	}
 	
 	/************************ PROGRAMMERS ONLY **********************

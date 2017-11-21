@@ -50,7 +50,7 @@ $(document).ready(function(e) {
 
 		'Anytime.', 
 
-		'**A Customer appears in front, ready to make a purchase, Takashi places the phone down and greets the customer.**',
+		'**A Customer appears in front, ready to make a purchase, Takashi places the phone down and greets the customer.**', //5
 
 		'Oh! HH-hey, just this?',
 
@@ -84,32 +84,53 @@ $(document).ready(function(e) {
 	let link3 = '#';
 	let link4 = '#';
 
+	changeBgAudio("./audio/bg/Hypnotic-Puzzle2.mp3"); //this is the other background music
+	bgAudio.volume = 0;
+
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
-		console.log('here'+i);
+		//console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
+		if (i >= 0) {
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
+		}
+
 		if (i == 0) {
 			changeCharacter('url("./images/characters/msg/MessagingAkira04_2_.gif")'); 
-			changeBackground('url("./images/bgs/shop_interior1.png")');
+			
 		}
-		else if(i == 1){
+
+		if(i == 1){
 			changeCharacter('url("./images/characters/msg/MessagingAkira05_2_.gif")'); 
 		}
-		else if(i == 2){
+
+		if(i == 2){
 			changeCharacter('url("./images/characters/msg/MessagingAkira06_2_.gif")');  //msg
 		}
-		else if(i == 3){
+		
+		if(i == 3){
 			changeCharacter('url("./images/characters/msg/MessagingAkira07_2_.gif")');//msg
 		}
-		else if(i == 4){
-			changeCharacter('url("./images/characters/msg/Customer_animated.gif")'); //msg
+		
+		if(i == 4){
+			changeCharacter('url("./images/characters/Customer_animated.gif")'); //msg
 		}
-		else if (i >= 5 && i <= 7){
+
+		if (i >= 5) {
+			bgMusic.volume = 0.0;	
+			bgAudio.volume = 0.5;
+		} else {
+			bgMusic.volume = 0.5;
+			bgAudio.volume = 0;
+		}
+		
+		if (i >= 5 && i <= 7){
 			changeCharacter('url("./images/characters/BossFinal.png")'); //change to customer W/O string
 		}
-		else if(i == 8){
+		
+		if(i == 8){
 			changeCharacter('url("./images/characters/Customer_animated.gif")');
 		}
 	}
@@ -268,6 +289,15 @@ $(document).ready(function(e) {
 		} else {
 			$('#audioContainer').html('<audio autoplay><source src='+file+' type="audio/mpeg"></audio>');
 		}
+	}
+
+	function stopAudio() {
+		$('#audioContainer').html('');
+	}
+
+	//other background music
+	function changeBgAudio(file) {
+		$('#bgAudio').html('<source src='+file+' type="audio/mpeg">');
 	}
 
 	function shakeScreen() {

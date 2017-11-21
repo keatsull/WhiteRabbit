@@ -101,15 +101,15 @@ $(document).ready(function(e) {
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
-		console.log('here'+i);
+		//console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
 		if (i >= 0) {
-			changeBackground('url("./images/bgs/shop_interior1.png")');
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 		}
 
 		if (i == 0) {
-			changeCharacter('url("./images/characters/emptySprite.png")');
+			changeCharacter('url("")'); //empty
 		}
 
 		else if(i >= 1 && i <= 5 )
@@ -119,7 +119,7 @@ $(document).ready(function(e) {
 
 		else if(i >= 6 && i <= 8)
 		{
-			changeCharacter('url("./images/characters/emptySprite.png")');//null
+			changeCharacter('url("")'); //empty
 		}
 
 		else if( i == 9 ){

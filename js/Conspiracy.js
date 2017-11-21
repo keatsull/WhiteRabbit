@@ -378,7 +378,7 @@ $(document).ready(function(e) {
 	];
 
 	//links for decision, likely only use first 2
-	let link1 = 'credits.html';
+	let link1 = 'endcredits.html';
 	let link2 = '#';
 	let link3 = '#';
 	let link4 = '#';
@@ -386,87 +386,107 @@ $(document).ready(function(e) {
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
-		console.log('here'+i);
+		//console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i >= 0 && i <= 4) {
-			changeCharacter('url("./images/characters/emptySprite.png")');												//null
+		if (i >= 0 && i < 9) {
 			changeBackground('url("./images/bgs/shop_interior1.png")');
+		}
+
+		if (i >= 0 && i <= 4) {
+			changeCharacter('url("")');												//null
 		} 
-		else if (i >= 5 && i <= 7) {
+		
+		if (i >= 5 && i <= 7) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//phone
 		} 
-		else if (i == 8 ) {
-			changeCharacter('url("./images/characters/emptySprite.png")');			//null
+		
+		if (i == 8 ) {
+			changeCharacter('url("")');			//null
 		}
-		else if (i >= 9 && i <= 11 ) {
+		
+		if (i >= 9 && i < 31 ) {
 			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
 		}
-		else if (i >= 12 && i <= 30) {
+		
+		if (i >= 12 && i <= 30) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//kira	
 		}
-		else if (i >= 31 && i <= 37) {
-			changeCharacter('url("./images/characters/emptySprite.png")');	
+		
+		if (i >= 31 && i <= 37) {
+			changeCharacter('url("")');	
 			changeBackground('url("./images/bgs/librarycomp2.jpg")');			//computer/null
 		}
-		else if (i >= 38 && i <= 54) {
+		
+		if (i >= 38 && i <= 54) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+		}
+
+		if (i >= 38 && i < 61) {
 			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
 		}
-		else if (i == 55 ) {
+		
+		if (i == 55 ) {
 			changeCharacter('url("./images/characters/Sora2.png")');			//sora
 		}
-		else if (i >= 56 && i <= 60 ) {
+		
+		if (i >= 56 && i <= 60 ) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
 		}
-		else if (i >= 61 && i <= 66) {
-			changeCharacter('url("./images/characters/emptySprite.png")');			//computer/null
+		
+		if (i >= 61 && i <= 66) {
+			changeCharacter('url("")');			//computer/null
 			changeBackground('url("./images/bgs/librarycomp2.jpg")');
 		}
-		else if (i >= 67 && i <= 72) {
+		
+		if (i >= 67 && i <= 72) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
 			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
 		}
-		else if(i == 73){
+		
+		if(i == 73) {
 			changeBackground('url("./images/bgs/bag.jpg")');	
-				}
+		}
 
-		else if (i >= 74 && i <= 76) {
+		if (i >= 74 && i <= 76) {
 			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
 			changeBackground('url("./images/bgs/librarycomp1.jpg")');			//uni
 		}
-		else if (i == 77 ) {
-			changeCharacter('url("./images/characters/emptySprite.png")');		//null
-			changeBackground('url("./images/bgs/blackbackground.jpg")');		//blackscreen (transistion)
-		}
-		else if (i >= 78 && i <= 96 ) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
-			changeBackground('url("./images/bgs/street11.png")');				//Hq
-		}
-		else if (i == 97 ) {
-			changeCharacter('url("./images/characters/emptySprite.png")');		//null
-			changeBackground('url("./images/bgs/testbackground.png")');
-		}
-		else if (i >= 98 && i <= 101 ) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//shadow
-			changeBackground('url("./images/bgs/testbackground.png")');			//phone
-		}
-		else if (i >= 102 && i <= 105) {
-			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
-			changeBackground('url("./images/bgs/street11.png")');				//hq
-		}
-		else if (i == 106) {
-			changeCharacter('url("./images/characters/emptySprite.png")');			//Kaboom (null)
-			changeBackground('url("./images/bgs/testbackground.png")');			//Special KaBOOM bg
-		}
-		else if (i == 107) {	
-			changeCharacter('url("./images/characters/emptySprite.png")');	
-			changeBackground('url("./images/bgs/train.png")');			//End screen on train
-		}
 
-		if (i == 3) {
-			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			//shakeScreen();
+		if (i == 77 ) {
+			changeCharacter('url("")');		//empty
+			changeBackground('url("")');		//blackscreen (transistion)
+		}
+		
+		if (i >= 78 && i <= 96 ) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeBackground('url("./images/bgs/street11.jpg")');				//Hq
+		}
+		
+		if (i == 97 ) {
+			changeCharacter('url("")');		//null
+			changeBackground('url("")');
+		}
+		
+		if (i >= 98 && i <= 101 ) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//shadow
+			changeBackground('');			//phone
+		}
+		
+		if (i >= 102 && i <= 105) {
+			changeCharacter('url("./images/characters/BossFinal.png")');		//kira
+			changeBackground('url("./images/bgs/street11.jpg")');				//hq
+		}
+		
+		if (i == 106) {
+			changeCharacter('url("")');			//Kaboom (null)
+			changeBackground('url("")');			//Special KaBOOM bg
+		}
+		
+		if (i >= 107) {	
+			updateNotification("conspiracy"); //achievement earned
+			changeCharacter('url("")');	
+			changeBackground('url("./images/bgs/train.jpg")');			//End screen on train
 		}
 	}
 	

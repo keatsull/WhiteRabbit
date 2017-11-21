@@ -107,23 +107,22 @@ let storyLine = [
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
-		console.log('here'+i);
+		//console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i >= 1 && i <= 3) {
+		if (i >= 0 && i <= 3) {
 			changeCharacter('url("./images/characters/Customer_animated.gif")');				//Phone
-			changeBackground('url("./images/bgs/shop_interior1.png")');							
-		} else if(i >= 4 && i <= 7) {
-			changeCharacter('url("./images/characters/emptySprite.png")');															
-			changeBackground('url("./images/bgs/street6.png")');							//street
-		} else if(i >=8){
-			changeBackground('url("./images/bgs/cafe_outside1.png")');	
-			changeCharacter('url("./images/characters/Sora2.png")');		
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');							
 		}
 
-		if (i == 3) {
-			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			//shakeScreen();
+		if(i >= 4 && i <= 7) {
+			changeCharacter('url("./images/characters/emptySprite.png")');															
+			changeBackground('url("./images/bgs/street6.jpg")');							//street
+		} 
+
+		if(i >=8) {
+			changeBackground('url("./images/bgs/cafe_outside1.jpg")');	
+			changeCharacter('url("./images/characters/Sora2.png")');		
 		}
 	}
 	

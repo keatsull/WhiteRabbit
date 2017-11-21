@@ -85,24 +85,28 @@ $(document).ready(function(e) {
 		console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
+		if (i >= 0) {
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
+		}
+		
 		if (i == 0) {
 			changeCharacter('url("./images/characters/msg/MessagingAkira05_1_.gif")'); 
-			changeBackground('url("./images/bgs/shop_interior1.png")');
 		}
-		else if( i == 1 ){
+
+		if( i == 1 ){
 			changeCharacter('url("./images/characters/msg/MessagingAkira06_1_.gif")');
 		}
-		else if( i == 2 ){
+
+		if( i == 2 ){
 			changeCharacter('url("./images/characters/msg/MessagingAkira07_1_.gif")');
 		}
-		else if (i >= 3 && i <= 5){
+		
+		if (i >= 3 && i <= 5){
 			changeCharacter('url("./images/characters/BossFinal.png")'); //change to customer W/O string
 		}
-		else if(i == 6)
+		
+		if(i == 6) {
 			changeCharacter('url("./images/characters/Customer_animated.gif")');
-		if (i == 3) {
-			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			//shakeScreen();
 		}
 	}
 	

@@ -102,34 +102,41 @@ function updateNotification(type) {
 
 	img = "";
 	title = "";
+	var showNot = false;
 
 	if (type == "hopelessromantic") {
 		img="hopelessromantic.png"
 		title="Hopeless Romantic"
-		setAchievement("hopelessromantic");
 	}
 
 	if (type == "conspiracy") {
 		img="conspiracy.png"
 		title="Conspiracy Theorist"
-		setAchievement("conspiracy");
 	}
 
 	if (type == "ignoranceisbliss") {
 		img="ignoranceisbliss.png"
 		title="Ignorance is Bliss"
-		setAchievement("ignoranceisbliss");
 	}
 
-	//fills html
-	$('#notification').html('<img src="./images/achievements/'+img+'" alt="img"/>'+'<div id="notifInnerContainer"><p>Unlocked Achievement</p><h3>'+title+'</h3></div>');
+	if (!getAchievement(type)) {
+		setAchievement(type); //stores complete achievement
+		showNot = true; //will show notification
+	}
 
-	//shows and then hides the notification
-	$('#notification').fadeIn(300, function() {
-		$('#notification').css('display', 'all');
-	}).delay(2000).fadeOut(300, function() {
-		$('#notification').css('display', 'none');
-	});
+	//show notification if it hasnt been shown before
+	if (showNot) {
+		//fills html
+		$('#notification').html('<img src="./images/achievements/'+img+'" alt="img"/>'+'<div id="notifInnerContainer"><p>Unlocked Achievement</p><h3>'+title+'</h3></div>');
+
+		//shows and then hides the notification
+		$('#notification').fadeIn(300, function() {
+			$('#notification').css('display', 'all');
+		}).delay(2000).fadeOut(300, function() {
+			$('#notification').css('display', 'none');
+		});
+	}
+	
 }
 
 function showAchievements() {

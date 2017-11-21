@@ -184,50 +184,75 @@ $(document).ready(function(e) {
 	let link3 = '#';
 	let link4 = '#';
 
+	changeBgAudio("./audio/bg/Hypnotic-Puzzle2.mp3"); //this is the other background music
+
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
-		console.log('here'+i);
+		//console.log('here'+i);
 
 		//Identical to scene 4, Needs some additions
+		if (i >= 0) {
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
+		}
+
 		if (i == 0) {
 			changeCharacter('url("./images/characters/Customer_animated.gif")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} 
-		else if (i >= 1 && i <= 3 ) 
-		{
-			changeCharacter('url("./images/characters/emptySprite.png")');
+			bgMusic.volume = 0.0;	
+			bgAudio.volume = 0.5;
 		}
 
-		else if (i >= 4 && i <= 7 ) 
-		{
-			changeCharacter('url("./images/characters/Sora2.png")');
-			changeBackground('url("./images/bgs/street11.png")');
+		if (i > 0 && i < 12) {
+			bgMusic.volume = 0.5;
+			bgAudio.volume = 0;
 		}
-		else if(i >= 8 && i <= 10)
-		{
+
+		if (i >= 11 && i < 18) {
+			bgMusic.volume = 0.0;	
+			bgAudio.volume = 0.5;
+		}
+
+		if (i > 18) {
+			bgMusic.volume = 0.5;
+			bgAudio.volume = 0;
+		}
+		
+		if (i >= 1 && i <= 3 ) {
+			changeCharacter('url("")'); //empty
+		}
+
+		if (i >= 4 && i <= 7 ) {
+			changeCharacter('url("./images/characters/Sora2.png")');
+		}
+
+		if (i >= 4 && i < 11) {
+			changeBackground('url("./images/bgs/street11.jpg")');
+		}
+		
+		if(i >= 8 && i <= 10) {
 			changeCharacter('url("./images/characters/BossFinal.png")'); //Correct
 		}
-		else if(i >=11 && i <= 15)
-		{
-			changeBackground('url("./images/bgs/street1.png")'); //Show street here, might have an additional stage showing the string.
+		
+		if(i >=11 && i <= 15)  {
+			changeBackground('url("./images/bgs/street1.jpg")'); //Show street here, might have an additional stage showing the string.
 			changeCharacter('url("./images/characters/sora2.png")');
 		}
-		else if(i == 16){
-			changeBackground('url("./images/bgs/blackbackground.png")'); //black background to show blacking out.
-			changeCharacter('url("./images/characters/emptySprite.png")');
-
-		}		
-		else if(i >= 17){
-			changeBackground('url("./images/bgs/room_interior2.png")'); //Takashis apartment
-		}
-		else if(i >= 27){
-			changeCharacter('url("./images/characters/sora2.png")'); //Takashis phone with Kira
-		}
-
-		if (i == 16) {
-			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+		
+		if(i == 16) {
+			changeBackground('url("")'); //black background to show blacking out.
 			shakeScreen();
+		}	
+
+		if (i >= 16 && i < 27) {
+			changeCharacter('url("")'); //empty
+		}	
+		
+		if(i >= 17) {
+			changeBackground('url("./images/bgs/room_interior2.jpg")'); //Takashis apartment
+		}
+		
+		if(i >= 27) {
+			changeCharacter('url("./images/characters/sora2.png")'); //Takashis phone with Kira
 		}
 
 	}
@@ -386,6 +411,16 @@ $(document).ready(function(e) {
 		} else {
 			$('#audioContainer').html('<audio autoplay><source src='+file+' type="audio/mpeg"></audio>');
 		}
+	}
+
+	//stops the audio
+	function stopAudio() {
+		$('#audioContainer').html('');
+	}
+
+	//other background music
+	function changeBgAudio(file) {
+		$('#bgAudio').html('<source src='+file+' type="audio/mpeg">');
 	}
 
 	function shakeScreen() {

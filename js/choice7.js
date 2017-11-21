@@ -348,7 +348,7 @@ let storyLine = [
 
 		if (i >= 59 && i < 63) {
 			//business card
-			changeBackground('url("./images/bgs/shop_interior1.png")');
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 			changeCharacter('url("./images/characters/BusinessCard.png")');
 		}
 

@@ -277,7 +277,7 @@ $(document).ready(function(e) {
 	];
 
 	//links for decision, likely only use first 2
-	let link1 = '#';
+	let link1 = 'endcredits.html';
 	let link2 = '#';
 	let link3 = '#';
 	let link4 = '#';
@@ -290,40 +290,62 @@ $(document).ready(function(e) {
 		//use the value i to set when a background &/or character should change
 		if (i >= 0 && <= 10) {
 			changeCharacter('url("./images/characters/Sora2.png")');
-			changeBackground('url("./images/bgs/cafe_outside1.png")');			//cafe
-		} else if(i == 11){
-			changeCharacter('url("./images/characters/emptySprite.png")');		//null
-		}else if(i >= 12 && i <= 13){
-			changeBackground('url("./images/bgs/street1.png")');			//street
-		}else if(i >= 14 && i <= 15){
-			changeBackground('url("./images/bgs/room_interior2.png")');			//Takashis
-		}else if(i >= 16 && i <= 18){
-			changeCharacter('url("./images/characters/emptySprite.png")');		
-			changeBackground('url("./images/bgs/book.jpg")');			//book
-		}else if(i >= 19 && i <= 25){
-			changeCharacter('url("./images/characters/BossFinal.png")');		//note
-			changeBackground('url("./images/bgs/book.jpg")');
-		}else if(i >= 26 && i <= 29){
-			changeCharacter('url("./images/characters/emptySprite.png")');		//takashis
-			changeBackground('url("./images/bgs/room_interior2.png")');
-		}else if(i >= 30 && i <= 33){
-			changeCharacter('url("./images/characters/BossFinal.png")');		//phone
-			changeBackground('url("./images/bgs/testbackground.png")');
-		}else if(i >= 34 && i <= 37){
-			changeCharacter('url("./images/characters/emptySprite.png")');			//null
-			changeBackground('url("./images/bgs/testbackground.png")');
-		}else if(i >= 38 && i <= 72){
-			changeCharacter('url("./images/characters/Sora2.png")');		//Sora/takashis
-			changeBackground('url("./images/bgs/room_interior2.png")');
-		}else if(i == 73){
-			changeCharacter('url("./images/characters/emptySprite.png")');			//Kaboom
-			changeBackground('url("./images/bgs/train.png")');
+			
+		} 
+
+		if (i >= 0 && i < 12) {
+			changeBackground('url("./images/bgs/cafe_outside1.jpg")');			//cafe
 		}
 
-		if (i == 3) {
-			playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
-			shakeScreen();
+		if(i == 11){
+			changeCharacter('url("")');		//null
 		}
+
+		if(i >= 12 && i <= 13){
+			changeBackground('url("./images/bgs/street1.jpg")');			//street
+		}
+
+		if(i >= 14 && i <= 15){
+			changeBackground('url("./images/bgs/room_interior2.jpg")');			//Takashis
+		}
+
+		if(i >= 16 && i <= 18){
+			changeCharacter('url("")');		
+			changeBackground('url("./images/bgs/book.jpg")');			//book
+		}
+
+		if(i >= 19 && i <= 25){
+			changeCharacter('url("./images/characters/BossFinal.png")');		//note
+			changeBackground('url("./images/bgs/book.jpg")');
+		}
+
+		if(i >= 26 && i <= 29){
+			changeCharacter('url("")');		//takashis
+			changeBackground('url("./images/bgs/room_interior2.jpg")');
+		}
+
+		if(i >= 30 && i <= 33){
+			changeCharacter('url("./images/characters/BossFinal.png")');		//phone
+			changeBackground('url("")');
+		}
+
+		if(i >= 34 && i <= 37){
+			changeCharacter('url("")');			//null
+			changeBackground('url("")');
+		}
+
+		if(i >= 38 && i <= 72){
+			changeCharacter('url("./images/characters/Sora2.png")');		//Sora/takashis
+			changeBackground('url("./images/bgs/room_interior2.jpg")');
+		}
+
+		if(i >= 73) {
+			updateNotification("hopelessromantic"); //achievement earned
+			changeCharacter('url("")');			//Kaboom
+			changeBackground('url("./images/bgs/takashiapartmentfire.jpg")');
+		}
+
+
 	}
 	
 	/************************ PROGRAMMERS ONLY **********************

@@ -222,43 +222,55 @@ let storyLine = [
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
-		console.log('here'+i);
+		//console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i == 0){
-			changeBackground('url("./images/bgsclock1.am.png")'); 	
-			changeCharacter('url("./images/characters/emptySprite.png")');		
-			playAudio('"./audio/effect/clock.m4a"', false);				
-		}else if (i >= 1 && i <= 4) {
-			changeCharacter('url("./images/characters/emptySprite.png")');
-			changeBackground('url("./images/bgs/room_interior2.png")'); 				
-		}
-		else if (i >= 5 && i <= 7) {
-			changeCharacter('url("./images/characters/emptySprite.png")');
-			changeBackground('url("./images/bgs/street6.png")'); 						
+		if (i >= 0 && i < 4) {
+			changeBackground('url("./images/clockbg.png")'); 
 		}
 
-		 else if (i >= 8 && i <= 20) {
-			changeCharacter('url("./images/characters/BossFinal.png")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} else if (i >= 21 && i <= 22){
-			changeCharacter('url("./images/characters/emptySprite.png")');																			
-		} else if (i >= 23 && i <= 35){
-			changeCharacter('url("./images/characters/Sora2.png")');			
-		} else if (i >= 36 && i <= 38){
-			changeCharacter('url("./images/characters/emptySprite.png")');																		
-		} else if (i >= 39 && i <= 46){
-			changeCharacter('url("./images/characters/Sora2.png")');	
-		} else if (i >= 47 && i <= 50){
-			changeCharacter('url("./images/characters/emptySprite.png")');			//Null
-		} else if (i >= 51){
-			changeCharacter('url("./images/characters/BossFinal.png")');
+		if (i == 0) {
+			changeCharacter('url("")'); //emtpy
+			playAudio('"./audio/effect/clock.m4a"', false);				
 		}
 
 		if (i == 1) {
-			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
 			shakeScreen();
 		}
+
+		if (i >= 1 && i <= 4) {
+			changeCharacter('url("")'); //empty
+			changeBackground('url("./images/bgs/room_interior2.jpg")'); 				
+		}
+		
+		if (i >= 5 && i <= 7) {
+			changeCharacter('url("")'); //empty
+			changeBackground('url("./images/bgs/street6.jpg")'); 						
+		}
+
+		if (i >= 8 && i <= 20) {
+			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
+		} 
+		if (i >= 21 && i <= 22){
+			changeCharacter('url("")'); //empty																		
+		} 
+		if (i >= 23 && i <= 35){
+			changeCharacter('url("./images/characters/Sora2.png")');			
+		} 
+		if (i >= 36 && i <= 38){
+			changeCharacter('url("")'); //empty																	
+		} 
+		if (i >= 39 && i <= 46){
+			changeCharacter('url("./images/characters/Sora2.png")');	
+		} 
+		if (i >= 47 && i <= 50){
+			changeCharacter('url("")'); //empty	
+		} 
+		if (i >= 51){
+			changeCharacter('url("./images/characters/BossFinal.png")');
+		}
+
 	}
 	
 	/************************ PROGRAMMERS ONLY **********************

@@ -94,13 +94,40 @@
 	</div>
 
 	<!-- used for sound effects -->
-	<div id="audioContainer"></div>
+	<div id="audioContainer">
+	</div>
+
+	<audio id="bgAudio" loop autoplay></audio>
 
 	<!-- used for notifications -->
 	<div id="notification"></div>
 
 	<!-- used for information overlay -->
 	<div id="overlayText"></div>
+
+	<!-- Background Music -->
+	<audio id = "bgMusic" autoplay loop >
+	<source src="audio/bg/bg1.mp3" type="audio/ogg">
+	</audio>
+
+	<script>
+	
+		let isSoundOn = true;
+		var bgAudio = document.getElementById("bgAudio")
+		var bgMusic = document.getElementById("bgMusic");
+
+		if(isSoundOn) {
+			//Adjusts music volume, set the number from 0.0 to 1.0 to increase or decrease volume
+			
+			bgMusic.volume = 0.5;	
+			bgAudio.volume = 0.5;
+
+		}
+		else {
+			bgMusic.volume = 0.0;	
+			bgAudio.volume = 0;
+		}
+	</script>
 	
 </body>
 

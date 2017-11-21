@@ -42,7 +42,7 @@ $(document).ready(function(e) {
 	let storyLine = [
 		'Excuse me? Look, I don’t have time for games, my bus arrives in a minute.', // 1
 
-		'**The Customer exits the convenient store.**', // 2
+		'**The Customer exits the convenient store.**', // 1
 
 		'Am I losing my mind?', // 3
 
@@ -62,7 +62,7 @@ $(document).ready(function(e) {
 
 		'Ahh fine, go ahead. ',//11
 
-		'**Takashi quickly leaves the store but as he exits a Strange animated strings warps into appearance**',//12
+		'**Takashi quickly leaves the store but as he exits a Strange animated strings warps into appearance**',//11
 
 		'**This time the string is attached to Takashi!!!**', //13 
 
@@ -76,7 +76,7 @@ $(document).ready(function(e) {
 
 		'ARRRrrrgggggh' , //18
 
-		'Damn it, not again.',
+		'Damn it, not again.', //18
 
  		'I was so close to talking to that girl!', //20
 
@@ -184,43 +184,63 @@ $(document).ready(function(e) {
 	let link3 = '#';
 	let link4 = '#';
 
+	changeBgAudio("./audio/bg/Hypnotic-Puzzle2.mp3"); //this is the other background music
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
-		console.log('here'+i);
+		//console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
-		if (i == 0) {
-			changeCharacter('url("./images/characters/Customer_animated.gif")');
-			changeBackground('url("./images/bgs/shop_interior1.png")');
-		} 
-		else if (i >= 1 && i <= 7 ) 
-		{
-			changeCharacter('url("./images/characters/emptySprite.png")');
-		}
-		else if(i >= 8 && i <= 10)
-		{
-			changeCharacter('url("./images/characters/BossFinal.png")'); //Correct
-		}
-		else if(i >=11 && i <= 15)
-		{
-			changeBackground('url("./images/bgs/street1.png")'); //Show street here, might have an additional stage showing the string.
-			changeCharacter('url("./images/characters/sora2.png")');
-		}
-		else if(i == 16){
-			changeBackground('url("./images/bgs/blackbackground.png")'); //black background to show blacking out.
-			changeCharacter('url("./images/characters/emptySprite.png")');
-		}		
-		else if(i >= 17){
-			changeBackground('url("./images/bgs/room_interior2.png")'); //Takashis apartment
-		}
-		else if(i >= 27){
-			changeCharacter('url("./images/characters/sora2.png")'); //Takashis phone with Kira
+		if (i >= 0 && i < 11) {
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 		}
 
-		if (i == 16) {
-			//playAudio('"./audio/effect/Creeky-Interior-Door.mp3"', false);
+		if (i == 0) {
+			changeCharacter('url("./images/characters/Customer_animated.gif")');
+			bgMusic.volume = 0.0;	
+			bgAudio.volume = 0.5;
+		}
+
+		if (i > 0 && i < 12) {
+			bgMusic.volume = 0.5;
+			bgAudio.volume = 0;
+		}
+
+		if (i >= 11 && i < 18) {
+			bgMusic.volume = 0.0;	
+			bgAudio.volume = 0.5;
+		}
+
+		if (i > 18) {
+			bgMusic.volume = 0.5;
+			bgAudio.volume = 0;
+		}
+
+		if (i >= 1 && i <= 7 ) {
+			changeCharacter('url("")'); //empty
+		}
+		
+		if(i >= 8 && i <= 10) {
+			changeCharacter('url("./images/characters/BossFinal.png")'); //Correct
+		}
+		
+		if(i >= 11 && i <= 15) {
+			changeBackground('url("./images/bgs/street1.jpg")'); //Show street here, might have an additional stage showing the string.
+			changeCharacter('url("./images/characters/sora2.png")');
+		}
+		
+		if(i == 16) {
+			changeBackground('url("")'); //black background to show blacking out.
+			changeCharacter('url("")'); //empty
 			shakeScreen();
+		}
+		
+		if(i >= 17) {
+			changeBackground('url("./images/bgs/room_interior2.jpg")'); //Takashis apartment
+		}
+		
+		if(i >= 27) {
+			changeCharacter('url("./images/characters/sora2.png")'); //Takashis phone with Kira
 		}
 
 	}
@@ -379,6 +399,16 @@ $(document).ready(function(e) {
 		} else {
 			$('#audioContainer').html('<audio autoplay><source src='+file+' type="audio/mpeg"></audio>');
 		}
+	}
+
+	//other background music
+	function changeBgAudio(file) {
+		$('#bgAudio').html('<source src='+file+' type="audio/mpeg">');
+	}
+
+	//stops the audio
+	function stopAudio() {
+		$('#audioContainer').html('');
 	}
 
 	function shakeScreen() {

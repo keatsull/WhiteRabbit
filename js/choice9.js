@@ -63,13 +63,13 @@ $(document).ready(function(e) {
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
-		console.log('here'+i);
+		//console.log('here'+i);
 
 		//use the value i to set when a background &/or character should change
 		//use the value i to set when a background &/or character should change
-		if (i == 0) {
+		if (i >= 0) {
 			changeCharacter('url("./images/characters/Sora2.png")');
-			changeBackground('url("./images/bgs/cafe_outside1.png")'); //Cafe
+			changeBackground('url("./images/bgs/cafe_outside1.jpg")'); //Cafe
 		}
 	}
 	
