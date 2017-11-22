@@ -37,7 +37,7 @@ button:focus {outline:0;}
 	position: fixed;
 	margin: 0 auto;
 	z-index: -100;
-	background: url('../images/bgs/titlebackground.png') no-repeat center center fixed; 
+	background: url('../images/bgs/titlebackground.jpg') no-repeat center center fixed; 
 	background-size: cover;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
