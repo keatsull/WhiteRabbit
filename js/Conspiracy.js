@@ -103,7 +103,7 @@ $(document).ready(function(e) {
 
 		'Ok then.', //30
 
-		'**Kira pulls up a document called MKManifest**', 
+		'**Kira pulls up a document called MKManifest**', //31
 
 		'The document states..', //32
 
@@ -417,13 +417,14 @@ $(document).ready(function(e) {
 			changeCharacter('url("./images/characters/Akira.gif")');	
 		}
 		
-		if (i >= 31 && i <= 37) {
-			changeCharacter('url("")');	
-			changeBackground('url("./images/bgs/librarycomp2.jpg")');			//computer/null
+		if (i >= 31 && i <= 37) { //MK MANifest scene
+			changeCharacter('url("")');	//null
+			changeBackground('url("./images/computerscenes/desktop/3.png")');			//computer/null
 		}
 		
-		if (i >= 38 && i <= 54) {
+		if (i >= 38 && i <= 54) { //kira talking 
 			changeCharacter('url("./images/characters/Akira.gif")');		//kira
+			changeBackground('url("./images/bgs/librarycomp1.jpg")');
 		}
 
 		if (i >= 38 && i < 61) {

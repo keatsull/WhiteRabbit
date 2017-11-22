@@ -201,11 +201,6 @@ $(document).ready(function(e) {
 			changeBackground('url("./images/bgs/street1.jpg")');
 		}
 
-		if (i >= 7) {
-			changeBackground('url("./images/bgs/shop_interior1.jpg")');
-			changeCharacter('url("./images/characters/BossAngry.png")');
-		}
-
 		if (i == 0) {
 			changeCharacter('url("./images/characters/Customer_animated.gif")');
 			bgMusic.volume = 0.0;	
@@ -231,10 +226,10 @@ $(document).ready(function(e) {
 			changeCharacter('url("")'); //empty
 		}
 		
-		if(i >= 8 && i <= 10) {
+		if(i >= 7 && i <= 10) {
+			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 			changeCharacter('url("./images/characters/BossAngry.png")'); //Correct
 		}
-
 		
 		if(i >= 11 && i <= 15) {
 			changeBackground('url("./images/bgs/street1.jpg")'); //Show street here, might have an additional stage showing the string.
@@ -247,12 +242,12 @@ $(document).ready(function(e) {
 			shakeScreen();
 		}
 		
-		if(i >= 17) {
+		if(i >= 17 && i < 25) {
+			changeCharacter('url("")'); //empty
 			changeBackground('url("./images/bgs/room_interior2.jpg")'); //Takashis apartment
 		}
 
 		if (i == 24) {
-
 			playAudio('"./audio/effect/SynthChime10.mp3"', false);
 		}
 		

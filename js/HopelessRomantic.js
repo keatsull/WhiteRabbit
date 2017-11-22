@@ -99,7 +99,7 @@ $(document).ready(function(e) {
 
 		'I’ll have to message Sora and get an explanation for this.', //28
 
-		'**Takashi pulls out his phone and starts to message Sora**',
+		'**Takashi pulls out his phone and starts to message Sora**', //29
 
 		'Message: Hi Sora, you dropped a book at the cafe today. It was titled Novus ordo seclorum, pretty weird title. Anyway, feel free to come around to get it or I can give it to you tomorrow at work', //30
 
@@ -111,7 +111,7 @@ $(document).ready(function(e) {
 
 		'**Takashi messages his address to Sora and waits patiently**', //34
 
-		'**KNOCK KNOCK KNOCK**',
+		'**KNOCK KNOCK KNOCK**', //35
 
 		'That must be her.', //36
 
@@ -282,6 +282,9 @@ $(document).ready(function(e) {
 	let link3 = '#';
 	let link4 = '#';
 
+	changeBgAudio("./audio/bg/Impossible-Decision.mp3"); //this is the other background music
+	bgAudio.volume = 0.0;
+
 	//use this to set events to play etc at certain times, maybe you just want to change backgrounds or characters
 	function newEvent() {
 
@@ -319,19 +322,19 @@ $(document).ready(function(e) {
 			changeBackground('url("./images/bgs/book.jpg")');
 		}
 
-		if(i >= 26 && i <= 29){
+		if(i >= 26 && i < 29){
 			changeCharacter('url("")');		//takashis
 			changeBackground('url("./images/bgs/room_interior2.jpg")');
 		}
 
-		if(i >= 30 && i <= 33){
+		if(i >= 29 && i <= 33){
 			changeCharacter('url("./images/characters/phoneinhand.png")');		//phone
 			changeBackground('url("./images/bgs/room_interior2.jpg")');
 		}
 
-		if(i >= 34 && i <= 37){
+		if(i >= 34 && i <= 37){ //sora enters
 			changeCharacter('url("")');			//null
-			changeBackground('url("")');
+			changeBackground('url("./images/bgs/room_interior2.jpg")');
 		}
 
 		if(i >= 38 && i <= 72){
@@ -343,6 +346,20 @@ $(document).ready(function(e) {
 			updateNotification("hopelessromantic"); //achievement earned
 			changeCharacter('url("")');			//Kaboom
 			changeBackground('url("./images/bgs/takashiapartmentfire.jpg")');
+		}
+
+		//audio
+		if(i >= 14) {
+			bgMusic.volume = 0;
+			bgAudio.volume = 0.5;
+		}
+
+		if(i == 35) {
+			playAudio("./audio/effect/Knock1.mp3");
+		}
+
+		if (i > 35 && i < 34) {
+			stopAudio();
 		}
 
 
@@ -503,6 +520,11 @@ $(document).ready(function(e) {
 		} else {
 			$('#audioContainer').html('<audio autoplay><source src='+file+' type="audio/mpeg"></audio>');
 		}
+	}
+
+	//other background music
+	function changeBgAudio(file) {
+		$('#bgAudio').html('<source src='+file+' type="audio/mpeg">');
 	}
 
 	function shakeScreen() {

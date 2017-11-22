@@ -468,6 +468,10 @@ let storyLine = [
 		$('#bgAudio').html('<source src='+file+' type="audio/mpeg">');
 	}
 
+	function stopAudio() {
+		$('#audioContainer').html(''); //empty 
+	}
+
 	//other background music
 	function changeBgAudio2(file) {
 		$('#bgAudio2').html('<source src='+file+' type="audio/mpeg">');
