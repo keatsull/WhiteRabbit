@@ -98,10 +98,23 @@
 
 		<br /><br /><br />
 
-		<div class="job">SOUND</div>
-		<div class="name">Eric Matyas @http://soundimage.org/ </div>
+		<div class="job">SOUND/MUSIC</div>
+		<div class="name">Eric Matyas @http://soundimage.org/</div>
+		<div class="name">ASOBEAT at http://asobeat.com/ </div>
+		<div class="name">Dj Rolfsky</div>
 		<div class="name">Rhys Harrison</div>
 		<div class="name">Clifford Smith</div>
+		<div class="name">Keaten Sullivan</div>
+
+		<br /><br /><br />
+
+		<div class="job">START MENU MUSIC</div>
+		<div class="name">SYNCHRONICITY by EarthSinger</div>
+
+		<br /><br /><br />
+
+		<div class="job">END CREDIT MUSIC</div>
+		<div class="name">WAY OF LIFE by Nhato feat. Sasi Lyrics: Frozen Starfall Original: 妖魔夜行</div>
 
 		<br /><br />
 
@@ -111,6 +124,31 @@
 		<div class="title"><img src="images/logos/logo-wht.png"/></div>
 
 	</div>
+
+	<!-- Background Music -->
+	<audio id = "bgMusic" autoplay loop >
+	<source src="audio/bg/endcreditsmusic.mp3" type="audio/ogg">
+	</audio>
+
+	<audio id="bgAudio" loop autoplay></audio>
+
+	<script>
+	
+		let isSoundOn = true;
+		var bgAudio = document.getElementById("bgAudio")
+		var bgMusic = document.getElementById("bgMusic");
+
+		if(isSoundOn) {
+			//Adjusts music volume, set the number from 0.0 to 1.0 to increase or decrease volume
+			
+			bgMusic.volume = 0.5;	
+			bgAudio.volume = 0.5;
+		}
+		else {
+			bgMusic.volume = 0.0;	
+			bgAudio.volume = 0;
+		}
+	</script>
 </body>
 
 </html>
