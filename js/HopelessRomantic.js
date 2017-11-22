@@ -315,7 +315,7 @@ $(document).ready(function(e) {
 		}
 
 		if(i >= 19 && i <= 25){
-			changeCharacter('url("./images/characters/BossFinal.png")');		//note
+			changeCharacter('url("")');			//note
 			changeBackground('url("./images/bgs/book.jpg")');
 		}
 
@@ -326,7 +326,7 @@ $(document).ready(function(e) {
 
 		if(i >= 30 && i <= 33){
 			changeCharacter('url("./images/characters/phoneinhand.png")');		//phone
-			changeBackground('url("")');
+			changeBackground('url("./images/bgs/room_interior2.jpg")');
 		}
 
 		if(i >= 34 && i <= 37){

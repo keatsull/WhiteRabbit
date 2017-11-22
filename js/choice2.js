@@ -275,6 +275,16 @@ $(document).ready(function(e) {
 		}
 	}
 
+	//other background music
+	function changeBgAudio(file) {
+		$('#bgAudio').html('<source src='+file+' type="audio/mpeg">');
+	}
+
+	//other background music
+	function changeBgAudio2(file) {
+		$('#bgAudio2').html('<source src='+file+' type="audio/mpeg">');
+	}
+
 	function shakeScreen() {
 		$('.conversationContainer').effect("shake", {times: 3}, 700);
 		$('.characterContainer').effect("shake", {times: 4}, 600);
