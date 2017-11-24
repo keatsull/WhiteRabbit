@@ -37,6 +37,7 @@ function saveGame(loc) {
 	var local = loc.split('/').pop();
 	localStorage.setItem('lastSave', local);
 	hideMobileMenu();
+	hideMenu();
 	showOverlayText('SAVED GAME');
 	console.log(getSave());
 }

@@ -13,19 +13,26 @@ $(document).ready(function(e){
             getChoices();
     }
 
-    $("#menuHelpBtn").click(function(){
+    //show help menu
+    /*$("#menuHelpBtn").click(function(){
     	$('#helpOverlay').css("visibility", "visible");
         $('#helpOverlay').delay(0).animate({'opacity': '1'}, 300);
         getChoices();
-    });
+    });*/
 
-    //shows help menu
+    //shows help menu from mobile button
     $("#mobileMenuHelpBtn").click(function(){
         $('#helpOverlay').css("visibility", "visible");
         $('#helpOverlay').delay(0).animate({'opacity': '1'}, 300);
-        $('#mobileMenuContainer').slideUp("fast", function() {});
-        $('#mobileMenuOverlay').delay(300).animate({'opacity': '0'}, 100);
-        $('#mobileMenuOverlay').delay(400).css("visibility", "hidden");
+        hideMobileMenu();
+        getChoices();
+    });
+
+    //shows help menu from desktop menu
+    $("#menuHelpButton").click(function(){
+        $('#helpOverlay').css("visibility", "visible");
+        $('#helpOverlay').delay(0).animate({'opacity': '1'}, 300);
+        hideMenu();
         getChoices();
     });
 
