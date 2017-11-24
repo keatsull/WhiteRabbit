@@ -22,7 +22,7 @@ $(document).ready(function(e){
 
     //shows achievements
     $("#mobileMenuAchBtn").click(function() {
-        //console.log("here");
+        console.log("here");
         showAchievements();
         hideMobileMenu(); //hides menu
     });

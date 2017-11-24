@@ -791,8 +791,12 @@ MOBILE
 	}
 }
 
-/* mobile desktop */
-@media only screen and (max-width: 500px), (max-height: 800px) {
+/* mobile */
+@media only screen and (max-width: 500px), (max-height: 850px), 
+	only screen and (device-width : 500px), 
+    only screen and (device-height : 812px), 
+    only screen and (-webkit-device-pixel-ratio : 3),
+    only screen and (-webkit-device-pixel-ratio : 2)  {
 
 	/* MENUS */
 	footer {
@@ -809,6 +813,13 @@ MOBILE
 
 	#mobileMenuBtn {
 		visibility: visible;
+		width: 100px;
+		height: 80px;
+	}
+
+	#mobileCloseBtn {
+    	width: 100px;
+    	height: 100px;
 	}
 
 	/* Notifications */
@@ -837,7 +848,7 @@ MOBILE
 	}
 
 	.conversationContainer #title {
-		font-size: 24px;
+		font-size: 40px;
 	}
 
 	.dialogue {
@@ -847,17 +858,16 @@ MOBILE
 	}
 
 	.dialogue p {
-		font-size: 15px;f
+		font-size: 40px;f
 	}
 
 	#dialogueBtnContainer {
-		height: 30px;
+		height: 50px;
 		margin-bottom: 5px;
 	}
 
 	#dialogueBtnContainer button {
-		font-size: 20px;
-		
+		font-size: 60px;
 	}
 
 	.optionContainer {
@@ -875,11 +885,11 @@ MOBILE
 		border-style: solid;
 		backdrop-filter: blur(20px);
 		padding: 0;
-		margin: 5px 0;
+		margin: 20px 0;
 	}
 
 	.optionContainer a h3 {
-		font-size: 20px;
+		font-size: 50px;
 		text-align: center;
 		padding: 0;
 		margin: 0;
@@ -887,7 +897,7 @@ MOBILE
 	}
 
 	.optionContainer a p {
-		font-size: 15px;
+		font-size: 50px;
 		padding: 0;
 		margin: 0;
 		margin-bottom: 5px;
@@ -895,12 +905,17 @@ MOBILE
 
 	/* help overlay */
 	.conversationContainer #dialogueTitle {
-		font-size: 24px;
+		font-size: 50px;
 		margin-bottom: 10px;
 	}
 
+	#closeBtn {
+		width: 100px;
+		height: 100px;
+	}
+
 	#optionsTitle {
-		font-size: 24px;
+		font-size: 50px;
 		display: inline-block;
 		vertical-align: bottom;
 		position: absolute;
@@ -908,7 +923,7 @@ MOBILE
 	}
 
 	#helpDialogue p {
-		font-size: 15px;
+		font-size: 50px;
 	}
 
 	.computerContainer {
@@ -928,11 +943,25 @@ MOBILE
 		background-size: cover;
 	}
 
+	/* mobile menu fix */
+	#mobileMenuContainer button {
+		font-size: 80px;
+	}
+
+	#mobileMenuContainer a {
+		font-size: 80px;
+	}
+
+	#mobileMenuContainer li {
+
+    	height: 80px;
+	}
+
 	/* achievements overlay */
 	h1 {
 		margin-top: 20px;
 		top: 20%;
-		font-size: 60px;
+		font-size: 100px;
 	}
 
 	#achContainer {
@@ -942,9 +971,22 @@ MOBILE
 
 	.achievement {
 		width: 90%;
-		height: 100px;
+		height: 200px;
 		float: none;
 		margin-bottom: 20px;
+	}
+
+	#achCloseBtn {
+   	 	width: 100px;
+    	height: 100px;
+	}
+
+	.achievement h3 {
+		font-size: 50px;
+	}
+
+	.achievement p {
+		font-size: 40px;
 	}
 
 }

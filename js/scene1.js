@@ -66,7 +66,7 @@ $(document).ready(function(e) {
 
 		//use the value i to set when a background &/or character should change
 		if (i <= 2) {
-			changeCharacter('url("./images/characters/BossFinal.png")');
+			changeCharacter('url("./images/characters/Boss.png")');
 			changeBackground('url("./images/bgs/shop_interior1.jpg")');
 			nextText(); //call this cause this is only used as a helpfile
 
