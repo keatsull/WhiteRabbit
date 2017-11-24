@@ -604,57 +604,97 @@ let storyLine = [
 		}
 	}
 
-	//used for scrolling through computer scene
-	//in the odd occasion that there is no scrolling involved in the scene.
-	function notScrolling() {
-		var tmp = true;
-		if ( $('.computer')[0].scrollHeight <= $('.computer')[0].clientHeight ) {
-			tmp = false;
-		} else {
-			tmp = true;
-		}
-
-		//var max = $(this)[0].scrollHeight - $(this)[0].clientHeight //maximum scroll size
-
-		//in case a user doesn't scroll during a scene
-		var time1 = 5000;
-		var time2 = 4000;
-
-		if (!tmp) {
-			time1 = 8000;
-			time2 = 6000;
-		}
+	//used to call dialogue at certain points in the story
+	function callDialogue() {
 
 		//full screen
-		console.log(currentLocation);
 		if (currentLocation == 6) {
 			setTimeout(function() {
 				showDialogue();
 				changeComputerImg("0b.png"); //blurred
-			}, time1); //after 5 seconds or 8
-		}
+			}, 500);
+	  	}
 
 		//mid screen
 		if (currentLocation == 8) {
 			setTimeout(function() {
 				showDialogue();
-				
 				changeComputerImg("3.png"); //blurred
-			}, time2); //after 4 seconds or 6
+			}, 500);
 		}
-		
+	  			
 		//full screen
 		if (currentLocation == 9) {
 			setTimeout(function() {
 				showDialogue();
 				changeComputerImg("3.png"); //blurred
-			}, time2); //after 4 seconds or 6
+			}, 500);
+	  	}
+	}	
+
+	//used for scrolling through computer scene
+	//in the odd occasion that there is no scrolling involved in the scene.
+	function notScrolling() {
+
+		var tmp = true; //can scroll
+		if ( $('.computer')[0].scrollHeight <= $('.computer')[0].clientHeight ) {
+			tmp = false; //cant scroll
+		} else {
+			tmp = true; //can scroll
+			checkScroll(); //calls function that detects the user is not scrolling
 		}
+
+		//in case a user doesn't scroll during a scene
+		var time1 = 8000; //5000
+		var time2 = 6000; //4000
+
+		//used if a user cannot scroll the page (ie. the image fits in the window size)
+		if (!tmp) {
+			//full screen
+			//console.log(currentLocation);
+			if (currentLocation == 6) {
+				setTimeout(function() {
+					showDialogue();
+					changeComputerImg("0b.png"); //blurred
+				}, time1); //after 5 seconds or 8
+			}
+
+			//mid screen
+			if (currentLocation == 8) {
+				setTimeout(function() {
+					showDialogue();
+					changeComputerImg("3.png"); //blurred
+				}, time2); //after 4 seconds or 6
+			}
+			
+			//full screen
+			if (currentLocation == 9) {
+				setTimeout(function() {
+					showDialogue();
+					changeComputerImg("3.png"); //blurred
+				}, time2); //after 4 seconds or 6
+			}
+		}
+
+		
+	}
+
+	//check to see if a user has scrolled
+	function checkScroll() {
+		$(window).scrollTop(function() {
+			console.log("Here again")
+			clearTimeout($.data(this, 'scrollTimer'));
+			$.data(this, 'scrollTimer', setTimeout(function() {
+	    		// do something
+	    		callDialogue(); //calls dialogue if user hasnt scrolled
+			}, 8000))
+		})
 	}
 
 	//called when scrolling through interactive element
 	//basically shows dialogue at certain scroll points
 	jQuery(
+
 
 		$('.computer').scroll(function() {
   			var y = $(this).scrollTop(); //scroll location
@@ -662,11 +702,8 @@ let storyLine = [
 
   			//full screen
   			if (currentLocation == 6) {
-  				if (y == max) {
-    				setTimeout(function() {
-  						showDialogue();
-    					changeComputerImg("0b.png"); //blurred
-  					}, 500);
+  				if (y == max || !didScroll) {
+    				callDialogue();
   				}
   			}
 
@@ -674,31 +711,22 @@ let storyLine = [
   			if (currentLocation == 8) {
 
   				if (y > max*0.6) {
-
-  					setTimeout(function() {
-  						showDialogue();
-    					changeComputerImg("3.png"); //blurred
-  					}, 100);
+  					callDialogue();
   				}
   			}
   			
   			//full screen
   			if (currentLocation == 9) {
   				if (y == max) {
-
-  					setTimeout(function() {
-  						showDialogue();
-    					changeComputerImg("3.png"); //blurred
-  					}, 500);
-    				
+					callDialogue();	
   				}
   			}
 		})
 	);
 
-
 	
 });
+
 
 function returnLocation() {
 		return currentLocation;
