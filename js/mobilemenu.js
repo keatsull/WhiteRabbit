@@ -1,21 +1,26 @@
 /* Created by Keaten Sullivan  */
 $(document).ready(function(e){
 
+    //hides mobile menu
 	$('#mobileMenuContainer').hide();
 
+    //click hamburger icon to show mobile menu
 	$("#mobileMenuBtn").click(function(){
     	showMobileMenu();
     });
 
+    //close mobile menu
     $("#mobileCloseBtn").click(function(){
     	hideMobileMenu();
     });
 
+    //save game
     $("#mobileMenuSaveBtn").click(function(){
         saveGame(window.location.pathname);
         storeDialogueLocation(returnLocation());
     });
 
+    //load game
     $("#mobileMenuLoadBtn").click(function(){
         loadGame();
     });
@@ -32,21 +37,25 @@ $(document).ready(function(e){
         hideAchievements();
     });
 
+    //hide menu
     $('#menuContainer').hide();
 
+    //show menu on click
     $("#menuBtn").click(function(){
         showMenu();
     });
 
-
+    //hide menu on close icon click
     $("#menuCloseButton").click(function(){
         hideMenu();
     });
 
+    //hide menu on close button click
     $("#menuCloseButton2").click(function(){
         hideMenu();
     });
 
+    //save the game
     $("#menuSaveButton").click(function(){
 
         saveGame(window.location.pathname);
@@ -56,7 +65,7 @@ $(document).ready(function(e){
     });
 
 
-
+    //load the game
     $("#menuLoadButton").click(function(){
 
         loadGame();
@@ -73,18 +82,21 @@ $(document).ready(function(e){
     });
 });
 
+//hides the mobile menu
 function hideMobileMenu() {
     $('#mobileMenuContainer').slideUp("fast", function() {});
     $('#mobileMenuOverlay').delay(0).animate({'opacity': '0'}, 300);
     $('#mobileMenuOverlay').delay(300).css("visibility", "hidden");
 }
 
+//hides the desktop menu
 function hideMenu() {
     $('#menuContainer').slideUp("fast", function() {});
     $('#menuOverlay').delay(0).animate({'opacity': '0'}, 300);
     $('#menuOverlay').delay(300).css("visibility", "hidden");
 }
 
+//shows the mobile menu
 function showMobileMenu() {
     $('#mobileMenuOverlay').css("visibility", "visible");
     $('#mobileMenuOverlay').delay(0).animate({'opacity': '1'}, 300);
@@ -106,6 +118,7 @@ function showMobileMenu() {
     }
 }
 
+//show menu
 function showMenu() {
 
     $('#menuOverlay').css("visibility", "visible");

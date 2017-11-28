@@ -3,22 +3,27 @@
 /* Persistant Data used for the story and loading/saving game */
 
 /* mutators */
+//store if an ending was chosen
 function storeDecision(bool) {
 	localStorage.setItem('trueEnding', bool);
 }
 
+//store dialogue choice (used in the choice#.js files) for save game
 function storeDialogueLocation(i) {
 	localStorage.setItem('dialogueLocation', i);
 }
 
+//check if we loaded a game, called in the choice#.js files
 function setDidWeLoadGame(bool) {
 	localStorage.setItem('didWeLoadGame', bool);
 }
 
+//first time loading the game
 function setFirstLoad(bool) {
 	localStorage.setItem('firstLoad', bool);
 }
 
+//set achievements to local storage if accomplished
 function setAchievement(type) {
 	if (type == "hopelessromantic") {
 		return localStorage.setItem('hopelessromantic', true);
@@ -33,36 +38,45 @@ function setAchievement(type) {
 	}
 }
 
+//save the game at current location
 function saveGame(loc) {
-	var local = loc.split('/').pop();
-	localStorage.setItem('lastSave', local);
+	var local = loc.split('/').pop();	//saves the name of the html file
+	localStorage.setItem('lastSave', local);	//stores it
+
+	//hide menus
 	hideMobileMenu();
 	hideMenu();
-	showOverlayText('SAVED GAME');
-	console.log(getSave());
+	showOverlayText('SAVED GAME'); //display
+	//console.log(getSave());
 }
 
 /* getters */
+//get the decision
 function getDecision() {
 	return (localStorage.getItem('trueEnding') === 'true');
 }
 
+//check if  we loaded a game
 function getDidWeLoadGame() {
 	return (localStorage.getItem('didWeLoadGame') === 'true');
 }
 
+//get the last save
 function getSave() {
 	return localStorage.getItem('lastSave');
 }
 
+//check if its our first time
 function getFirstLoad() {
 	return localStorage.getItem('firstLoad');
 }
 
+//get our current location in the array - used in choice# html files
 function getDialogueLocation() {
 	return parseInt(localStorage.getItem('dialogueLocation'));
 }
 
+//get achievements
 function getAchievement(type) {
 	if (type == "hopelessromantic") {
 		return localStorage.getItem('hopelessromantic');
@@ -77,6 +91,7 @@ function getAchievement(type) {
 	}
 }
 
+//load game
 function loadGame() {
 
 	//get items
@@ -91,8 +106,9 @@ function loadGame() {
 	
 }
 
+//show text that is called as an overlay
 function showOverlayText(text) {
-	console.log(text);
+	//console.log(text);
 	$('#overlayText').show(0);
 	$('#overlayText').html('<h3>'+text+'</h3>');
 	$('#overlayText').delay(2000).hide(0);
@@ -140,6 +156,7 @@ function updateNotification(type) {
 	
 }
 
+//shows the achievemnt overlay
 function showAchievements() {
 	$('#achievementsOverlay').css("visibility", "visible");
     $('#achievementsOverlay').delay(0).animate({'opacity': '1'}, 300);
@@ -161,6 +178,7 @@ function showAchievements() {
     }
 }
 
+//hides the achievement overlay
 function hideAchievements() {
 	$('#achievementsOverlay').delay(0).animate({'opacity': '0'}, 300);
     $('#achievementsOverlay').delay(300).css("visibility", "hidden");

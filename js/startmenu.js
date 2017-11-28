@@ -2,14 +2,17 @@
 
 $(document).ready(function(e){
 
+    //load game
     $("#startMenuLoadBtn").click(function(){
         loadGame();
     });
 
+    //show the achievements after button click
     $("#startMenuAchBtn").click(function(){
         showAchievements();
     });
 
+    //close the achievements panel
     $("#achCloseBtn").click(function(){
         hideAchievements();
     });
